@@ -1,6 +1,6 @@
 # AGENTS.md
 
-本文件给编码 Agent 使用（格式约定见 [agents.md](https://agents.md/)）。  
+本文件给编码 Agent 使用（格式约定见 [agents.md](https://agents.md/)）。
 人类贡献者请优先阅读 `README.md`、`CONTRIBUTING.md`；详细 Prompt 规范见 `PROMPT_AUTHORING_STANDARD.md`。
 
 ## Project overview
