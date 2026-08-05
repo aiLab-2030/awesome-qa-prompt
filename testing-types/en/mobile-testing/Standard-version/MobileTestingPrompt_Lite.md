@@ -88,7 +88,7 @@ Before producing the main output, run an input audit:
 
 #### Key Performance Metrics
 - **Launch Time:** Cold start ≤ 3s, Hot start ≤ 1s
-- **Memory Usage:** Peak memory ≤ 200MB
+- **Memory Usage:** Peak memory [TBD]
 - **CPU Usage:** Average CPU ≤ 30%
 - **Battery Consumption:** ≤ 10% battery per hour of use
 - **Network Traffic:** Data transmission optimization

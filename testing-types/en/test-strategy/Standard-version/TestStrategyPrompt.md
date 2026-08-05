@@ -139,7 +139,7 @@ Please output test strategies in the following Markdown format:
 
 - **Non-Functional Quality Objectives:** [Performance, security, usability objectives]
   - System response time: [Target value, mark as TBD if not provided]
-  - System concurrent users: ≥ 1000 users
+  - System concurrent users: [TBD]
   - System availability: ≥ 99.5%
   - Security vulnerabilities: 0 high-risk vulnerabilities
 

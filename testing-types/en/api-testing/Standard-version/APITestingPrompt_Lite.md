@@ -45,10 +45,10 @@ Before producing the main output, run an input audit:
 #### Testing Layers
 | Test Level | Test Content | Automation Level | Execution Frequency |
 |------------|--------------|------------------|---------------------|
-| Unit API Testing | Single interface functionality | 100% | Every commit |
+| Unit API Testing | Single interface functionality | [TBD] | Every commit |
 | Integration API Testing | Inter-interface integration | 90% | Daily build |
 | End-to-End Testing | Business processes | 80% | Regression testing |
-| Contract Testing | API contract verification | 100% | Continuous integration |
+| Contract Testing | API contract verification | [TBD] | Continuous integration |
 
 #### Testing Priority
 - **P0 - Core APIs:** Core business function interfaces
@@ -150,7 +150,7 @@ load_test:
 
 **Performance Requirements:**
 - **Response Time:** P95 ≤ 500ms
-- **Throughput:** ≥ 1000 RPS
+- **Throughput:** [TBD, e.g. RPS]
 - **Concurrent Users:** ≥ 500
 - **Error Rate:** ≤ 0.1%
 
@@ -328,7 +328,7 @@ public void testCreateUser(String name, String email, int expectedStatus) {
 |------------|------------|--------|--------|-----------|-------------------|
 | User Management | 25 | 24 | 1 | 96% | 245ms |
 | Product Management | 30 | 28 | 2 | 93% | 380ms |
-| Order Management | 35 | 35 | 0 | 100% | 320ms |
+| Order Management | 35 | 35 | 0 | [example] | [example] |
 | **Total** | **90** | **87** | **3** | **97%** | **315ms** |
 
 #### Quality Assessment

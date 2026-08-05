@@ -84,7 +84,7 @@ Before producing the main output, run an input audit:
 | Metric | Target Value | Actual Value | Achievement |
 |--------|--------------|--------------|-------------|
 | Functional Completeness | 100% | 98% | Close to target |
-| Bug Density | ≤ 2/KLOC | 1.8/KLOC | Achieved |
+| Bug Density | [TBD] | [example only] | [status TBD] |
 | Test Coverage | ≥ 90% | 95% | Achieved |
 | User Satisfaction | ≥ 4.0 | 4.2 | Achieved |
 

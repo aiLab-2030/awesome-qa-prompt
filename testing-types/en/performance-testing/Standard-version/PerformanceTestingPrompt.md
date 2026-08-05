@@ -147,9 +147,9 @@ Please output performance testing plans in the following Markdown format:
 #### Performance Target Setting
 | Performance Metric | Target Value | Acceptable Value | Test Conditions |
 |-------------------|--------------|------------------|-----------------|
-| Page Response Time | ≤ 2s | ≤ 3s | Under normal load |
+| Page Response Time | [TBD] | [TBD] | Under normal load |
 | API Response Time | ≤ 500ms | ≤ 1s | Under normal load |
-| Concurrent Users | ≥ 1000 | ≥ 800 | Under peak load |
+| Concurrent Users | [TBD] | [TBD] | Under peak load |
 | TPS | ≥ 500 | ≥ 400 | Under peak load |
 | CPU Utilization | ≤ 70% | ≤ 80% | Under peak load |
 | Memory Utilization | ≤ 80% | ≤ 90% | Under peak load |

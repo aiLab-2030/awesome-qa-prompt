@@ -44,7 +44,7 @@ Before producing the main output, run an input audit:
 #### Automation Scope
 | Test Type | Automation Level | Tool Selection | Priority |
 |-----------|------------------|----------------|----------|
-| Unit Testing | 100% | JUnit/pytest | P0 |
+| Unit Testing | [TBD] | JUnit/pytest | P0 |
 | API Testing | 90% | REST Assured/Postman | P0 |
 | UI Testing | 70% | Selenium/Cypress | P1 |
 | Performance Testing | 80% | JMeter/K6 | P2 |

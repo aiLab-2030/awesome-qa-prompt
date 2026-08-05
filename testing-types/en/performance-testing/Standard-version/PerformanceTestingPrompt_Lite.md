@@ -52,8 +52,8 @@ Before producing the main output, run an input audit:
 - **Response Time:**
   - Page loading: ≤ 3 seconds
   - API response: ≤ 500ms
-  - Database query: ≤ 200ms
-- **Throughput:** ≥ 1000 TPS
+  - Database query: [TBD]
+- **Throughput:** [TBD, e.g. TPS]
 - **Concurrent Users:** ≥ 500 users
 - **Resource Usage:** CPU ≤ 80%, Memory ≤ 85%
 

@@ -45,7 +45,7 @@
 #### 自动化范围
 | 测试类型 | 自动化程度 | 工具选择 | 优先级 |
 |----------|------------|----------|--------|
-| 单元测试 | 100% | JUnit/pytest | P0 |
+| 单元测试 | [待确认] | JUnit/pytest | P0 |
 | API测试 | 90% | REST Assured/Postman | P0 |
 | UI测试 | 70% | Selenium/Cypress | P1 |
 | 性能测试 | 80% | JMeter/K6 | P2 |

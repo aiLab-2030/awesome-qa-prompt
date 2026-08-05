@@ -264,7 +264,7 @@ pm.test("Response time is less than 2000ms", function () {
 
 **Performance Requirements:**
 - Response Time: ≤ 500ms (95% requests)
-- Throughput: ≥ 1000 RPS
+- Throughput: [TBD, e.g. RPS]
 - Concurrent Users: ≥ 100
 - Error Rate: ≤ 0.1%
 

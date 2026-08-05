@@ -55,7 +55,7 @@ Before producing the main output, run an input audit:
 
 #### Quality Goals
 - **Functional Quality:** Functional completeness ≥ 98%
-- **Performance Quality:** Response time ≤ 2s, Concurrency ≥ 1000
+- **Performance Quality:** Response time: [TBD]; Concurrency: [TBD] (do not invent values)
 - **Security Quality:** No high-risk security vulnerabilities
 - **User Experience:** User satisfaction ≥ 4.0 points
 
@@ -75,9 +75,9 @@ Before producing the main output, run an input audit:
 | Acceptance Testing | Business scenario verification | 100% | 30% | Before release |
 
 #### Test Type Strategy
-- **Functional Testing (40%):** Core business function verification
-- **Performance Testing (20%):** Response time and concurrency capability
-- **Security Testing (15%):** Security vulnerabilities and data protection
+- **Functional Testing (share TBD):** Core business function verification
+- **Performance Testing (share TBD):** Response time and concurrency capability
+- **Security Testing (share TBD):** Security vulnerabilities and data protection
 - **Compatibility Testing (15%):** Cross-platform and browser compatibility
 - **Usability Testing (10%):** User experience and ease of use
 

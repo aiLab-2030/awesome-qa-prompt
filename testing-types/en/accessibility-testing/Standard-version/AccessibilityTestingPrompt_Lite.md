@@ -260,7 +260,7 @@ Verification Points:
 - **Training Plan:** Team accessibility knowledge training
 
 ### Success Criteria
-- **Compliance Achievement:** 100% WCAG 2.1 AA level compliance
+- **Compliance Achievement:** [TBD WCAG level, e.g. AA] (example target, not a default commitment)
 - **User Satisfaction:** Users with disabilities usability testing pass
 - **Tool Compatibility:** Good compatibility with mainstream assistive technologies
 - **Continuous Improvement:** Establish accessibility continuous improvement mechanisms

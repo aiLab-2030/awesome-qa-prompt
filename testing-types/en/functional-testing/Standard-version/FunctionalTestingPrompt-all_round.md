@@ -256,7 +256,7 @@ Please output functional testing plans in the following Markdown format:
 - **P3 Defects:** [Minor function defect count ≤ X]
 
 #### Coverage Criteria
-- **Requirement Coverage:** [≥ 100%]
+- **Requirement Coverage:** [TBD / user-provided target]
 - **Function Coverage:** [≥ 95%]
 - **Use Case Coverage:** [≥ 90%]
 - **Path Coverage:** [≥ 85%]
