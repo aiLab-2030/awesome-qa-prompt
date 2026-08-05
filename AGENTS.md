@@ -1,47 +1,166 @@
 # AGENTS.md
 
-本文件定义了在 `awesome-qa-prompt` 仓库中协作时的默认工作方式。目标是持续维护一个可直接使用、结构稳定、双语一致、尽量不误导用户的 **QA Prompt Baseline** 仓库。
+本文件给编码 Agent 使用（格式约定见 [agents.md](https://agents.md/)）。
+人类贡献者请优先阅读 `README.md`、`CONTRIBUTING.md`；详细 Prompt 规范见 `PROMPT_AUTHORING_STANDARD.md`。
 
-## 先理解这个项目
+## Project overview
 
-- 这是以 Markdown 内容为主的仓库，核心产物是 QA 提示词、模块 README、工作流文档和中英文版本内容。
-- 本仓库是 **Prompt Baseline**（复制即用的提示词合集），不是 AI 工具技能包。
-- 与 [`awesome-qa-skills`](https://github.com/naodeng/awesome-qa-skills) 的关系：可借鉴质量原则（反编造、输入审计、最小可执行、文案克制）；不要引入 `SKILL.md`、安装脚本或技能目录结构。
-- 新增或修改内容时，优先参考：
-  - `README.md`
-  - `PROMPT_AUTHORING_STANDARD.md`
-  - `package.json`
-  - `scripts/check-prompts.mjs`
-  - `scripts/check-markdown-format.mjs`
+- 仓库名：`awesome-qa-prompt`
+- 定位：**QA Prompt Baseline** — 以 Markdown 维护、可复制使用的 QA 提示词合集
+- **不是** AI 工具技能包：不要引入 `SKILL.md`、技能安装脚本，或照搬 [`awesome-qa-skills`](https://github.com/naodeng/awesome-qa-skills) 的目录形态
+- 可借鉴 skills 的质量原则：反编造、输入审计、最小可执行、文案克制
+- 核心内容：
+  - `testing-types/zh|en/<module>/`：15 个测试类型（Standard / Lite / 框架变体 / 部分平台场景版）
+  - `Workflows/zh|en/`：日常 / 迭代 / 发布测试工作流
+  - `prompt-frameworks/`、`examples/`：框架说明与示例
+  - `scripts/`：内容校验脚本
 
-## 你的核心任务
+默认入口：各模块 `Standard-version/`。
 
-1. 先判断改动类型：Prompt 正文 / README / 目录链接 / 校验脚本。
-2. 沿用现有结构、语气和双语组织方式，不要凭空发明新套路。
-3. 改完后自己验证，不要把“可能有问题”留给用户检查。
-
-## 内容层面的硬规则
-
-1. 不要编造用户未提供的需求、接口、字段、环境、指标、日期、角色或结论；假设必须显式标注。
-2. 优先给最小可执行结果，不要默认超长万能模板。
-3. 中英文与各版本（Standard / Lite / 框架 / 平台场景）修改时要判断是否需要同步，避免规则漂移。
-4. README 与模块说明里的 Markdown 链接必须真实可打开；默认入口优先 `Standard-version/`。
-
-## 写 Prompt 时至少体现
-
-- 输入完整性检查
-- 禁止编造
-- 信息不足时的降级策略
-- 输出服务真实工作场景
-
-## 必做验证
-
-文档或 Prompt 相关改动后运行：
+## Setup
 
 ```bash
-npm run check:all
+git clone https://github.com/naodeng/awesome-qa-prompt.git
+cd awesome-qa-prompt
+npm install
 ```
 
-## 汇报方式
+- Node.js：建议 >= 18
+- 本仓库几乎全是 Markdown；一般不需要构建前端或启动服务
+- 在线文档站点不在本仓库主流程内；改内容以仓库 Markdown 为准
 
-用简单直白的话说清：做了什么、结果怎样、还有没有风险。
+## Repository map
+
+| 路径 | 用途 |
+| --- | --- |
+| `testing-types/zh/<module>/` | 中文测试类型模块 |
+| `testing-types/en/<module>/` | 英文测试类型模块 |
+| `*/Standard-version/` | 默认推荐 Prompt |
+| `*/CRISPE-version/` 等 | 框架变体（CRISPE / RISE / ICIO / ROSES / LangGPT） |
+| `Workflows/` | 测试工作流 |
+| `PROMPT_AUTHORING_STANDARD.md` | Prompt / README 编写硬规则 |
+| `PROMPT_AUTHORING_STANDARD_EN.md` | 英文编写标准 |
+| `CONTRIBUTING.md` | 人类贡献流程 |
+| `scripts/check-prompts.mjs` | Prompt / README 链接与禁用模式检查 |
+| `scripts/check-markdown-format.mjs` | Markdown 格式检查 |
+| `.github/workflows/prompt-check.yml` | CI：Prompt Check |
+
+模块目录通常包含：`README.md` + `Standard-version/` + 多个 `*-version/`。
+
+## How to work on changes
+
+动手前先判断改动类型，并沿用现有结构，不要发明新目录套路。
+
+### 1. Prompt 正文
+
+- 优先改 `Standard-version/`；再按需同步 Lite / 框架 / 平台变体
+- 中英文同名模块尽量保持结构、用途、核心约束一致
+- Prompt 至少体现：输入完整性检查、禁止编造、信息不足时的降级、可执行输出
+- 未提供的 KPI / SLA / 覆盖率 / 并发等必须标为「待确认 / 建议值 / 示例值」，禁止写成既定目标
+- 不要加入「收到后立即开始执行」类无条件指令
+- LangGPT 变体尽量保留框架风格，但须在 Constrains / Guardrails / Workflow 中覆盖上述约束
+
+### 2. 模块 README
+
+- 中文模块默认指向中文 `Standard-version/`；英文模块同理
+- 语言切换链接必须指向真实路径（例如中文 README → `../../en/<module>/README.md`）
+- 所有相对链接必须可打开；禁止指向不存在的 `*_EN.md` 或错误的 `../testing-types/` 路径
+
+### 3. 根 README / 规范文档
+
+- 保持「Prompt Baseline」定位，表述克制，不写不可核实的效果 KPI
+- 与 skills 的边界说明不要删掉或写混
+
+### 4. 校验脚本 / CI
+
+- 先读懂现有检查再改；小步修改
+- 改规则后确认仓库内容仍能通过新规则
+
+## Hard rules (content)
+
+1. **不要编造**：不得补写用户未提供的需求、接口、字段、环境、指标、日期、角色、审批或合规结论；假设必须显式标注。
+2. **最小可执行**：优先短而完整、可直接用的结果，不要默认超长万能模板。
+3. **双语与多版本一致**：改一侧时主动判断另一侧 / 其他变体是否要同步，避免行为漂移。
+4. **链接真实**：README 与模块说明里的路径必须存在；默认入口优先 `Standard-version/`。
+5. **不 skill 化**：不把本仓库改成 skills 安装体系。
+
+## Testing / verification
+
+改完后**自己跑检查**，不要把验证留给用户。
+
+```bash
+# 推荐：全量
+npm run check:all
+
+# 或分别运行
+npm run check:prompts
+npm run check:markdown-format
+```
+
+检查含义：
+
+- `check:prompts`：根 README + `testing-types/**` 的坏链、禁用文案、模块入口约定等
+- `check:markdown-format`：仓库内 Markdown 格式问题（含尾随空格等）
+
+CI 工作流：`.github/workflows/prompt-check.yml`（PR / push 到 `main` 会跑 Prompt Check）。
+
+本地通过后再提交；若 CI 失败，先在本地复现并修复。
+
+### 快速自检清单
+
+- [ ] 改动与用户请求直接对应，无无关大重写
+- [ ] 相关中英文 / 变体已按需同步
+- [ ] 新增或修改的 Markdown 链接可打开
+- [ ] 未引入硬编码假 KPI 或无条件「立即执行」
+- [ ] `npm run check:all` 已通过
+
+## Commit and PR instructions
+
+### Commits
+
+- 用简短陈述句，说明**为什么**；可用前缀：`docs:` / `fix:` / `chore:`
+- 只暂存相关文件；不要提交密钥、`.env`、无关 `.DS_Store`
+- 不使用 `--no-verify` 跳过钩子（除非用户明确要求）
+- 用户未要求时不要主动 commit；用户要求时再提交
+
+### Pull requests
+
+建议标题：
+
+- `docs: ...`（文档 / Prompt / README）
+- `fix: ...`（断链、约束、KPI 误导等）
+- `chore: ...`（脚本 / CI）
+
+PR 正文建议包含：
+
+- Summary：改了什么、为什么
+- Validation：已运行的命令与结果（至少 `npm run check:all`）
+- 影响范围：是否触及 README 入口、Prompt 约束、中英文同步
+
+## Security notes
+
+- 示例、Prompt、文档中**禁止**写入真实 token、密码、cookie、内网密钥
+- 需要凭证时用环境变量名或占位符（如 `YOUR_API_TOKEN`）
+- 用户粘贴的 curl / 日志若含敏感头，写入仓库前先脱敏
+
+## Communication with the user
+
+- 用简单直白的中文说明：做了什么、结果怎样、还有何风险
+- 少堆术语；除非用户追问，不展开实现细节
+- 信息不足时先指出缺口，再决定提问或基于最少必要假设继续（假设必须标明）
+
+## Do not
+
+- 不要把愿景写成现状，或编造仓库里不存在的模块 / 路径
+- 不要为了「风格统一」删除框架变体或平台场景版
+- 不要在无用户要求时做大规模无关重构
+- 不要跳过 `npm run check:all` 就声称完成
+
+## Preferred workflow
+
+1. 读相关现有文件与 `PROMPT_AUTHORING_STANDARD.md`
+2. 确定最小必要改动
+3. 修改文件
+4. 自查关联影响（双语、变体、链接）
+5. 运行 `npm run check:all`
+6. 向用户汇报结果
