@@ -1,6 +1,6 @@
 # 测试策略 (Test Strategy)
 
-[English](./README_EN.md) | 简体中文
+[English](../../en/test-strategy/README.md) | 简体中文
 
 ## 📋 概述
 
@@ -35,7 +35,7 @@
 - 风险管理和质量控制机制
 - 实施计划和预算资源规划
 
-### [TestStrategyPrompt_EN.md](Standard-version/TestStrategyPrompt_EN.md)
+### [TestStrategyPrompt.md](../../en/test-strategy/Standard-version/TestStrategyPrompt.md)
 **语言**：English
 **角色**：Senior Test Strategy Architect
 **功能**：Develop comprehensive test strategies and implementation plans

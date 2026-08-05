@@ -1,6 +1,6 @@
 # Test Case Writing
 
-English | [简体中文](./README.md)
+English | [简体中文](../../zh/test-case-writing/README.md)
 
 ## Module Overview
 
@@ -50,12 +50,12 @@ The Test Case Writing module provides professional test case design and writing 
 - **Use Case:** Chinese project teams, test case writing requirements
 
 ### English Prompts
-- **File:** `Standard-version/TestCaseWritingPrompt_EN.md`
+- **File:** `Standard-version/TestCaseWritingPrompt.md`
 - **Role:** Senior Test Case Designer
 - **Use Case:** International teams, English project environments
 
 ### Lite Version Prompts
-- **File:** `Standard-version/TestCaseWritingPrompt_Lite.md` / `Standard-version/TestCaseWritingPrompt_Lite_EN.md`
+- **File:** `Standard-version/TestCaseWritingPrompt_Lite.md` / `Standard-version/TestCaseWritingPrompt_Lite.md`
 - **Features:** Quick start, focused on core test case elements
 - **Use Case:** Quick test case creation and basic documentation
 
@@ -83,9 +83,9 @@ The Test Case Writing module provides professional test case design and writing 
 
 ## Related Modules
 
-- **[Requirements Analysis](../requirements-analysis/README_EN.md)** - Analyze requirements for test case design
-- **[Functional Testing](../functional-testing/README_EN.md)** - Execute functional test cases
-- **[Automation Testing](../automation-testing/README_EN.md)** - Automate test cases
+- **[Requirements Analysis](../requirements-analysis/README.md)** - Analyze requirements for test case design
+- **[Functional Testing](../functional-testing/README.md)** - Execute functional test cases
+- **[Automation Testing](../automation-testing/README.md)** - Automate test cases
 
 ## Learning Resources
 
@@ -110,7 +110,7 @@ Welcome to contribute to the Test Case Writing module:
 
 ## License
 
-This module follows the MIT License. See the [LICENSE](../LICENSE) file in the project root directory for details.
+This module follows the MIT License. See the [LICENSE](../../../LICENSE) file in the project root directory for details.
 
 ---
 

@@ -1,6 +1,6 @@
 # Security Testing
 
-English | [简体中文](./README.md)
+English | [简体中文](../../zh/security-testing/README.md)
 
 ## Module Overview
 
@@ -48,12 +48,12 @@ The Security Testing module provides comprehensive security testing guidance, he
 - **Use Case:** Chinese project teams, security testing requirements
 
 ### English Prompts
-- **File:** `Standard-version/SecurityTestingPrompt_EN.md`
+- **File:** `Standard-version/SecurityTestingPrompt.md`
 - **Role:** Senior Security Testing Expert
 - **Use Case:** International teams, English project environments
 
 ### Lite Version Prompts
-- **File:** `Standard-version/SecurityTestingPrompt_Lite.md` / `Standard-version/SecurityTestingPrompt_Lite_EN.md`
+- **File:** `Standard-version/SecurityTestingPrompt_Lite.md` / `Standard-version/SecurityTestingPrompt_Lite.md`
 - **Features:** Quick start, focused on core security testing concepts
 - **Use Case:** Quick security assessment and basic testing
 
@@ -81,9 +81,9 @@ The Security Testing module provides comprehensive security testing guidance, he
 
 ## Related Modules
 
-- **[API Testing](../api-testing/README_EN.md)** - API security testing
-- **[Automation Testing](../automation-testing/README_EN.md)** - Security test automation
-- **[Test Strategy](../test-strategy/README_EN.md)** - Security testing strategy
+- **[API Testing](../api-testing/README.md)** - API security testing
+- **[Automation Testing](../automation-testing/README.md)** - Security test automation
+- **[Test Strategy](../test-strategy/README.md)** - Security testing strategy
 
 ## Learning Resources
 
@@ -108,7 +108,7 @@ Welcome to contribute to the Security Testing module:
 
 ## License
 
-This module follows the MIT License. See the [LICENSE](../LICENSE) file in the project root directory for details.
+This module follows the MIT License. See the [LICENSE](../../../LICENSE) file in the project root directory for details.
 
 ---
 

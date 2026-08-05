@@ -40,6 +40,7 @@
 - All resource allocations must be reasonable and feasible
 
 #### ## Guardrails
+- Numbers in templates that are not user-provided are examples or TBD, not committed targets
 - Before the main output, list the known information, missing information, key assumptions, and main risks
 - If critical information is missing, ask 3-5 high-value clarifying questions first
 - Do not invent requirements, endpoints, fields, workflows, environments, dates, version numbers, team structures, metrics, SLA/SLO targets, or compliance conclusions
@@ -60,7 +61,7 @@
 
 #### Quality Goals
 - **Functional Quality:** Functional completeness ≥ 98%
-- **Performance Quality:** Response time ≤ 2s, Concurrency ≥ 1000
+- **Performance Quality:** Response time: [TBD]; Concurrency: [TBD]
 - **Security Quality:** No high-risk security vulnerabilities
 - **User Experience:** User satisfaction ≥ 4.0 points
 
@@ -74,7 +75,7 @@
 #### Layered Testing Strategy
 | Test Level | Test Content | Coverage Target | Automation Level | Execution Frequency |
 |------------|--------------|-----------------|------------------|---------------------|
-| Unit Testing | Code logic verification | 80% | 100% | Every commit |
+| Unit Testing | Code logic verification | [TBD] | [TBD] | Every commit |
 | Integration Testing | Inter-module interaction | 70% | 90% | Daily build |
 | System Testing | End-to-end functionality | 90% | 60% | Every version |
 | Acceptance Testing | Business scenario verification | 100% | 30% | Before release |

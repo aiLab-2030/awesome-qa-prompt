@@ -1,6 +1,6 @@
 # Manual Testing
 
-English | [简体中文](./README.md)
+English | [简体中文](../../zh/manual-testing/README.md)
 
 ## Module Overview
 
@@ -48,12 +48,12 @@ The Manual Testing module provides comprehensive manual testing guidance, helpin
 - **Use Case:** Chinese project teams, manual testing requirements
 
 ### English Prompts
-- **File:** `Standard-version/ManualTestingPrompt_EN.md`
+- **File:** `Standard-version/ManualTestingPrompt.md`
 - **Role:** Senior Manual Testing Expert
 - **Use Case:** International teams, English project environments
 
 ### Lite Version Prompts
-- **File:** `Standard-version/ManualTestingPrompt_Lite.md` / `Standard-version/ManualTestingPrompt_Lite_EN.md`
+- **File:** `Standard-version/ManualTestingPrompt_Lite.md` / `Standard-version/ManualTestingPrompt_Lite.md`
 - **Features:** Quick start, focused on core manual testing techniques
 - **Use Case:** Quick manual testing and exploratory testing
 
@@ -81,9 +81,9 @@ The Manual Testing module provides comprehensive manual testing guidance, helpin
 
 ## Related Modules
 
-- **[Functional Testing](../functional-testing/README_EN.md)** - Manual functional testing
-- **[Accessibility Testing](../accessibility-testing/README_EN.md)** - Manual accessibility verification
-- **[Bug Reporting](../bug-reporting/README_EN.md)** - Report discovered issues
+- **[Functional Testing](../functional-testing/README.md)** - Manual functional testing
+- **[Accessibility Testing](../accessibility-testing/README.md)** - Manual accessibility verification
+- **[Bug Reporting](../bug-reporting/README.md)** - Report discovered issues
 
 ## Learning Resources
 
@@ -108,7 +108,7 @@ Welcome to contribute to the Manual Testing module:
 
 ## License
 
-This module follows the MIT License. See the [LICENSE](../LICENSE) file in the project root directory for details.
+This module follows the MIT License. See the [LICENSE](../../../LICENSE) file in the project root directory for details.
 
 ---
 

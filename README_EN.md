@@ -14,17 +14,17 @@
 ![GitHub forks](https://img.shields.io/github/forks/naodeng/awesome-qa-prompt?style=flat)
 ![GitHub watchers](https://img.shields.io/github/watchers/naodeng/awesome-qa-prompt?style=flat)
 
-A professional collection of AI prompts for QA (Quality Assurance) professionals, designed to help test engineers and QA teams work more efficiently throughout the software testing lifecycle. This collection covers the complete testing lifecycle from requirements analysis to test reporting, providing 15 testing type modules, 3 workflows, and rich usage examples.
+A **Prompt Baseline** for QA work: a copy-and-use prompt collection that helps test engineers and QA teams produce executable test plans and documents. It covers common testing scenarios from requirements analysis to test reporting, with 15 testing-type modules, workflows, and multi-framework / platform variants.
 
 ## ✨ Key Highlights
 
-- 🎯 **Highly Professional**: Each prompt designed by testing experts with 10+ years of experience
+- 🎯 **Practical by default**: Organized by testing scenarios; default entry is `Standard-version/`
 - 🌍 **Bilingual Support**: Complete Chinese and English prompts for international teams
-- 📚 **Rich Content**: 15 testing types + 3 workflows + 225+ professional documents
-- 🔄 **Complete Versions**: Each module provides full and lite versions, and selected modules now include `all_round`, `Web`, and `Mobile` platform variants
+- 📚 **Broad coverage**: 15 testing types + workflows + framework/platform variants
+- 🔄 **Complete Versions**: Each module provides full and lite versions; selected modules include `all_round`, `Web`, and `Mobile` platform variants
 - 🎨 **Multi-Framework Support**: Supports TOP 5 prompt frameworks (ROSES, LangGPT, ICIO, CRISPE, RISE)
-- 🚀 **Ready to Use**: Copy and paste to use, no complex configuration required
-- 📖 **Online Documentation**: Beautiful online documentation website with full-text search
+- 🚀 **Copy and use**: Open a prompt file and paste it into common AI assistants
+- 📖 **Online Documentation**: Online docs site with full-text search
 
 ## 🌐 Online Documentation
 
@@ -42,6 +42,7 @@ Online documentation features:
 
 - [Key Highlights](#key-highlights)
 - [Project Overview](#project-overview)
+- [Difference from awesome-qa-skills](#difference-from-awesome-qa-skills)
 - [Feature Categories](#feature-categories)
 - [Testing Workflows](#testing-workflows)
 - [Quick Start](#quick-start)
@@ -56,23 +57,33 @@ Online documentation features:
 
 ## 🎯 Project Overview
 
-Awesome QA Prompt Collection is a carefully curated library of AI prompts specifically designed for software testing and quality assurance. Started in 2024, the project has undergone continuous iteration and optimization, becoming a powerful assistant for test engineers.
+Awesome QA Prompt is a **Prompt Baseline** for software testing and quality assurance: copy-and-use prompts first, not an installable AI-tool skill pack. The repo maintains bilingual modules, standard/lite versions, and selected framework and platform variants.
 
 ### 🌟 Project Value
 
-By providing structured, professional prompt templates, it helps test engineers:
+By providing structured prompt templates, it helps test engineers:
 
-- **🚀 Improve Testing Efficiency**: Quickly generate high-quality test scenarios and test cases, saving 60% of documentation writing time
-- **🎯 Ensure Test Coverage**: Systematically cover functional, performance, security, and other dimensions, avoiding missing critical test points
-- **📋 Standardize Processes**: Unify test documentation formats and test execution standards, improving team collaboration efficiency
-- **💡 Knowledge Transfer**: Preserve best practices and testing experience, helping newcomers grow quickly
+- **🚀 Improve Testing Efficiency**: Quickly produce executable test plans and first-draft test cases with structured prompts
+- **🎯 Ensure Test Coverage**: Systematically cover functional, performance, security, and other dimensions to reduce missed critical points
+- **📋 Standardize Processes**: Unify documentation formats and testing approaches for better collaboration
+- **💡 Knowledge Transfer**: Keep reusable prompts and practices that help newcomers ramp up faster
 
 ### 🎨 Design Philosophy
 
-- **Professional-Oriented**: Based on industry best practices and testing theory
-- **Practical First**: Generated documentation can be directly used for test execution
-- **Easy to Use**: Simple copy and paste, no complex learning curve
-- **Continuous Improvement**: Continuously optimize and expand based on user feedback
+- **Professional-Oriented**: Grounded in practical testing work, not marketing claims
+- **Practical First**: Prefer a minimum executable result over oversized templates
+- **Easy to Use**: Clear default entry points and copy-paste usage
+- **Continuous Improvement**: Keep fixing broken links, misleading wording, and unusable content
+
+## Difference from awesome-qa-skills
+
+| | Awesome QA Prompt (this repo) | Awesome QA Skills |
+| --- | --- | --- |
+| Positioning | QA Prompt Baseline: copy-and-use prompt collection | Installable skill pack for Cursor / Claude Code and similar tools |
+| Usage | Open a module → choose `Standard-version` → paste into chat | Install a skill and invoke with `@skill` |
+| Out of scope | No skill installer / `SKILL.md` system | Not a multi-framework prompt-variant collection |
+
+Skills repo: [https://github.com/naodeng/awesome-qa-skills](https://github.com/naodeng/awesome-qa-skills)
 
 ## 📚 Feature Categories
 
@@ -336,14 +347,13 @@ Visit our online documentation: **[https://inaodeng.com/prompts](https://inaoden
 ### Usage Steps
 
 1. **Select a Prompt**
-   - Choose the corresponding prompt file based on your testing task
-   - Use prompts under `en/` for English projects and `zh/` for Chinese projects
-   - Choose between Standard version or TOP 5 framework versions (ROSES, LangGPT, ICIO, CRISPE, RISE)
-   - Each version provides both full and lite options
+   - Go to `testing-types/en/<module>/` (use `testing-types/zh/<module>/` for Chinese)
+   - Open the matching prompt under `Standard-version/` by default; use Lite, framework, or platform variants only when needed
+   - Choose Standard or TOP 5 framework versions (ROSES, LangGPT, ICIO, CRISPE, RISE)
 
 2. **Prepare Input Materials**
-   - Prepare relevant input documents according to the prompt requirements
-   - Example: Requirements analysis requires requirements documents or User Stories
+   - Add real project context: scope, environment, constraints, risks, and expected output
+   - Example: Requirements analysis needs requirements documents or User Stories
 
 3. **Copy the Prompt**
    - Open the selected prompt and copy all content starting from the first divider `---`
@@ -352,7 +362,7 @@ Visit our online documentation: **[https://inaodeng.com/prompts](https://inaoden
 
 4. **Get Output**
    - The AI assistant will generate structured test documentation based on the prompt
-   - Adjust and refine as needed
+   - Adjust and refine as needed; if input is incomplete, clarify first or mark assumptions
 
 #### Unified Usage Instructions (Applies to All Prompt Files)
 
@@ -425,8 +435,8 @@ Visit our online documentation: **[https://inaodeng.com/prompts](https://inaoden
 - **📋 Full + Lite Versions**: Each testing type provides both full and lite versions for different scenarios
 - **📱 Platform Variants**: Requirements Analysis, Test Case Writing, Functional Testing, Test Strategy, Manual Testing, and Test Case Review now include `all_round`, `Web`, and `Mobile`
 - **🎨 TOP 5 Framework Support**: Each testing type supports ROSES, LangGPT, ICIO, CRISPE, RISE prompt frameworks
-- **👨‍💼 High Professionalism**: Each prompt designed by expert roles with 10+ years of experience
-- **🛠️ High Practicality**: Provides standardized formats and best practice guidance
+- **👨‍💼 Clear Constraints**: Emphasizes input audit, no fabrication, and minimum executable output
+- **🛠️ High Practicality**: Provides standardized formats and a practical usage path
 - **🔧 Good Extensibility**: Modular design, easy to extend and customize
 
 ### 📊 Usage Statistics

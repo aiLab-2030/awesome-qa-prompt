@@ -1,6 +1,6 @@
 # 可访问性测试 (Accessibility Testing)
 
-[English](./README_EN.md) | 简体中文
+[English](../../en/accessibility-testing/README.md) | 简体中文
 
 ## 模块简介
 
@@ -48,7 +48,7 @@
 - **适用场景：** 中文项目团队，无障碍合规要求
 
 ### 英文提示词
-- **文件：** `Standard-version/AccessibilityTestingPrompt_EN.md`
+- **文件：** `../../en/accessibility-testing/Standard-version/AccessibilityTestingPrompt.md`
 - **角色：** Senior Accessibility Testing Expert
 - **适用场景：** 国际化团队，英文项目环境
 

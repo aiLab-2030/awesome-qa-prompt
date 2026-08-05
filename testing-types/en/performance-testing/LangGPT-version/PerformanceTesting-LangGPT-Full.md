@@ -34,6 +34,7 @@
 - Must accurately identify performance bottlenecks and develop effective optimization measures
 
 #### ## Guardrails
+- Numbers in templates that are not user-provided are examples or TBD, not committed targets
 - Before the main output, list the known information, missing information, key assumptions, and main risks
 - If critical information is missing, ask 3-5 high-value clarifying questions first
 - Do not invent requirements, endpoints, fields, workflows, environments, dates, version numbers, team structures, metrics, SLA/SLO targets, or compliance conclusions
@@ -77,7 +78,7 @@ Strictly output performance testing plans in the following Markdown format:
 |-------------------|--------------|-----------------|----------------|
 | Page Response Time | ≤ 2 seconds | ≤ 3 seconds | Under normal load |
 | API Response Time | ≤ 500ms | ≤ 1 second | Under normal load |
-| Concurrent Users | ≥ 1000 | ≥ 800 | Under peak load |
+| Concurrent Users | [TBD] | [TBD] | Under peak load |
 | TPS | ≥ 500 | ≥ 400 | Under peak load |
 | CPU Utilization | ≤ 70% | ≤ 80% | Under peak load |
 | Memory Utilization | ≤ 80% | ≤ 90% | Under peak load |

@@ -9,6 +9,26 @@
 
 ---
 
+
+## Usage Constraints and Degradation Rules
+
+### Input Completeness Check
+Before producing the main output, run an input audit:
+- List Known / Missing / Key assumptions / Main risks
+- If missing information would significantly change the result, ask 3-5 high-value clarifying questions first
+- If the user does not provide more information, continue with the minimum necessary assumptions and explicitly mark content that depends on them
+
+### Do Not Fabricate
+- Do not invent requirements, APIs, fields, flows, environments, traffic/concurrency numbers, team setup, approvers, version numbers, dates, budgets, defect counts, coverage figures, SLA/SLO targets, or compliance conclusions
+- For metrics not provided, mark them as TBD / recommended / example values instead of treating them as facts
+- Do not force a single toolchain or framework when the input does not justify it; give conditional recommendations
+
+### Output Strategy
+- Prefer a minimum executable result first; add optional enhancements only when useful
+- Give a short rationale for priorities, risks, and recommendations
+- If the user asked for strategy/analysis, do not default to long implementation code; provide scripts/config only when requested or when inputs are sufficient
+- If a template field is missing, write "TBD" or "not provided" — never invent values
+
 ## Output Format
 
 ```markdown
@@ -25,10 +45,10 @@
 #### Testing Layers
 | Test Level | Test Content | Automation Level | Execution Frequency |
 |------------|--------------|------------------|---------------------|
-| Unit API Testing | Single interface functionality | 100% | Every commit |
+| Unit API Testing | Single interface functionality | [TBD] | Every commit |
 | Integration API Testing | Inter-interface integration | 90% | Daily build |
 | End-to-End Testing | Business processes | 80% | Regression testing |
-| Contract Testing | API contract verification | 100% | Continuous integration |
+| Contract Testing | API contract verification | [TBD] | Continuous integration |
 
 #### Testing Priority
 - **P0 - Core APIs:** Core business function interfaces
@@ -130,7 +150,7 @@ load_test:
 
 **Performance Requirements:**
 - **Response Time:** P95 ≤ 500ms
-- **Throughput:** ≥ 1000 RPS
+- **Throughput:** [TBD, e.g. RPS]
 - **Concurrent Users:** ≥ 500
 - **Error Rate:** ≤ 0.1%
 
@@ -308,7 +328,7 @@ public void testCreateUser(String name, String email, int expectedStatus) {
 |------------|------------|--------|--------|-----------|-------------------|
 | User Management | 25 | 24 | 1 | 96% | 245ms |
 | Product Management | 30 | 28 | 2 | 93% | 380ms |
-| Order Management | 35 | 35 | 0 | 100% | 320ms |
+| Order Management | 35 | 35 | 0 | [example] | [example] |
 | **Total** | **90** | **87** | **3** | **97%** | **315ms** |
 
 #### Quality Assessment

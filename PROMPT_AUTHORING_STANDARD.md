@@ -4,6 +4,12 @@
 
 本规范用于约束 `awesome-qa-prompt` 仓库内新增或修改的 Prompt、README 和框架变体，避免再次出现断链、过度模板化、默认编造和固定 KPI 误导等问题。
 
+## 仓库定位
+
+- 本仓库是 **QA Prompt Baseline**，维护可复制使用的提示词与多框架/平台变体。
+- 不要求 skill 化结构（无需 `SKILL.md`、安装脚本或工具技能目录）。
+- 质量上对齐常见约定：输入审计、禁止编造、最小可执行、链接真实可用；形态上保持 Prompt 合集，不与 `awesome-qa-skills` 混同。
+
 ## 适用范围
 
 - `testing-types/zh/*/README.md`

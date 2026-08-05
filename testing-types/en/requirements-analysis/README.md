@@ -1,6 +1,6 @@
 # Requirements Analysis
 
-English | [简体中文](./README.md)
+English | [简体中文](../../zh/requirements-analysis/README.md)
 
 ## Module Overview
 
@@ -58,7 +58,7 @@ The Requirements Analysis module provides professional test analysis guidance, h
 
 ### Full Version Prompts
 - **Chinese Version:** `Standard-version/RequirementsAnalysisPrompt.md` (v0.3)
-- **English Version:** `Standard-version/RequirementsAnalysisPrompt_EN.md` (v0.3)
+- **English Version:** `Standard-version/RequirementsAnalysisPrompt.md` (v0.3)
 - **Role:** Senior Web Full-Stack Testing Expert (10+ years experience)
 - **Output Content:**
   - Business background analysis
@@ -71,7 +71,7 @@ The Requirements Analysis module provides professional test analysis guidance, h
 
 ### Plus Version Prompts (Multi-Format Requirements Parsing)
 - **Chinese Version:** `Standard-version/RequirementsAnalysisPrompt_Plus.md` (v0.4)
-- **English Version:** `Standard-version/RequirementsAnalysisPrompt_Plus_EN.md` (v0.4)
+- **English Version:** `Standard-version/RequirementsAnalysisPrompt_Plus.md` (v0.4)
 - **Features:** Supports Word/HTML/JSON/Markdown/Excel inputs, runs input auditing and cross-document consistency checks before producing requirements analysis conclusions
 - **Output Content:**
   - Input inventory and parsability assessment
@@ -83,7 +83,7 @@ The Requirements Analysis module provides professional test analysis guidance, h
 
 ### Lite Version Prompts
 - **Chinese Version:** `Standard-version/RequirementsAnalysisPrompt_Lite.md` (v0.2)
-- **English Version:** `Standard-version/RequirementsAnalysisPrompt_Lite_EN.md` (v0.2)
+- **English Version:** `Standard-version/RequirementsAnalysisPrompt_Lite.md` (v0.2)
 - **Features:** Quick start, focused on core points, concise output
 - **Output Content:**
   - Business background (simplified)
@@ -266,9 +266,9 @@ Expected: Analysis report suitable for team review and discussion
 
 ## Related Modules
 
-- **[Test Case Writing](../test-case-writing/README_EN.md)** - Write detailed test cases based on test scenarios
-- **[Functional Testing](../functional-testing/README_EN.md)** - Execute functional testing
-- **[Test Strategy](../test-strategy/README_EN.md)** - Develop overall test strategy
+- **[Test Case Writing](../test-case-writing/README.md)** - Write detailed test cases based on test scenarios
+- **[Functional Testing](../functional-testing/README.md)** - Execute functional testing
+- **[Test Strategy](../test-strategy/README.md)** - Develop overall test strategy
 
 ## Learning Resources
 
@@ -293,7 +293,7 @@ Welcome to contribute to the Requirements Analysis module:
 
 ## License
 
-This module follows the MIT License. See the [LICENSE](../LICENSE) file in the project root directory for details.
+This module follows the MIT License. See the [LICENSE](../../../LICENSE) file in the project root directory for details.
 
 ---
 

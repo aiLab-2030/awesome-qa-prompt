@@ -1,6 +1,6 @@
 # AI-Assisted Testing
 
-English | [简体中文](./README.md)
+English | [简体中文](../../zh/ai-assisted-testing/README.md)
 
 ## Module Overview
 
@@ -48,12 +48,12 @@ The AI-Assisted Testing module provides comprehensive AI-powered testing guidanc
 - **Use Case:** Chinese project teams, AI testing implementation
 
 ### English Prompts
-- **File:** `Standard-version/AIAssistedTestingPrompt_EN.md`
+- **File:** `Standard-version/AIAssistedTestingPrompt.md`
 - **Role:** Senior AI Testing Expert
 - **Use Case:** International teams, English project environments
 
 ### Lite Version Prompts
-- **File:** `Standard-version/AIAssistedTestingPrompt_Lite.md` / `Standard-version/AIAssistedTestingPrompt_Lite_EN.md`
+- **File:** `Standard-version/AIAssistedTestingPrompt_Lite.md` / `Standard-version/AIAssistedTestingPrompt_Lite.md`
 - **Features:** Quick start, focused on core AI testing concepts
 - **Use Case:** Quick AI testing assessment and basic implementation
 
@@ -81,9 +81,9 @@ The AI-Assisted Testing module provides comprehensive AI-powered testing guidanc
 
 ## Related Modules
 
-- **[Automation Testing](../automation-testing/README_EN.md)** - Foundation for AI-assisted testing
-- **[Test Strategy](../test-strategy/README_EN.md)** - Integrate AI testing into overall strategy
-- **[Performance Testing](../performance-testing/README_EN.md)** - AI-powered performance analysis
+- **[Automation Testing](../automation-testing/README.md)** - Foundation for AI-assisted testing
+- **[Test Strategy](../test-strategy/README.md)** - Integrate AI testing into overall strategy
+- **[Performance Testing](../performance-testing/README.md)** - AI-powered performance analysis
 
 ## Learning Resources
 
@@ -108,7 +108,7 @@ Welcome to contribute to the AI-Assisted Testing module:
 
 ## License
 
-This module follows the MIT License. See the [LICENSE](../LICENSE) file in the project root directory for details.
+This module follows the MIT License. See the [LICENSE](../../../LICENSE) file in the project root directory for details.
 
 ---
 

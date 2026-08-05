@@ -20,6 +20,26 @@
 
 ---
 
+
+## Usage Constraints and Degradation Rules
+
+### Input Completeness Check
+Before producing the main output, run an input audit:
+- List Known / Missing / Key assumptions / Main risks
+- If missing information would significantly change the result, ask 3-5 high-value clarifying questions first
+- If the user does not provide more information, continue with the minimum necessary assumptions and explicitly mark content that depends on them
+
+### Do Not Fabricate
+- Do not invent requirements, APIs, fields, flows, environments, traffic/concurrency numbers, team setup, approvers, version numbers, dates, budgets, defect counts, coverage figures, SLA/SLO targets, or compliance conclusions
+- For metrics not provided, mark them as TBD / recommended / example values instead of treating them as facts
+- Do not force a single toolchain or framework when the input does not justify it; give conditional recommendations
+
+### Output Strategy
+- Prefer a minimum executable result first; add optional enhancements only when useful
+- Give a short rationale for priorities, risks, and recommendations
+- If the user asked for strategy/analysis, do not default to long implementation code; provide scripts/config only when requested or when inputs are sufficient
+- If a template field is missing, write "TBD" or "not provided" — never invent values
+
 ## Output Format
 
 ```markdown
@@ -35,7 +55,7 @@
 
 #### Quality Goals
 - **Functional Quality:** Functional completeness ≥ 98%
-- **Performance Quality:** Response time ≤ 2s, Concurrency ≥ 1000
+- **Performance Quality:** Response time: [TBD]; Concurrency: [TBD] (do not invent values)
 - **Security Quality:** No high-risk security vulnerabilities
 - **User Experience:** User satisfaction ≥ 4.0 points
 
@@ -55,9 +75,9 @@
 | Acceptance Testing | Business scenario verification | 100% | 30% | Before release |
 
 #### Test Type Strategy
-- **Functional Testing (40%):** Core business function verification
-- **Performance Testing (20%):** Response time and concurrency capability
-- **Security Testing (15%):** Security vulnerabilities and data protection
+- **Functional Testing (share TBD):** Core business function verification
+- **Performance Testing (share TBD):** Response time and concurrency capability
+- **Security Testing (share TBD):** Security vulnerabilities and data protection
 - **Compatibility Testing (15%):** Cross-platform and browser compatibility
 - **Usability Testing (10%):** User experience and ease of use
 

@@ -29,6 +29,7 @@
 - All test scripts must be executable and comply with best practices
 
 #### ## Guardrails
+- Numbers in templates that are not user-provided are examples or TBD, not committed targets
 - Before the main output, list the known information, missing information, key assumptions, and main risks
 - If critical information is missing, ask 3-5 high-value clarifying questions first
 - Do not invent requirements, endpoints, fields, workflows, environments, dates, version numbers, team structures, metrics, SLA/SLO targets, or compliance conclusions
@@ -58,7 +59,7 @@
   - Page loading: ≤ 3 seconds
   - API response: ≤ 500ms
   - Database query: ≤ 200ms
-- **Throughput:** ≥ 1000 TPS
+- **Throughput:** [TBD]
 - **Concurrent Users:** ≥ 500 users
 - **Resource Usage:** CPU ≤ 80%, Memory ≤ 85%
 

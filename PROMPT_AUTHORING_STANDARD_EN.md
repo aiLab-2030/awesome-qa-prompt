@@ -4,6 +4,12 @@
 
 This standard defines the minimum quality bar for prompts, READMEs, and framework variants in `awesome-qa-prompt`, so the repository does not regress into broken links, over-specified templates, fabricated details, or misleading hard-coded KPIs.
 
+## Repository Positioning
+
+- This repository is a **QA Prompt Baseline**: copy-and-use prompts plus multi-framework / platform variants.
+- It does not require a skill-pack structure (no `SKILL.md`, installers, or tool skill directories).
+- Quality should follow input audit, no fabrication, minimum executable output, and real links; the form stays a prompt collection and must not be conflated with `awesome-qa-skills`.
+
 ## Scope
 
 - `testing-types/zh/*/README.md`

@@ -1,6 +1,6 @@
 # 自动化测试 (Automation Testing)
 
-[English](./README_EN.md) | 简体中文
+[English](../../en/automation-testing/README.md) | 简体中文
 
 ## 📋 概述
 
@@ -35,7 +35,7 @@
 - 技术栈选择和框架设计
 - CI/CD 集成和维护优化
 
-### [AutomationTestingPrompt_EN.md](Standard-version/AutomationTestingPrompt_EN.md)
+### [AutomationTestingPrompt.md](../../en/automation-testing/Standard-version/AutomationTestingPrompt.md)
 **语言**：English
 **角色**：Senior Test Automation Architect
 **功能**：Design comprehensive test automation strategies and implementation plans

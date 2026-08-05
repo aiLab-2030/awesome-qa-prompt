@@ -1,6 +1,6 @@
 # Test Reporting
 
-English | [简体中文](./README.md)
+English | [简体中文](../../zh/test-reporting/README.md)
 
 ## Module Overview
 
@@ -48,12 +48,12 @@ The Test Reporting module provides comprehensive test reporting guidance, helpin
 - **Use Case:** Chinese project teams, test reporting requirements
 
 ### English Prompts
-- **File:** `Standard-version/TestReportingPrompt_EN.md`
+- **File:** `Standard-version/TestReportingPrompt.md`
 - **Role:** Senior Test Manager
 - **Use Case:** International teams, English project environments
 
 ### Lite Version Prompts
-- **File:** `Standard-version/TestReportingPrompt_Lite.md` / `Standard-version/TestReportingPrompt_Lite_EN.md`
+- **File:** `Standard-version/TestReportingPrompt_Lite.md` / `Standard-version/TestReportingPrompt_Lite.md`
 - **Features:** Quick start, focused on core reporting elements
 - **Use Case:** Quick test reporting and status updates
 
@@ -81,9 +81,9 @@ The Test Reporting module provides comprehensive test reporting guidance, helpin
 
 ## Related Modules
 
-- **[Bug Reporting](../bug-reporting/README_EN.md)** - Defect data for reporting
-- **[Test Strategy](../test-strategy/README_EN.md)** - Strategic quality reporting
-- **[Automation Testing](../automation-testing/README_EN.md)** - Automation test results
+- **[Bug Reporting](../bug-reporting/README.md)** - Defect data for reporting
+- **[Test Strategy](../test-strategy/README.md)** - Strategic quality reporting
+- **[Automation Testing](../automation-testing/README.md)** - Automation test results
 
 ## Learning Resources
 
@@ -108,7 +108,7 @@ Welcome to contribute to the Test Reporting module:
 
 ## License
 
-This module follows the MIT License. See the [LICENSE](../LICENSE) file in the project root directory for details.
+This module follows the MIT License. See the [LICENSE](../../../LICENSE) file in the project root directory for details.
 
 ---
 

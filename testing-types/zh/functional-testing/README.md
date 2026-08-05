@@ -1,6 +1,6 @@
 # 功能测试 (Functional Testing)
 
-[English](./README_EN.md) | 简体中文
+[English](../../en/functional-testing/README.md) | 简体中文
 
 ## 📋 概述
 
@@ -35,7 +35,7 @@
 - 业务逻辑复杂性和用户体验关注
 - 系统集成复杂性处理
 
-### [FunctionalTestingPrompt_EN.md](Standard-version/FunctionalTestingPrompt_EN.md)
+### [FunctionalTestingPrompt.md](../../en/functional-testing/Standard-version/FunctionalTestingPrompt.md)
 **语言**：English
 **角色**：Senior Functional Testing Expert
 **功能**：Design comprehensive functional testing strategies and test plans

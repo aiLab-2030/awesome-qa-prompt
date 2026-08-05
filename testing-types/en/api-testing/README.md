@@ -1,6 +1,6 @@
 # API Testing
 
-English | [简体中文](./README.md)
+English | [简体中文](../../zh/api-testing/README.md)
 
 ## Module Overview
 
@@ -48,12 +48,12 @@ The API Testing module provides comprehensive API testing guidance, helping test
 - **Use Case:** Chinese project teams, API testing requirements
 
 ### English Prompts
-- **File:** `Standard-version/APITestingPrompt_EN.md`
+- **File:** `Standard-version/APITestingPrompt.md`
 - **Role:** Senior API Testing Expert
 - **Use Case:** International teams, English project environments
 
 ### Lite Version Prompts
-- **File:** `Standard-version/APITestingPrompt_Lite.md` / `Standard-version/APITestingPrompt_Lite_EN.md`
+- **File:** `Standard-version/APITestingPrompt_Lite.md` / `Standard-version/APITestingPrompt_Lite.md`
 - **Features:** Quick start, focused on core API testing concepts
 - **Use Case:** Quick API testing and basic validation
 
@@ -81,9 +81,9 @@ The API Testing module provides comprehensive API testing guidance, helping test
 
 ## Related Modules
 
-- **[Automation Testing](../automation-testing/README_EN.md)** - API test automation
-- **[Performance Testing](../performance-testing/README_EN.md)** - API performance testing
-- **[Security Testing](../security-testing/README_EN.md)** - API security testing
+- **[Automation Testing](../automation-testing/README.md)** - API test automation
+- **[Performance Testing](../performance-testing/README.md)** - API performance testing
+- **[Security Testing](../security-testing/README.md)** - API security testing
 
 ## Learning Resources
 
@@ -108,7 +108,7 @@ Welcome to contribute to the API Testing module:
 
 ## License
 
-This module follows the MIT License. See the [LICENSE](../LICENSE) file in the project root directory for details.
+This module follows the MIT License. See the [LICENSE](../../../LICENSE) file in the project root directory for details.
 
 ---
 

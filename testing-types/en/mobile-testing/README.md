@@ -1,6 +1,6 @@
 # Mobile Testing
 
-English | [简体中文](./README.md)
+English | [简体中文](../../zh/mobile-testing/README.md)
 
 ## Module Overview
 
@@ -48,12 +48,12 @@ The Mobile Testing module provides comprehensive mobile application testing guid
 - **Use Case:** Chinese project teams, mobile testing requirements
 
 ### English Prompts
-- **File:** `Standard-version/MobileTestingPrompt_EN.md`
+- **File:** `Standard-version/MobileTestingPrompt.md`
 - **Role:** Senior Mobile Testing Expert
 - **Use Case:** International teams, English project environments
 
 ### Lite Version Prompts
-- **File:** `Standard-version/MobileTestingPrompt_Lite.md` / `Standard-version/MobileTestingPrompt_Lite_EN.md`
+- **File:** `Standard-version/MobileTestingPrompt_Lite.md` / `Standard-version/MobileTestingPrompt_Lite.md`
 - **Features:** Quick start, focused on core mobile testing concepts
 - **Use Case:** Quick mobile testing and basic validation
 
@@ -81,9 +81,9 @@ The Mobile Testing module provides comprehensive mobile application testing guid
 
 ## Related Modules
 
-- **[Automation Testing](../automation-testing/README_EN.md)** - Mobile test automation
-- **[Performance Testing](../performance-testing/README_EN.md)** - Mobile performance testing
-- **[Accessibility Testing](../accessibility-testing/README_EN.md)** - Mobile accessibility testing
+- **[Automation Testing](../automation-testing/README.md)** - Mobile test automation
+- **[Performance Testing](../performance-testing/README.md)** - Mobile performance testing
+- **[Accessibility Testing](../accessibility-testing/README.md)** - Mobile accessibility testing
 
 ## Learning Resources
 
@@ -108,7 +108,7 @@ Welcome to contribute to the Mobile Testing module:
 
 ## License
 
-This module follows the MIT License. See the [LICENSE](../LICENSE) file in the project root directory for details.
+This module follows the MIT License. See the [LICENSE](../../../LICENSE) file in the project root directory for details.
 
 ---
 

@@ -1,6 +1,6 @@
 # Automation Testing
 
-English | [简体中文](./README.md)
+English | [简体中文](../../zh/automation-testing/README.md)
 
 ## Module Overview
 
@@ -48,12 +48,12 @@ The Automation Testing module provides comprehensive test automation guidance, h
 - **Use Case:** Chinese project teams, automation framework design
 
 ### English Prompts
-- **File:** `Standard-version/AutomationTestingPrompt_EN.md`
+- **File:** `Standard-version/AutomationTestingPrompt.md`
 - **Role:** Senior Test Automation Architect
 - **Use Case:** International teams, English project environments
 
 ### Lite Version Prompts
-- **File:** `Standard-version/AutomationTestingPrompt_Lite.md` / `Standard-version/AutomationTestingPrompt_Lite_EN.md`
+- **File:** `Standard-version/AutomationTestingPrompt_Lite.md` / `Standard-version/AutomationTestingPrompt_Lite.md`
 - **Features:** Quick start, focused on core automation concepts
 - **Use Case:** Quick automation assessment and basic framework setup
 
@@ -81,9 +81,9 @@ The Automation Testing module provides comprehensive test automation guidance, h
 
 ## Related Modules
 
-- **[Functional Testing](../functional-testing/README_EN.md)** - Functional test automation
-- **[API Testing](../api-testing/README_EN.md)** - API test automation
-- **[Performance Testing](../performance-testing/README_EN.md)** - Performance test automation
+- **[Functional Testing](../functional-testing/README.md)** - Functional test automation
+- **[API Testing](../api-testing/README.md)** - API test automation
+- **[Performance Testing](../performance-testing/README.md)** - Performance test automation
 
 ## Learning Resources
 
@@ -108,7 +108,7 @@ Welcome to contribute to the Automation Testing module:
 
 ## License
 
-This module follows the MIT License. See the [LICENSE](../LICENSE) file in the project root directory for details.
+This module follows the MIT License. See the [LICENSE](../../../LICENSE) file in the project root directory for details.
 
 ---
 

@@ -1,6 +1,6 @@
 # 测试用例评审 (Test Case Review)
 
-[English](./README_EN.md) | 简体中文
+[English](../../en/test-case-reviewer/README.md) | 简体中文
 
 ## 模块简介
 
@@ -53,7 +53,7 @@
 
 ### 完整版提示词
 - **中文版：** `Standard-version/TestCaseReviewerPrompt.md` (v0.1)
-- **英文版：** `Standard-version/TestCaseReviewerPrompt_EN.md` (v0.1)
+- **英文版：** `../../en/test-case-reviewer/Standard-version/TestCaseReviewerPrompt.md` (v0.1)
 - **角色：** 资深业务测试专家 (10年+业务一线经验)
 - **输出内容：**
   - 评审概览（基本信息、评审结论）
@@ -68,7 +68,7 @@
 
 ### 精简版提示词
 - **中文版：** `Standard-version/TestCaseReviewerPrompt_Lite.md` (v0.1)
-- **英文版：** `Standard-version/TestCaseReviewerPrompt_Lite_EN.md` (v0.1)
+- **英文版：** `../../en/test-case-reviewer/Standard-version/TestCaseReviewerPrompt_Lite.md` (v0.1)
 - **特点：** 快速评审，核心要点集中，输出简洁
 - **输出内容：**
   - 评审概览（简化版）
@@ -337,7 +337,7 @@
 
 ## 许可证
 
-本模块遵循 MIT 许可证，详见项目根目录的 [LICENSE](../LICENSE) 文件。
+本模块遵循 MIT 许可证，详见项目根目录的 [LICENSE](../../../LICENSE) 文件。
 
 ---
 

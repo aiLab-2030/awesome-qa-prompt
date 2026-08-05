@@ -1,6 +1,6 @@
 # 需求分析 (Requirements Analysis)
 
-[English](./README_EN.md) | 简体中文
+[English](../../en/requirements-analysis/README.md) | 简体中文
 
 ## 模块简介
 
@@ -57,7 +57,7 @@
 
 ### 完整版提示词
 - **中文版：** `Standard-version/RequirementsAnalysisPrompt.md` (v0.3)
-- **英文版：** `Standard-version/RequirementsAnalysisPrompt_EN.md` (v0.3)
+- **英文版：** `../../en/requirements-analysis/Standard-version/RequirementsAnalysisPrompt.md` (v0.3)
 - **角色：** 资深 Web 全栈测试专家 (10年+经验)
 - **输出内容：**
   - 业务背景分析
@@ -70,7 +70,7 @@
 
 ### Plus 版提示词（多格式需求解析）
 - **中文版：** `Standard-version/RequirementsAnalysisPrompt_Plus.md` (v0.4)
-- **英文版：** `Standard-version/RequirementsAnalysisPrompt_Plus_EN.md` (v0.4)
+- **英文版：** `../../en/requirements-analysis/Standard-version/RequirementsAnalysisPrompt_Plus.md` (v0.4)
 - **特点：** 支持 Word/HTML/JSON/Markdown/Excel 多格式输入，先做输入审计与跨文档一致性检查，再输出需求分析结论
 - **输出内容：**
   - 输入清单与可解析性评估
@@ -82,7 +82,7 @@
 
 ### 精简版提示词
 - **中文版：** `Standard-version/RequirementsAnalysisPrompt_Lite.md` (v0.2)
-- **英文版：** `Standard-version/RequirementsAnalysisPrompt_Lite_EN.md` (v0.2)
+- **英文版：** `../../en/requirements-analysis/Standard-version/RequirementsAnalysisPrompt_Lite.md` (v0.2)
 - **特点：** 快速上手，核心要点集中，输出简洁
 - **输出内容：**
   - 业务背景（简化版）
@@ -292,7 +292,7 @@
 
 ## 许可证
 
-本模块遵循 MIT 许可证，详见项目根目录的 [LICENSE](../LICENSE) 文件。
+本模块遵循 MIT 许可证，详见项目根目录的 [LICENSE](../../../LICENSE) 文件。
 
 ---
 
