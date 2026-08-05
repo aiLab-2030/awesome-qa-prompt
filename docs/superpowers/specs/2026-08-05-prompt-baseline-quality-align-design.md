@@ -1,8 +1,8 @@
 # Design: Prompt Baseline 质量原则对齐
 
-日期：2026-08-05  
-仓库：`awesome-qa-prompt`  
-参考：`awesome-qa-skills`（只借鉴质量原则，不 skill 化）  
+日期：2026-08-05
+仓库：`awesome-qa-prompt`
+参考：`awesome-qa-skills`（只借鉴质量原则，不 skill 化）
 方案：方案 2（规范 + README 克制化 + 违规点定点修）
 
 ## 1. 背景与目标

@@ -244,7 +244,7 @@ EOF
 - Modify: `testing-types/zh/*/README.md`（15 个）
 - Modify: `testing-types/en/*/README.md`（15 个）
 
-**模块名列表（两边一致）：**  
+**模块名列表（两边一致）：**
 `accessibility-testing` `ai-assisted-testing` `api-testing` `automation-testing` `bug-reporting` `functional-testing` `manual-testing` `mobile-testing` `performance-testing` `requirements-analysis` `security-testing` `test-case-reviewer` `test-case-writing` `test-reporting` `test-strategy`
 
 - [ ] **Step 1: 修中文模块语言切换链接**
@@ -281,7 +281,7 @@ English | [简体中文](../../zh/<module>/README.md)
 
 规则：
 
-- 链接/路径若为 `Standard-version/FooPrompt_EN.md`，改为指向英文目录真实文件，例如：  
+- 链接/路径若为 `Standard-version/FooPrompt_EN.md`，改为指向英文目录真实文件，例如：
   `[FooPrompt.md](../../en/<module>/Standard-version/FooPrompt.md)`
 - 文案里写「英文版文件：`..._EN.md`」的，改为「英文版见 `testing-types/en/<module>/Standard-version/`」
 - 保留对本目录中文 Prompt 的正确相对链接（如 `Standard-version/FooPrompt.md`）
@@ -386,7 +386,7 @@ Before producing the main output, run an input audit:
 
 - [ ] **Step 2: 批量插入（可用一次性 node 脚本；不要改已有约束文件）**
 
-判定“已有约束”：文件已匹配  
+判定“已有约束”：文件已匹配
 `Usage Constraints|Do Not Fabricate|Input Completeness|使用约束与降级|禁止编造|输入完整性`。
 
 插入位置启发式：在第一个 `---` 之后的 Role/Task 块结束的下一个 `---` 之后插入；若结构不同，则在标题与第一个 `## ` 之间插入，且避免重复插入。
