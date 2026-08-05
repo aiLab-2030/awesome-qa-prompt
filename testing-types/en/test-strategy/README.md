@@ -1,6 +1,6 @@
 # Test Strategy
 
-English | [简体中文](./README.md)
+English | [简体中文](../../zh/test-strategy/README.md)
 
 ## Module Overview
 
@@ -48,12 +48,12 @@ The Test Strategy module provides comprehensive test strategy planning guidance,
 - **Use Case:** Chinese project teams, test strategy planning
 
 ### English Prompts
-- **File:** `Standard-version/TestStrategyPrompt_EN.md`
+- **File:** `Standard-version/TestStrategyPrompt.md`
 - **Role:** Senior Test Architect
 - **Use Case:** International teams, English project environments
 
 ### Lite Version Prompts
-- **File:** `Standard-version/TestStrategyPrompt_Lite.md` / `Standard-version/TestStrategyPrompt_Lite_EN.md`
+- **File:** `Standard-version/TestStrategyPrompt_Lite.md` / `Standard-version/TestStrategyPrompt_Lite.md`
 - **Features:** Quick start, focused on core strategy elements
 - **Use Case:** Quick test strategy planning and basic approach
 
@@ -81,9 +81,9 @@ The Test Strategy module provides comprehensive test strategy planning guidance,
 
 ## Related Modules
 
-- **[Requirements Analysis](../requirements-analysis/README_EN.md)** - Requirements-based strategy
-- **[Test Reporting](../test-reporting/README_EN.md)** - Strategy execution reporting
-- **[Automation Testing](../automation-testing/README_EN.md)** - Automation strategy
+- **[Requirements Analysis](../requirements-analysis/README.md)** - Requirements-based strategy
+- **[Test Reporting](../test-reporting/README.md)** - Strategy execution reporting
+- **[Automation Testing](../automation-testing/README.md)** - Automation strategy
 
 ## Learning Resources
 
@@ -108,7 +108,7 @@ Welcome to contribute to the Test Strategy module:
 
 ## License
 
-This module follows the MIT License. See the [LICENSE](../LICENSE) file in the project root directory for details.
+This module follows the MIT License. See the [LICENSE](../../../LICENSE) file in the project root directory for details.
 
 ---
 

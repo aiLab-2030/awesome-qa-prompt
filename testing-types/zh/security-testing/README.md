@@ -1,6 +1,6 @@
 # 安全测试 (Security Testing)
 
-[English](./README_EN.md) | 简体中文
+[English](../../en/security-testing/README.md) | 简体中文
 
 ## 模块简介
 
@@ -47,7 +47,7 @@
 - **适用场景：** 中文项目团队，系统安全评估和加固
 
 ### 英文提示词
-- **文件：** `Standard-version/SecurityTestingPrompt_EN.md`
+- **文件：** `../../en/security-testing/Standard-version/SecurityTestingPrompt.md`
 - **角色：** Senior Security Testing Expert
 - **适用场景：** 国际化团队，英文项目环境
 
@@ -57,7 +57,7 @@
 
 1. **选择提示词文件**
    - 中文项目使用 `Standard-version/SecurityTestingPrompt.md`
-   - 英文项目使用 `Standard-version/SecurityTestingPrompt_EN.md`
+   - 英文项目使用 `../../en/security-testing/Standard-version/SecurityTestingPrompt.md`
 
 2. **准备输入材料**
    ```

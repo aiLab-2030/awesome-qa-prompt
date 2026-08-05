@@ -1,6 +1,6 @@
 # Functional Testing
 
-English | [简体中文](./README.md)
+English | [简体中文](../../zh/functional-testing/README.md)
 
 ## Module Overview
 
@@ -48,12 +48,12 @@ The Functional Testing module provides comprehensive functional testing guidance
 - **Use Case:** Chinese project teams, functional testing requirements
 
 ### English Prompts
-- **File:** `Standard-version/FunctionalTestingPrompt_EN.md`
+- **File:** `Standard-version/FunctionalTestingPrompt.md`
 - **Role:** Senior Functional Testing Expert
 - **Use Case:** International teams, English project environments
 
 ### Lite Version Prompts
-- **File:** `Standard-version/FunctionalTestingPrompt_Lite.md` / `Standard-version/FunctionalTestingPrompt_Lite_EN.md`
+- **File:** `Standard-version/FunctionalTestingPrompt_Lite.md` / `Standard-version/FunctionalTestingPrompt_Lite.md`
 - **Features:** Quick start, focused on core functional testing
 - **Use Case:** Quick functional validation and basic testing
 
@@ -81,9 +81,9 @@ The Functional Testing module provides comprehensive functional testing guidance
 
 ## Related Modules
 
-- **[Requirements Analysis](../requirements-analysis/README_EN.md)** - Understand requirements for testing
-- **[Test Case Writing](../test-case-writing/README_EN.md)** - Write detailed test cases
-- **[Automation Testing](../automation-testing/README_EN.md)** - Automate functional tests
+- **[Requirements Analysis](../requirements-analysis/README.md)** - Understand requirements for testing
+- **[Test Case Writing](../test-case-writing/README.md)** - Write detailed test cases
+- **[Automation Testing](../automation-testing/README.md)** - Automate functional tests
 
 ## Learning Resources
 
@@ -108,7 +108,7 @@ Welcome to contribute to the Functional Testing module:
 
 ## License
 
-This module follows the MIT License. See the [LICENSE](../LICENSE) file in the project root directory for details.
+This module follows the MIT License. See the [LICENSE](../../../LICENSE) file in the project root directory for details.
 
 ---
 

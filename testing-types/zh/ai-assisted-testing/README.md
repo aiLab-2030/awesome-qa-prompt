@@ -1,6 +1,6 @@
 # AI辅助测试 (AI-Assisted Testing)
 
-[English](./README_EN.md) | 简体中文
+[English](../../en/ai-assisted-testing/README.md) | 简体中文
 
 ## 模块简介
 
@@ -41,7 +41,7 @@ AI辅助测试模块提供了将人工智能技术应用于软件测试的专业
 - **适用场景：** 中文项目团队，AI技术在测试中的应用
 
 ### 英文提示词
-- **文件：** `Standard-version/AIAssistedTestingPrompt_EN.md`
+- **文件：** `../../en/ai-assisted-testing/Standard-version/AIAssistedTestingPrompt.md`
 - **角色：** Senior AI-Assisted Testing Expert
 - **适用场景：** 国际化团队，英文项目环境
 
@@ -51,7 +51,7 @@ AI辅助测试模块提供了将人工智能技术应用于软件测试的专业
 
 1. **选择提示词文件**
    - 中文项目使用 `Standard-version/AIAssistedTestingPrompt.md`
-   - 英文项目使用 `Standard-version/AIAssistedTestingPrompt_EN.md`
+   - 英文项目使用 `../../en/ai-assisted-testing/Standard-version/AIAssistedTestingPrompt.md`
 
 2. **准备输入材料**
    ```

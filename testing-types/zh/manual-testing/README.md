@@ -1,6 +1,6 @@
 # 手动测试 (Manual Testing)
 
-[English](./README_EN.md) | 简体中文
+[English](../../en/manual-testing/README.md) | 简体中文
 
 ## 模块简介
 
@@ -47,7 +47,7 @@
 - **适用场景：** 中文项目团队，需要人工测试验证的场景
 
 ### 英文提示词
-- **文件：** `Standard-version/ManualTestingPrompt_EN.md`
+- **文件：** `../../en/manual-testing/Standard-version/ManualTestingPrompt.md`
 - **角色：** Senior Manual Testing Expert
 - **适用场景：** 国际化团队，英文项目环境
 
@@ -57,7 +57,7 @@
 
 1. **选择提示词文件**
    - 中文项目使用 `Standard-version/ManualTestingPrompt.md`
-   - 英文项目使用 `Standard-version/ManualTestingPrompt_EN.md`
+   - 英文项目使用 `../../en/manual-testing/Standard-version/ManualTestingPrompt.md`
 
 2. **准备输入材料**
    ```

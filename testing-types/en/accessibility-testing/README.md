@@ -1,6 +1,6 @@
 # Accessibility Testing
 
-English | [简体中文](./README.md)
+English | [简体中文](../../zh/accessibility-testing/README.md)
 
 ## Module Overview
 
@@ -49,12 +49,12 @@ The Accessibility Testing module provides comprehensive accessibility testing gu
 - **Use Case:** Chinese project teams, accessibility compliance requirements
 
 ### English Prompts
-- **File:** `Standard-version/AccessibilityTestingPrompt_EN.md`
+- **File:** `Standard-version/AccessibilityTestingPrompt.md`
 - **Role:** Senior Accessibility Testing Expert
 - **Use Case:** International teams, English project environments
 
 ### Lite Version Prompts
-- **File:** `Standard-version/AccessibilityTestingPrompt_Lite.md` / `Standard-version/AccessibilityTestingPrompt_Lite_EN.md`
+- **File:** `Standard-version/AccessibilityTestingPrompt_Lite.md` / `Standard-version/AccessibilityTestingPrompt_Lite.md`
 - **Features:** Quick start, focused on core points
 - **Use Case:** Quick assessment and basic accessibility testing
 
@@ -261,7 +261,7 @@ Welcome to contribute to the Accessibility Testing module:
 
 ## License
 
-This module follows the MIT License. See the [LICENSE](../LICENSE) file in the project root directory for details.
+This module follows the MIT License. See the [LICENSE](../../../LICENSE) file in the project root directory for details.
 
 ---
 

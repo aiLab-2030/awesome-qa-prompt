@@ -1,6 +1,6 @@
 # 测试用例编写 (Test Case Writing)
 
-[English](./README_EN.md) | 简体中文
+[English](../../en/test-case-writing/README.md) | 简体中文
 
 ## 📋 概述
 
@@ -36,7 +36,7 @@
 - 测试数据设计和管理策略
 - 可维护性和可追溯性保证
 
-### [TestCaseWritingPrompt_EN.md](Standard-version/TestCaseWritingPrompt_EN.md)
+### [TestCaseWritingPrompt.md](../../en/test-case-writing/Standard-version/TestCaseWritingPrompt.md)
 **语言**：English
 **角色**：Senior Test Case Design Expert
 **功能**：Transform test scenarios into detailed, executable test cases
@@ -55,7 +55,7 @@
 
 2. **选择合适的提示词**
    - 中文项目使用 `Standard-version/TestCaseWritingPrompt.md`
-   - 英文项目使用 `Standard-version/TestCaseWritingPrompt_EN.md`
+   - 英文项目使用 `../../en/test-case-writing/Standard-version/TestCaseWritingPrompt.md`
 
 3. **提供上下文信息**
    ```
@@ -168,7 +168,7 @@
 
 ## 📄 许可证
 
-本项目采用 [MIT License](../../LICENSE) 许可证。
+本项目采用 [MIT License](../../../LICENSE) 许可证。
 
 ---
 

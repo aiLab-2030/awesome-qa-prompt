@@ -1,6 +1,6 @@
 # 性能测试 (Performance Testing)
 
-[English](./README_EN.md) | 简体中文
+[English](../../en/performance-testing/README.md) | 简体中文
 
 ## 📋 概述
 
@@ -35,7 +35,7 @@
 - 测试场景真实性和性能优化建议
 - 性能监控和趋势分析
 
-### [PerformanceTestingPrompt_EN.md](Standard-version/PerformanceTestingPrompt_EN.md)
+### [PerformanceTestingPrompt.md](../../en/performance-testing/Standard-version/PerformanceTestingPrompt.md)
 **语言**：English
 **角色**：Senior Performance Testing Expert
 **功能**：Design comprehensive performance testing strategies and test plans

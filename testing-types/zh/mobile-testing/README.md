@@ -1,6 +1,6 @@
 # 移动端测试 (Mobile Testing)
 
-[English](./README_EN.md) | 简体中文
+[English](../../en/mobile-testing/README.md) | 简体中文
 
 ## 📋 概述
 
@@ -35,7 +35,7 @@
 - 移动端生命周期和用户交互测试
 - 性能、安全、用户体验专项测试
 
-### [MobileTestingPrompt_EN.md](Standard-version/MobileTestingPrompt_EN.md)
+### [MobileTestingPrompt.md](../../en/mobile-testing/Standard-version/MobileTestingPrompt.md)
 **语言**：English
 **角色**：Senior Mobile Testing Expert
 **功能**：Design comprehensive mobile testing strategies and test plans

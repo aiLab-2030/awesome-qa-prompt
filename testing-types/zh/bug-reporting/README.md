@@ -1,6 +1,6 @@
 # 缺陷上报 (Bug Reporting)
 
-[English](./README_EN.md) | 简体中文
+[English](../../en/bug-reporting/README.md) | 简体中文
 
 ## 📋 概述
 
@@ -35,7 +35,7 @@
 - 根因分析和解决建议
 - 缺陷生命周期管理
 
-### [BugReportingPrompt_EN.md](Standard-version/BugReportingPrompt_EN.md)
+### [BugReportingPrompt.md](../../en/bug-reporting/Standard-version/BugReportingPrompt.md)
 **语言**：English
 **角色**：Senior Bug Management Expert
 **功能**：Write detailed and accurate bug reports

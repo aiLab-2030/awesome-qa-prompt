@@ -1,6 +1,6 @@
 # Performance Testing
 
-English | [简体中文](./README.md)
+English | [简体中文](../../zh/performance-testing/README.md)
 
 ## Module Overview
 
@@ -48,12 +48,12 @@ The Performance Testing module provides comprehensive performance testing guidan
 - **Use Case:** Chinese project teams, performance testing requirements
 
 ### English Prompts
-- **File:** `Standard-version/PerformanceTestingPrompt_EN.md`
+- **File:** `Standard-version/PerformanceTestingPrompt.md`
 - **Role:** Senior Performance Testing Expert
 - **Use Case:** International teams, English project environments
 
 ### Lite Version Prompts
-- **File:** `Standard-version/PerformanceTestingPrompt_Lite.md` / `Standard-version/PerformanceTestingPrompt_Lite_EN.md`
+- **File:** `Standard-version/PerformanceTestingPrompt_Lite.md` / `Standard-version/PerformanceTestingPrompt_Lite.md`
 - **Features:** Quick start, focused on core performance testing concepts
 - **Use Case:** Quick performance assessment and basic testing
 
@@ -81,9 +81,9 @@ The Performance Testing module provides comprehensive performance testing guidan
 
 ## Related Modules
 
-- **[Automation Testing](../automation-testing/README_EN.md)** - Performance test automation
-- **[API Testing](../api-testing/README_EN.md)** - API performance testing
-- **[Test Reporting](../test-reporting/README_EN.md)** - Performance test reporting
+- **[Automation Testing](../automation-testing/README.md)** - Performance test automation
+- **[API Testing](../api-testing/README.md)** - API performance testing
+- **[Test Reporting](../test-reporting/README.md)** - Performance test reporting
 
 ## Learning Resources
 
@@ -108,7 +108,7 @@ Welcome to contribute to the Performance Testing module:
 
 ## License
 
-This module follows the MIT License. See the [LICENSE](../LICENSE) file in the project root directory for details.
+This module follows the MIT License. See the [LICENSE](../../../LICENSE) file in the project root directory for details.
 
 ---
 

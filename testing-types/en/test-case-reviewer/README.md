@@ -1,6 +1,6 @@
 # Test Case Review
 
-English | [简体中文](./README.md)
+English | [简体中文](../../zh/test-case-reviewer/README.md)
 
 ## Module Overview
 
@@ -54,7 +54,7 @@ The Test Case Review module provides professional test case review guidance from
 
 ### Full Version Prompts
 - **Chinese Version:** `Standard-version/TestCaseReviewerPrompt.md` (v0.1)
-- **English Version:** `Standard-version/TestCaseReviewerPrompt_EN.md` (v0.1)
+- **English Version:** `Standard-version/TestCaseReviewerPrompt.md` (v0.1)
 - **Role:** Senior Business & Testing Expert (10+ years business frontline experience)
 - **Output Content:**
   - Review overview (basic information, review conclusion)
@@ -69,7 +69,7 @@ The Test Case Review module provides professional test case review guidance from
 
 ### Lite Version Prompts
 - **Chinese Version:** `Standard-version/TestCaseReviewerPrompt_Lite.md` (v0.1)
-- **English Version:** `Standard-version/TestCaseReviewerPrompt_Lite_EN.md` (v0.1)
+- **English Version:** `Standard-version/TestCaseReviewerPrompt_Lite.md` (v0.1)
 - **Features:** Quick review, focused on core points, concise output
 - **Output Content:**
   - Review overview (simplified)
@@ -311,9 +311,9 @@ Expected: Improve testing depth and breadth
 
 ## Related Modules
 
-- **[Requirements Analysis](../requirements-analysis/README_EN.md)** - Requirements analysis and test scenario design
-- **[Test Case Writing](../test-case-writing/README_EN.md)** - Test case writing guidance
-- **[Test Strategy](../test-strategy/README_EN.md)** - Overall test strategy formulation
+- **[Requirements Analysis](../requirements-analysis/README.md)** - Requirements analysis and test scenario design
+- **[Test Case Writing](../test-case-writing/README.md)** - Test case writing guidance
+- **[Test Strategy](../test-strategy/README.md)** - Overall test strategy formulation
 
 ## Learning Resources
 
@@ -338,7 +338,7 @@ Welcome to contribute to the Test Case Review module:
 
 ## License
 
-This module follows the MIT License. See the [LICENSE](../LICENSE) file in the project root directory for details.
+This module follows the MIT License. See the [LICENSE](../../../LICENSE) file in the project root directory for details.
 
 ---
 

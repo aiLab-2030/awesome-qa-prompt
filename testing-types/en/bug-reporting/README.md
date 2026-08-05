@@ -1,6 +1,6 @@
 # Bug Reporting
 
-English | [简体中文](./README.md)
+English | [简体中文](../../zh/bug-reporting/README.md)
 
 ## Module Overview
 
@@ -48,12 +48,12 @@ The Bug Reporting module provides professional defect reporting guidance, helpin
 - **Use Case:** Chinese project teams, bug reporting standards
 
 ### English Prompts
-- **File:** `Standard-version/BugReportingPrompt_EN.md`
+- **File:** `Standard-version/BugReportingPrompt.md`
 - **Role:** Senior QA Engineer
 - **Use Case:** International teams, English project environments
 
 ### Lite Version Prompts
-- **File:** `Standard-version/BugReportingPrompt_Lite.md` / `Standard-version/BugReportingPrompt_Lite_EN.md`
+- **File:** `Standard-version/BugReportingPrompt_Lite.md` / `Standard-version/BugReportingPrompt_Lite.md`
 - **Features:** Quick start, focused on core bug reporting elements
 - **Use Case:** Quick bug reporting and basic documentation
 
@@ -82,9 +82,9 @@ The Bug Reporting module provides professional defect reporting guidance, helpin
 
 ## Related Modules
 
-- **[Functional Testing](../functional-testing/README_EN.md)** - Functional bug identification
-- **[Test Reporting](../test-reporting/README_EN.md)** - Bug metrics and reporting
-- **[Test Strategy](../test-strategy/README_EN.md)** - Defect management strategy
+- **[Functional Testing](../functional-testing/README.md)** - Functional bug identification
+- **[Test Reporting](../test-reporting/README.md)** - Bug metrics and reporting
+- **[Test Strategy](../test-strategy/README.md)** - Defect management strategy
 
 ## Learning Resources
 
@@ -109,7 +109,7 @@ Welcome to contribute to the Bug Reporting module:
 
 ## License
 
-This module follows the MIT License. See the [LICENSE](../LICENSE) file in the project root directory for details.
+This module follows the MIT License. See the [LICENSE](../../../LICENSE) file in the project root directory for details.
 
 ---
 

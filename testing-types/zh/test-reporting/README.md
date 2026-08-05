@@ -1,6 +1,6 @@
 # 测试报告 (Test Reporting)
 
-[English](./README_EN.md) | 简体中文
+[English](../../en/test-reporting/README.md) | 简体中文
 
 ## 📋 概述
 
@@ -35,7 +35,7 @@
 - 数据可视化和趋势分析
 - 决策支持和改进建议
 
-### [TestReportingPrompt_EN.md](Standard-version/TestReportingPrompt_EN.md)
+### [TestReportingPrompt.md](../../en/test-reporting/Standard-version/TestReportingPrompt.md)
 **语言**：English
 **角色**：Senior Test Reporting Analyst
 **功能**：Write comprehensive and professional test reports
