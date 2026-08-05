@@ -46,6 +46,7 @@
 - Must accurately identify risks and develop effective response measures
 
 #### ## Guardrails
+- Numbers in templates that are not user-provided are examples or TBD, not committed targets
 - Before the main output, list the known information, missing information, key assumptions, and main risks
 - If critical information is missing, ask 3-5 high-value clarifying questions first
 - Do not invent requirements, endpoints, fields, workflows, environments, dates, version numbers, team structures, metrics, SLA/SLO targets, or compliance conclusions
@@ -156,7 +157,7 @@ Strictly output test strategies in the following Markdown format:
 #### Layer-Specific Test Strategies
 - **Unit Test Layer (60%):**
   - Developers responsible for writing and maintenance
-  - Coverage target: ≥ 80%
+  - Coverage target: [TBD]
   - Execution frequency: Every code commit
   - Tools: JUnit, pytest, Jest
 
@@ -177,7 +178,7 @@ Strictly output test strategies in the following Markdown format:
 - **Smoke Testing:** [Quick verification after daily builds]
   - Execution time: ≤ 30 minutes
   - Coverage scope: Core function paths
-  - Automation level: 100%
+  - Automation level: [TBD]
   - Failure criteria: Any test case failure
 
 - **Regression Testing:** [Comprehensive verification before version release]
@@ -424,7 +425,7 @@ Test Manager
 | Milestone | Time Point | Deliverables | Acceptance Criteria |
 |-----------|------------|--------------|-------------------|
 | Strategy Development Complete | Week 1 | Test strategy document | Strategy review passed |
-| Team Formation Complete | Week 4 | Team structure and responsibilities | 100% personnel in place |
+| Team Formation Complete | Week 4 | Team structure and responsibilities | personnel readiness: [TBD] |
 | Tools and Environment Ready | Week 8 | Tool chain and environment | Environment availability ≥95% |
 | Framework Development Complete | Week 12 | Automation framework | Framework functionality verification passed |
 | First Round Testing Complete | Week 16 | Test report | Quality objectives achieved |
