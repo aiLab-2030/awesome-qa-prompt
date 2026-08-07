@@ -14,15 +14,15 @@
 ![GitHub forks](https://img.shields.io/github/forks/naodeng/awesome-qa-prompt?style=flat)
 ![GitHub watchers](https://img.shields.io/github/watchers/naodeng/awesome-qa-prompt?style=flat)
 
-A **Prompt Baseline** for QA work: a copy-and-use prompt collection that helps test engineers and QA teams produce executable test plans and documents. It covers common testing scenarios from requirements analysis to test reporting, with 15 testing-type modules, workflows, and multi-framework / platform variants.
+A **Prompt Baseline** for QA work: a copy-and-use prompt collection that helps test engineers and QA teams produce executable test plans and documents. It covers common testing scenarios from requirements analysis to test reporting, with 34 testing-type modules, workflows, and multi-framework / platform variants.
 
 ## ✨ Key Highlights
 
 - 🎯 **Practical by default**: Organized by testing scenarios; default entry is `Standard-version/`
 - 🌍 **Bilingual Support**: Complete Chinese and English prompts for international teams
-- 📚 **Broad coverage**: 15 testing types + workflows + framework/platform variants
-- 🔄 **Complete Versions**: Each module provides full and lite versions; selected modules include `all_round`, `Web`, and `Mobile` platform variants
-- 🎨 **Multi-Framework Support**: Supports TOP 5 prompt frameworks (ROSES, LangGPT, ICIO, CRISPE, RISE)
+- 📚 **Broad coverage**: 34 testing types + 4 workflows + framework/platform variants
+- 🔄 **Complete Versions**: Base modules provide full and lite versions; selected modules include `all_round`, `Web`, and `Mobile` platform variants
+- 🎨 **Multi-Framework Support**: Base testing types support TOP 5 prompt frameworks (ROSES, LangGPT, ICIO, CRISPE, RISE)
 - 🚀 **Copy and use**: Open a prompt file and paste it into common AI assistants
 - 📖 **Online Documentation**: Online docs site with full-text search
 
@@ -57,7 +57,7 @@ Online documentation features:
 
 ## 🎯 Project Overview
 
-Awesome QA Prompt is a **Prompt Baseline** for software testing and quality assurance: copy-and-use prompts first, not an installable AI-tool skill pack. The repo maintains bilingual modules, standard/lite versions, and selected framework and platform variants.
+Awesome QA Prompt is a **Prompt Baseline** for software testing and quality assurance: copy-and-use prompts first, not an installable AI-tool-specific prompt pack. The repo maintains bilingual modules, standard/lite versions, and selected framework and platform variants.
 
 ### 🌟 Project Value
 
@@ -79,9 +79,9 @@ By providing structured prompt templates, it helps test engineers:
 
 | | Awesome QA Prompt (this repo) | Awesome QA Skills |
 | --- | --- | --- |
-| Positioning | QA Prompt Baseline: copy-and-use prompt collection | Installable skill pack for Cursor / Claude Code and similar tools |
+| Positioning | QA Prompt Baseline: copy-and-use prompt collection | Installable prompt pack for Cursor / Claude Code and similar tools |
 | Usage | Open a module → choose `Standard-version` → paste into chat | Install a skill and invoke with `@skill` |
-| Out of scope | No skill installer / `SKILL.md` system | Not a multi-framework prompt-variant collection |
+| Out of scope | No prompt installer / `SKILL.md` system | Not a multi-framework prompt-variant collection |
 
 Skills repo: [https://github.com/naodeng/awesome-qa-skills](https://github.com/naodeng/awesome-qa-skills)
 
@@ -238,9 +238,42 @@ This collection includes professional prompts for the following testing domains:
   - Test coverage check and missing scenario identification
   - Structured review reports and improvement recommendations
 
+### 16-34. 🧩 Tool-Specific And Plus Modules
+
+These modules correspond to newer testing-type entries in `awesome-qa-skills`. They now have bilingual `Standard-version/` prompts and module READMEs following this repository's standards.
+
+#### Tool-Specific
+
+| Module | English | 中文 |
+| --- | --- | --- |
+| API Test Bruno | [`api-test-bruno`](testing-types/en/api-test-bruno/README.md) | [`api-test-bruno`](testing-types/zh/api-test-bruno/README.md) |
+| API Test Postman | [`api-test-postman`](testing-types/en/api-test-postman/README.md) | [`api-test-postman`](testing-types/zh/api-test-postman/README.md) |
+| API Test Pytest | [`api-test-pytest`](testing-types/en/api-test-pytest/README.md) | [`api-test-pytest`](testing-types/zh/api-test-pytest/README.md) |
+| API Test Rest Assured | [`api-test-restassure`](testing-types/en/api-test-restassure/README.md) | [`api-test-restassure`](testing-types/zh/api-test-restassure/README.md) |
+| API Test Supertest | [`api-test-supertest`](testing-types/en/api-test-supertest/README.md) | [`api-test-supertest`](testing-types/zh/api-test-supertest/README.md) |
+| UI Test Selenium | [`ui-test-selenium`](testing-types/en/ui-test-selenium/README.md) | [`ui-test-selenium`](testing-types/zh/ui-test-selenium/README.md) |
+| UI Test Playwright | [`ui-test-playwright`](testing-types/en/ui-test-playwright/README.md) | [`ui-test-playwright`](testing-types/zh/ui-test-playwright/README.md) |
+| UI Test TestCafe | [`ui-test-testcafe`](testing-types/en/ui-test-testcafe/README.md) | [`ui-test-testcafe`](testing-types/zh/ui-test-testcafe/README.md) |
+| UI Test Cypress | [`ui-test-cypress`](testing-types/en/ui-test-cypress/README.md) | [`ui-test-cypress`](testing-types/zh/ui-test-cypress/README.md) |
+| UI Test Puppeteer | [`ui-test-puppeteer`](testing-types/en/ui-test-puppeteer/README.md) | [`ui-test-puppeteer`](testing-types/zh/ui-test-puppeteer/README.md) |
+| UI Test WebdriverIO | [`ui-test-webdriverio`](testing-types/en/ui-test-webdriverio/README.md) | [`ui-test-webdriverio`](testing-types/zh/ui-test-webdriverio/README.md) |
+| Performance Test k6 | [`performance-test-k6`](testing-types/en/performance-test-k6/README.md) | [`performance-test-k6`](testing-types/zh/performance-test-k6/README.md) |
+| Performance Test Gatling | [`performance-test-gatling`](testing-types/en/performance-test-gatling/README.md) | [`performance-test-gatling`](testing-types/zh/performance-test-gatling/README.md) |
+| Performance Test JMeter | [`performance-test-jmeter`](testing-types/en/performance-test-jmeter/README.md) | [`performance-test-jmeter`](testing-types/zh/performance-test-jmeter/README.md) |
+| Code Review | [`code-review`](testing-types/en/code-review/README.md) | [`code-review`](testing-types/zh/code-review/README.md) |
+
+#### Plus
+
+| Module | English | 中文 |
+| --- | --- | --- |
+| Requirements Analysis Plus | [`requirements-analysis-plus`](testing-types/en/requirements-analysis-plus/README.md) | [`requirements-analysis-plus`](testing-types/zh/requirements-analysis-plus/README.md) |
+| Test Strategy Plus | [`test-strategy-plus`](testing-types/en/test-strategy-plus/README.md) | [`test-strategy-plus`](testing-types/zh/test-strategy-plus/README.md) |
+| Test Case Writer Plus | [`testcase-writer-plus`](testing-types/en/testcase-writer-plus/README.md) | [`testcase-writer-plus`](testing-types/zh/testcase-writer-plus/README.md) |
+| Test Case Reviewer Plus | [`test-case-reviewer-plus`](testing-types/en/test-case-reviewer-plus/README.md) | [`test-case-reviewer-plus`](testing-types/zh/test-case-reviewer-plus/README.md) |
+
 ## 🎨 Prompt Framework Support
 
-This project supports **TOP 5 prompt frameworks**, providing multiple framework version options for each testing type:
+This project supports **TOP 5 prompt frameworks**. The 15 base testing types provide multiple framework variants; tool-specific and plus modules currently provide `Standard-version/` entries.
 
 ### Supported Frameworks
 
@@ -266,7 +299,7 @@ This project supports **TOP 5 prompt frameworks**, providing multiple framework 
 
 ### Framework Version Usage
 
-Each testing type provides:
+Base testing types provide:
 - **Standard Version**: General prompt format, suitable for most scenarios
 - **Framework Versions**: Structured prompts based on TOP 5 frameworks, suitable for specific framework needs
 
@@ -291,7 +324,7 @@ Platform variants are currently available for:
 
 ## 🔄 Testing Workflows
 
-This project provides three practical testing workflows to help teams efficiently use the prompt library in different scenarios:
+This project provides four practical testing workflows to help teams efficiently use the prompt library in different scenarios:
 
 ### 1. 📅 Daily Testing Workflow
 - **Location**: `Workflows/en/daily-testing-workflow.md` | [中文版](Workflows/zh/daily-testing-workflow.md)
@@ -319,6 +352,15 @@ This project provides three practical testing workflows to help teams efficientl
   - Specialized testing (performance, security, accessibility)
   - Release candidate testing and Go/No-Go decision
   - Release day process and post-release monitoring
+
+### 4. 🧭 Testing Prompt Router
+- **Location**: `Workflows/en/discover-testing/Standard-version/DiscoverTestingPrompt.md` | [中文版](Workflows/zh/discover-testing/Standard-version/DiscoverTestingPrompt.md)
+- **Use Cases**: When you are not sure which testing type or workflow prompt to choose
+- **Coverage**:
+  - Identify the main prompt from the user goal
+  - Recommend at most one auxiliary prompt
+  - Provide order of use and a minimal input template
+  - Label missing information, prerequisites, and risks
 
 **Workflow Usage Tips**:
 - Choose the appropriate workflow based on current task
@@ -419,12 +461,12 @@ Visit our online documentation: **[https://inaodeng.com/prompts](https://inaoden
 
 | Category | Quantity | Completion | Status |
 |----------|----------|------------|--------|
-| 🧪 **Testing Type Modules** | 15 | 100% | ✅ Complete |
-| 🔄 **Workflows** | 3 | 100% | ✅ Complete |
-| 📝 **Standard Version Prompts** | 30 (15 Chinese + 15 English) | 100% | ✅ Complete |
-| 🎨 **Framework Version Prompts** | 150 (5 frameworks × 15 types × 2 versions) | 100% | ✅ Complete |
-| 📚 **Module Documentation** | 30 | 100% | ✅ Complete |
-| 📖 **Total Documents** | **225+** | **100%** | ✅ **Complete** |
+| 🧪 **Testing Type Modules** | 34 | 100% | ✅ Complete |
+| 🔄 **Workflows** | 4 | 100% | ✅ Complete |
+| 📝 **Testing-Type Standard Prompts** | 68 (34 Chinese + 34 English) | 100% | ✅ Complete |
+| 🎨 **Base Module Framework Prompts** | 150 (5 frameworks × 15 base types × 2 versions) | 100% | ✅ Complete |
+| 📚 **Testing-Type Module Docs** | 68 | 100% | ✅ Complete |
+| 📖 **Total Documents** | **265+** | **100%** | ✅ **Complete** |
 
 </div>
 
@@ -432,9 +474,9 @@ Visit our online documentation: **[https://inaodeng.com/prompts](https://inaoden
 
 - **🔄 Full Lifecycle Coverage**: Complete testing lifecycle from requirements analysis to test reporting
 - **🌍 Multi-language Support**: Bilingual prompts in Chinese and English for different team needs
-- **📋 Full + Lite Versions**: Each testing type provides both full and lite versions for different scenarios
+- **📋 Base + Specialized Versions**: Base modules provide full / lite versions, while tool-specific and plus modules provide standard entries
 - **📱 Platform Variants**: Requirements Analysis, Test Case Writing, Functional Testing, Test Strategy, Manual Testing, and Test Case Review now include `all_round`, `Web`, and `Mobile`
-- **🎨 TOP 5 Framework Support**: Each testing type supports ROSES, LangGPT, ICIO, CRISPE, RISE prompt frameworks
+- **🎨 TOP 5 Framework Support**: The 15 base testing types support ROSES, LangGPT, ICIO, CRISPE, RISE prompt frameworks
 - **👨‍💼 Clear Constraints**: Emphasizes input audit, no fabrication, and minimum executable output
 - **🛠️ High Practicality**: Provides standardized formats and a practical usage path
 - **🔧 Good Extensibility**: Modular design, easy to extend and customize
@@ -459,21 +501,20 @@ awesome-qa-prompt/
 │   ├── zh/                            # Chinese prompts
 │   │   ├── requirements-analysis/     # Requirements Analysis
 │   │   ├── test-case-writing/         # Test Case Writing
-│   │   ├── ...                        # Other testing types
-│   │   └── test-case-reviewer/        # Test Case Review
+│   │   ├── code-review/               # Code Review
+│   │   ├── api-test-bruno/            # Bruno API Testing
+│   │   ├── ...                        # Tool-specific and plus modules
+│   │   └── test-case-reviewer-plus/   # Test Case Reviewer Plus
 │   └── en/                            # English prompts
 │       ├── requirements-analysis/
 │       ├── test-case-writing/
 │       ├── ...
 │       └── test-case-reviewer/
-│   # Each testing-type folder contains:
+│   # Testing-type folders usually contain:
 │   # ├── README.md                    # Module guide
 │   # ├── Standard-version/            # Standard version
-│   # ├── ROSES-version/               # ROSES framework version
-│   # ├── LangGPT-version/             # LangGPT framework version
-│   # ├── ICIO-version/                # ICIO framework version
-│   # ├── CRISPE-version/              # CRISPE framework version
-│   # └── RISE-version/                # RISE framework version
+│   # └── ROSES/LangGPT/ICIO/CRISPE/RISE-version/
+│   #     # Base modules provide framework versions; tool-specific and plus modules currently provide Standard-version
 │
 ├── Workflows/                         # Testing workflows
 │   ├── zh/README.md                   # Chinese workflow guide
@@ -483,7 +524,9 @@ awesome-qa-prompt/
 │   ├── zh/sprint-testing-workflow.md  # Sprint Testing Workflow (Chinese)
 │   ├── en/sprint-testing-workflow.md  # Sprint Testing Workflow (English)
 │   ├── zh/release-testing-workflow.md # Release Testing Workflow (Chinese)
-│   └── en/release-testing-workflow.md # Release Testing Workflow (English)
+│   ├── en/release-testing-workflow.md # Release Testing Workflow (English)
+│   ├── zh/discover-testing/           # Testing Prompt Router Prompt (Chinese)
+│   └── en/discover-testing/           # Testing Prompt Router Prompt (English)
 │
 ├── prompt-frameworks/                 # Prompt frameworks
 │   ├── frameworks/                    # Framework template collection

@@ -15,15 +15,15 @@
 ![GitHub watchers](https://img.shields.io/github/watchers/naodeng/awesome-qa-prompt?style=flat)
 [![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-支持项目-FFDD00?style=flat&logo=buy-me-a-coffee&logoColor=black)](https://inaodeng.com/prompts)
 
-一个面向 QA 工作的 **Prompt Baseline**（提示词基线合集），帮助测试工程师和 QA 团队用结构化提示词产出可执行的测试方案与文档。本集合覆盖从需求分析到测试报告的常见测试场景，提供 15 个测试类型模块、工作流程和多框架/平台变体。
+一个面向 QA 工作的 **Prompt Baseline**（提示词基线合集），帮助测试工程师和 QA 团队用结构化提示词产出可执行的测试方案与文档。本集合覆盖从需求分析到测试报告的常见测试场景，提供 34 个测试类型模块、工作流程和多框架/平台变体。
 
 ## ✨ 核心亮点
 
 - 🎯 **面向实战**：按测试场景组织，默认推荐 `Standard-version/` 入口
 - 🌍 **双语支持**：完整的中英文提示词，适应国际化团队
-- 📚 **内容覆盖**：15 个测试类型 + 工作流程 + 多框架/平台变体
-- 🔄 **版本齐全**：每个模块提供完整版和精简版，部分模块提供 `all_round`、`Web`、`Mobile` 平台场景版
-- 🎨 **多框架支持**：支持 TOP 5 提示词框架（ROSES、LangGPT、ICIO、CRISPE、RISE）
+- 📚 **内容覆盖**：34 个测试类型 + 4 个工作流程 + 多框架/平台变体
+- 🔄 **版本齐全**：基础模块提供完整版和精简版，部分模块提供 `all_round`、`Web`、`Mobile` 平台场景版
+- 🎨 **多框架支持**：基础测试类型支持 TOP 5 提示词框架（ROSES、LangGPT、ICIO、CRISPE、RISE）
 - 🚀 **复制即用**：打开 Prompt 文件即可粘贴到常见 AI 助手使用
 - 📖 **在线文档**：提供在线文档网站与全文搜索
 
@@ -248,9 +248,42 @@ Awesome QA Prompt 是面向软件测试与质量保证的 **Prompt Baseline**：
   - 测试覆盖度检查和缺失场景识别
   - 结构化评审报告和改进建议
 
+### 16-34. 🧩 工具专项与增强模块
+
+这些模块对应 `awesome-qa-skills` 中新增的测试类型条目，已按本仓库规范补齐中英文 `Standard-version/` Prompt 与模块 README。
+
+#### 工具专项
+
+| 模块 | 中文入口 | English |
+| --- | --- | --- |
+| API 测试（Bruno） | [`api-test-bruno`](testing-types/zh/api-test-bruno/README.md) | [`api-test-bruno`](testing-types/en/api-test-bruno/README.md) |
+| API 测试（Postman） | [`api-test-postman`](testing-types/zh/api-test-postman/README.md) | [`api-test-postman`](testing-types/en/api-test-postman/README.md) |
+| API 测试（Pytest） | [`api-test-pytest`](testing-types/zh/api-test-pytest/README.md) | [`api-test-pytest`](testing-types/en/api-test-pytest/README.md) |
+| API 测试（Rest Assured） | [`api-test-restassure`](testing-types/zh/api-test-restassure/README.md) | [`api-test-restassure`](testing-types/en/api-test-restassure/README.md) |
+| API 测试（Supertest） | [`api-test-supertest`](testing-types/zh/api-test-supertest/README.md) | [`api-test-supertest`](testing-types/en/api-test-supertest/README.md) |
+| UI 自动化测试（Selenium） | [`ui-test-selenium`](testing-types/zh/ui-test-selenium/README.md) | [`ui-test-selenium`](testing-types/en/ui-test-selenium/README.md) |
+| UI 自动化测试（Playwright） | [`ui-test-playwright`](testing-types/zh/ui-test-playwright/README.md) | [`ui-test-playwright`](testing-types/en/ui-test-playwright/README.md) |
+| UI 自动化测试（TestCafe） | [`ui-test-testcafe`](testing-types/zh/ui-test-testcafe/README.md) | [`ui-test-testcafe`](testing-types/en/ui-test-testcafe/README.md) |
+| UI 自动化测试（Cypress） | [`ui-test-cypress`](testing-types/zh/ui-test-cypress/README.md) | [`ui-test-cypress`](testing-types/en/ui-test-cypress/README.md) |
+| UI 自动化测试（Puppeteer） | [`ui-test-puppeteer`](testing-types/zh/ui-test-puppeteer/README.md) | [`ui-test-puppeteer`](testing-types/en/ui-test-puppeteer/README.md) |
+| UI 自动化测试（WebdriverIO） | [`ui-test-webdriverio`](testing-types/zh/ui-test-webdriverio/README.md) | [`ui-test-webdriverio`](testing-types/en/ui-test-webdriverio/README.md) |
+| 性能测试（k6） | [`performance-test-k6`](testing-types/zh/performance-test-k6/README.md) | [`performance-test-k6`](testing-types/en/performance-test-k6/README.md) |
+| 性能测试（Gatling） | [`performance-test-gatling`](testing-types/zh/performance-test-gatling/README.md) | [`performance-test-gatling`](testing-types/en/performance-test-gatling/README.md) |
+| 性能测试（JMeter） | [`performance-test-jmeter`](testing-types/zh/performance-test-jmeter/README.md) | [`performance-test-jmeter`](testing-types/en/performance-test-jmeter/README.md) |
+| 代码审查 | [`code-review`](testing-types/zh/code-review/README.md) | [`code-review`](testing-types/en/code-review/README.md) |
+
+#### 增强版
+
+| 模块 | 中文入口 | English |
+| --- | --- | --- |
+| 需求分析增强版 | [`requirements-analysis-plus`](testing-types/zh/requirements-analysis-plus/README.md) | [`requirements-analysis-plus`](testing-types/en/requirements-analysis-plus/README.md) |
+| 测试策略增强版 | [`test-strategy-plus`](testing-types/zh/test-strategy-plus/README.md) | [`test-strategy-plus`](testing-types/en/test-strategy-plus/README.md) |
+| 测试用例编写增强版 | [`testcase-writer-plus`](testing-types/zh/testcase-writer-plus/README.md) | [`testcase-writer-plus`](testing-types/en/testcase-writer-plus/README.md) |
+| 测试用例评审增强版 | [`test-case-reviewer-plus`](testing-types/zh/test-case-reviewer-plus/README.md) | [`test-case-reviewer-plus`](testing-types/en/test-case-reviewer-plus/README.md) |
+
 ## 🎨 提示词框架支持
 
-本项目支持 **TOP 5 提示词框架**，为每个测试类型提供多种框架版本选择：
+本项目支持 **TOP 5 提示词框架**。基础 15 个测试类型提供多种框架版本选择；工具专项与增强模块当前默认提供 `Standard-version/`。
 
 ### 支持的框架
 
@@ -276,7 +309,7 @@ Awesome QA Prompt 是面向软件测试与质量保证的 **Prompt Baseline**：
 
 ### 框架版本使用
 
-每个测试类型都提供：
+基础测试类型提供：
 - **标准版本**：通用提示词格式，适合大多数场景
 - **框架版本**：基于 TOP 5 框架的结构化提示词，适合特定框架需求
 
@@ -301,7 +334,7 @@ Awesome QA Prompt 是面向软件测试与质量保证的 **Prompt Baseline**：
 
 ## 🔄 测试工作流程 (Testing Workflows)
 
-本项目提供三种实用的测试工作流程，帮助团队在不同场景下高效使用提示词库：
+本项目提供四种实用的测试工作流程，帮助团队在不同场景下高效使用提示词库：
 
 ### 1. 📅 日常测试工作流程 (Daily Testing Workflow)
 - **文件位置**：`Workflows/zh/daily-testing-workflow.md` | [English](Workflows/en/daily-testing-workflow.md)
@@ -329,6 +362,15 @@ Awesome QA Prompt 是面向软件测试与质量保证的 **Prompt Baseline**：
   - 专项测试（性能、安全、可访问性）
   - 候选版本测试和Go/No-Go决策
   - 发布日流程和发布后监控
+
+### 4. 🧭 测试 Prompt 路由 (Testing Prompt Router)
+- **文件位置**：`Workflows/zh/discover-testing/Standard-version/DiscoverTestingPrompt.md` | [English](Workflows/en/discover-testing/Standard-version/DiscoverTestingPrompt.md)
+- **适用场景**：不确定该选择哪个测试类型或工作流程 Prompt
+- **涵盖内容**：
+  - 根据用户目标识别主 Prompt
+  - 推荐最多 1 个辅助 Prompt
+  - 给出调用顺序和最小输入模板
+  - 标明缺失信息、适用前提和风险
 
 **工作流程使用提示**：
 - 根据当前任务选择合适的工作流程
@@ -429,12 +471,12 @@ Awesome QA Prompt 是面向软件测试与质量保证的 **Prompt Baseline**：
 
 | 类别 | 数量 | 完成度 | 状态 |
 |------|------|--------|------|
-| 🧪 **测试类型模块** | 15 个 | 100% | ✅ 完成 |
-| 🔄 **工作流程** | 3 个 | 100% | ✅ 完成 |
-| 📝 **标准版本提示词** | 30 个（中英文各15个） | 100% | ✅ 完成 |
-| 🎨 **框架版本提示词** | 150 个（5个框架 × 15个类型 × 2种版本） | 100% | ✅ 完成 |
-| 📚 **模块文档** | 30 个 | 100% | ✅ 完成 |
-| 📖 **总文档数量** | **225+** | **100%** | ✅ **完成** |
+| 🧪 **测试类型模块** | 34 个 | 100% | ✅ 完成 |
+| 🔄 **工作流程** | 4 个 | 100% | ✅ 完成 |
+| 📝 **测试类型标准提示词** | 68 个（中英文各34个） | 100% | ✅ 完成 |
+| 🎨 **基础模块框架版本提示词** | 150 个（5个框架 × 15个基础类型 × 2种版本） | 100% | ✅ 完成 |
+| 📚 **测试类型模块文档** | 68 个 | 100% | ✅ 完成 |
+| 📖 **总文档数量** | **265+** | **100%** | ✅ **完成** |
 
 </div>
 
@@ -442,9 +484,9 @@ Awesome QA Prompt 是面向软件测试与质量保证的 **Prompt Baseline**：
 
 - **🔄 全生命周期覆盖**：从需求分析到测试报告的完整测试生命周期
 - **🌍 多语言支持**：中英文双语提示词，适应不同团队需求
-- **📋 完整版 + 精简版**：每个测试类型都提供完整版和精简版，满足不同场景需求
+- **📋 基础版 + 专项版**：基础模块提供完整版 / 精简版，工具专项和增强模块提供标准版入口
 - **📱 平台场景版**：需求分析、测试用例编写、功能测试、测试策略、手工测试、测试用例评审已新增 `all_round`、`Web`、`Mobile`
-- **🎨 TOP 5 框架支持**：每个测试类型支持 ROSES、LangGPT、ICIO、CRISPE、RISE 五大提示词框架
+- **🎨 TOP 5 框架支持**：基础 15 个测试类型支持 ROSES、LangGPT、ICIO、CRISPE、RISE 五大提示词框架
 - **👨‍💼 约束清晰**：强调输入审计、禁止编造与最小可执行输出
 - **🛠️ 实用性高**：提供标准化格式和可落地的使用路径
 - **🔧 可扩展性好**：模块化设计，便于扩展和定制
@@ -469,21 +511,20 @@ awesome-qa-prompt/
 │   ├── zh/                            # 中文提示词
 │   │   ├── requirements-analysis/     # 需求分析
 │   │   ├── test-case-writing/         # 测试用例编写
-│   │   ├── ...                        # 其余测试类型
-│   │   └── test-case-reviewer/        # 测试用例评审
+│   │   ├── code-review/               # 代码审查
+│   │   ├── api-test-bruno/            # Bruno API 测试
+│   │   ├── ...                        # 工具专项与增强模块
+│   │   └── test-case-reviewer-plus/   # 测试用例评审增强版
 │   └── en/                            # 英文提示词
 │       ├── requirements-analysis/
 │       ├── test-case-writing/
 │       ├── ...
 │       └── test-case-reviewer/
-│   # 每个测试类型文件夹包含：
+│   # 测试类型文件夹通常包含：
 │   # ├── README.md                    # 模块说明
 │   # ├── Standard-version/            # 标准版本
-│   # ├── ROSES-version/               # ROSES 框架版本
-│   # ├── LangGPT-version/             # LangGPT 框架版本
-│   # ├── ICIO-version/                # ICIO 框架版本
-│   # ├── CRISPE-version/              # CRISPE 框架版本
-│   # └── RISE-version/                # RISE 框架版本
+│   # └── ROSES/LangGPT/ICIO/CRISPE/RISE-version/
+│   #     # 基础模块提供框架版本；工具专项与增强模块当前提供 Standard-version
 │
 ├── Workflows/                         # 测试工作流程
 │   ├── zh/README.md                   # 中文工作流程说明
@@ -493,7 +534,9 @@ awesome-qa-prompt/
 │   ├── zh/sprint-testing-workflow.md  # 迭代测试工作流程（中文）
 │   ├── en/sprint-testing-workflow.md  # 迭代测试工作流程（英文）
 │   ├── zh/release-testing-workflow.md # 发布测试工作流程（中文）
-│   └── en/release-testing-workflow.md # 发布测试工作流程（英文）
+│   ├── en/release-testing-workflow.md # 发布测试工作流程（英文）
+│   ├── zh/discover-testing/           # 测试 Prompt 路由 Prompt（中文）
+│   └── en/discover-testing/           # 测试 Prompt 路由 Prompt（英文）
 │
 ├── prompt-frameworks/                 # 提示词框架
 │   ├── frameworks/                    # 框架模板集合
