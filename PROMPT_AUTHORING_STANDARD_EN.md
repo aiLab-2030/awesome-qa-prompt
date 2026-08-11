@@ -26,6 +26,12 @@ This standard defines the minimum quality bar for prompts, READMEs, and framewor
 - `testing-types/en/*/ROSES-version/*.md`
 - `testing-types/zh/*/LangGPT-version/*.md`
 - `testing-types/en/*/LangGPT-version/*.md`
+- `Workflows/zh/**/README.md`
+- `Workflows/en/**/README.md`
+- `Workflows/zh/*/Standard-version/*.md`
+- `Workflows/en/*/Standard-version/*.md`
+- `Workflows/zh/*/*/Standard-version/*.md`
+- `Workflows/en/*/*/Standard-version/*.md`
 
 ## Core Principles
 
@@ -95,6 +101,28 @@ Correct examples:
 - Each module README should include version-selection guidance
 - Cross-module links must use real relative paths, not broken `../testing-types/...` patterns
 
+## Workflow Role Prompt Requirements
+
+- Role prompts in the same stage must be independently usable, read only the stage's declared inputs, and never depend on, read, or infer another role's output
+- Role boundaries must be explicit; PM may organize management information but must not override quality facts, risk levels, test priorities, or technical judgments
+- A conditionally participating role must first use input evidence to return `Participate`, `Do not participate`, or `Pending confirmation`; it must not participate by role name alone or silently omit a non-participation result
+- `Do not participate` and `Pending confirmation` outputs must still preserve the rationale, uncovered scope, and evidence gaps for synthesis traceability
+- When a required input is missing, versions cannot be aligned, or material is unreadable in a way that materially affects the result, use a blocker / insufficient-information mode instead of inventing a formal conclusion
+
+## Workflow Synthesis Prompt Requirements
+
+- A synthesis prompt must list its allowed inputs explicitly; it must not reread undeclared material or replace a missing role's professional analysis
+- Facts, findings, disagreements, risks, and recommendations must preserve role sources and, where possible, cite Artifact names, versions, stable IDs, sections, or another verifiable location
+- Synthesis may deduplicate, classify, and normalize format, but it must not use a majority opinion to erase a minority high-risk finding; conflicts must remain visible side by side
+- Planned coverage, existing test cases, and completed design must not be synthesized into executed facts; without execution evidence, use `Not executed or insufficient evidence`
+- A synthesis recommendation is not human approval, release authorization, waiver, risk acceptance, or a merge decision, and must not prefill those Human Task states
+
+## Human Task Boundary
+
+- Prompts may organize evidence, differences, options, and recommendations for human decisions, but must not impersonate an approver or authorized decision-maker
+- Final approval, rejection, release, risk acceptance, waiver, owner assignment, and schedule confirmation belong to authorized people
+- If the input contains a human decision, record it only with its verifiable source and version; never infer a completed decision from a meeting name, role presence, or workflow stage
+
 ## LangGPT Special Rules
 
 LangGPT variants should preserve their framework style, but must still cover:
@@ -111,3 +139,6 @@ LangGPT variants should preserve their framework style, but must still cover:
 - [ ] No unconditional “start immediately” instruction remains
 - [ ] Chinese and English variants follow the same behavior rules
 - [ ] Lite / Full / framework variants remain aligned on core constraints
+- [ ] Workflow role prompts remain independent, and conditional-participation results have evidence and are not silently omitted
+- [ ] Workflow synthesis preserves role and Artifact traceability, conflicts, and evidence gaps
+- [ ] AI does not replace Human Tasks such as approval, release, waiver, or risk acceptance

@@ -20,7 +20,7 @@ A **Prompt Baseline** for QA work: a copy-and-use prompt collection that helps t
 
 - 🎯 **Practical by default**: Organized by testing scenarios; default entry is `Standard-version/`
 - 🌍 **Bilingual Support**: Complete Chinese and English prompts for international teams
-- 📚 **Broad coverage**: 34 testing types + 4 workflows + framework/platform variants
+- 📚 **Broad coverage**: 34 testing types + 5 workflows + framework/platform variants
 - 🔄 **Complete Versions**: Base modules provide full and lite versions; selected modules include `all_round`, `Web`, and `Mobile` platform variants
 - 🎨 **Multi-Framework Support**: Base testing types support TOP 5 prompt frameworks (ROSES, LangGPT, ICIO, CRISPE, RISE)
 - 🚀 **Copy and use**: Open a prompt file and paste it into common AI assistants
@@ -324,7 +324,7 @@ Platform variants are currently available for:
 
 ## 🔄 Testing Workflows
 
-This project provides four practical testing workflows to help teams efficiently use the prompt library in different scenarios:
+This project provides five practical testing workflows to help teams efficiently use the prompt library in different scenarios:
 
 ### 1. 📅 Daily Testing Workflow
 - **Location**: `Workflows/en/daily-testing-workflow.md` | [中文版](Workflows/zh/daily-testing-workflow.md)
@@ -361,6 +361,15 @@ This project provides four practical testing workflows to help teams efficiently
   - Recommend at most one auxiliary prompt
   - Provide order of use and a minimal input template
   - Label missing information, prerequisites, and risks
+
+### 5. 🤖 AI Quality Analysis MVP
+- **Location**: [`Workflows/en/ai-quality-analysis-mvp/README.md`](Workflows/en/ai-quality-analysis-mvp/README.md) | [中文版](Workflows/zh/ai-quality-analysis-mvp/README.md)
+- **Use Cases**: Moving from requirements analysis through test report review while preserving role separation, evidence traceability, and Human Task decision boundaries
+- **Coverage**:
+  - Requirements analysis, test strategy, strategy review, and code review
+  - Test case writing, test case review, test report, and report review
+  - Independent analysis by Product, QA, UI/UX, Technical, and PM roles
+  - Stage synthesis, conditional participation, insufficient-evidence degradation, and human decision boundaries
 
 **Workflow Usage Tips**:
 - Choose the appropriate workflow based on current task
@@ -462,11 +471,12 @@ Visit our online documentation: **[https://inaodeng.com/prompts](https://inaoden
 | Category | Quantity | Completion | Status |
 |----------|----------|------------|--------|
 | 🧪 **Testing Type Modules** | 34 | 100% | ✅ Complete |
-| 🔄 **Workflows** | 4 | 100% | ✅ Complete |
+| 🔄 **Workflows** | 5 | 100% | ✅ Complete |
 | 📝 **Testing-Type Standard Prompts** | 68 (34 Chinese + 34 English) | 100% | ✅ Complete |
+| 🤖 **AI Quality Analysis Role and Synthesis Prompts** | 86 (43 Chinese + 43 English) | 100% | ✅ Complete |
 | 🎨 **Base Module Framework Prompts** | 150 (5 frameworks × 15 base types × 2 versions) | 100% | ✅ Complete |
 | 📚 **Testing-Type Module Docs** | 68 | 100% | ✅ Complete |
-| 📖 **Total Documents** | **265+** | **100%** | ✅ **Complete** |
+| 📖 **Total Documents** | **350+** | **100%** | ✅ **Complete** |
 
 </div>
 
@@ -526,7 +536,9 @@ awesome-qa-prompt/
 │   ├── zh/release-testing-workflow.md # Release Testing Workflow (Chinese)
 │   ├── en/release-testing-workflow.md # Release Testing Workflow (English)
 │   ├── zh/discover-testing/           # Testing Prompt Router Prompt (Chinese)
-│   └── en/discover-testing/           # Testing Prompt Router Prompt (English)
+│   ├── en/discover-testing/           # Testing Prompt Router Prompt (English)
+│   ├── zh/ai-quality-analysis-mvp/    # AI Quality Analysis MVP: 8 stages, 43 Chinese prompts
+│   └── en/ai-quality-analysis-mvp/    # AI Quality Analysis MVP: 8 stages, 43 English prompts
 │
 ├── prompt-frameworks/                 # Prompt frameworks
 │   ├── frameworks/                    # Framework template collection

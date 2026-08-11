@@ -21,7 +21,7 @@
 
 - 🎯 **面向实战**：按测试场景组织，默认推荐 `Standard-version/` 入口
 - 🌍 **双语支持**：完整的中英文提示词，适应国际化团队
-- 📚 **内容覆盖**：34 个测试类型 + 4 个工作流程 + 多框架/平台变体
+- 📚 **内容覆盖**：34 个测试类型 + 5 个工作流程 + 多框架/平台变体
 - 🔄 **版本齐全**：基础模块提供完整版和精简版，部分模块提供 `all_round`、`Web`、`Mobile` 平台场景版
 - 🎨 **多框架支持**：基础测试类型支持 TOP 5 提示词框架（ROSES、LangGPT、ICIO、CRISPE、RISE）
 - 🚀 **复制即用**：打开 Prompt 文件即可粘贴到常见 AI 助手使用
@@ -334,7 +334,7 @@ Awesome QA Prompt 是面向软件测试与质量保证的 **Prompt Baseline**：
 
 ## 🔄 测试工作流程 (Testing Workflows)
 
-本项目提供四种实用的测试工作流程，帮助团队在不同场景下高效使用提示词库：
+本项目提供五种实用的测试工作流程，帮助团队在不同场景下高效使用提示词库：
 
 ### 1. 📅 日常测试工作流程 (Daily Testing Workflow)
 - **文件位置**：`Workflows/zh/daily-testing-workflow.md` | [English](Workflows/en/daily-testing-workflow.md)
@@ -371,6 +371,15 @@ Awesome QA Prompt 是面向软件测试与质量保证的 **Prompt Baseline**：
   - 推荐最多 1 个辅助 Prompt
   - 给出调用顺序和最小输入模板
   - 标明缺失信息、适用前提和风险
+
+### 5. 🤖 AI 研发质量分析 MVP (AI Quality Analysis MVP)
+- **文件位置**：[`Workflows/zh/ai-quality-analysis-mvp/README.md`](Workflows/zh/ai-quality-analysis-mvp/README.md) | [English](Workflows/en/ai-quality-analysis-mvp/README.md)
+- **适用场景**：需要从需求分析推进到测试报告评审，并保留角色分工、证据追溯和 Human Task 决策边界
+- **涵盖内容**：
+  - 需求分析、测试策略、策略评审和代码评审
+  - 测试用例编写、用例评审、测试报告和报告评审
+  - 产品、QA、UI/UX、技术、PM 五类角色独立分析
+  - 每阶段汇总、条件参与、证据不足降级和人工决策边界
 
 **工作流程使用提示**：
 - 根据当前任务选择合适的工作流程
@@ -472,11 +481,12 @@ Awesome QA Prompt 是面向软件测试与质量保证的 **Prompt Baseline**：
 | 类别 | 数量 | 完成度 | 状态 |
 |------|------|--------|------|
 | 🧪 **测试类型模块** | 34 个 | 100% | ✅ 完成 |
-| 🔄 **工作流程** | 4 个 | 100% | ✅ 完成 |
+| 🔄 **工作流程** | 5 个 | 100% | ✅ 完成 |
 | 📝 **测试类型标准提示词** | 68 个（中英文各34个） | 100% | ✅ 完成 |
+| 🤖 **AI 质量分析角色与汇总提示词** | 86 个（中英文各43个） | 100% | ✅ 完成 |
 | 🎨 **基础模块框架版本提示词** | 150 个（5个框架 × 15个基础类型 × 2种版本） | 100% | ✅ 完成 |
 | 📚 **测试类型模块文档** | 68 个 | 100% | ✅ 完成 |
-| 📖 **总文档数量** | **265+** | **100%** | ✅ **完成** |
+| 📖 **总文档数量** | **350+** | **100%** | ✅ **完成** |
 
 </div>
 
@@ -536,7 +546,9 @@ awesome-qa-prompt/
 │   ├── zh/release-testing-workflow.md # 发布测试工作流程（中文）
 │   ├── en/release-testing-workflow.md # 发布测试工作流程（英文）
 │   ├── zh/discover-testing/           # 测试 Prompt 路由 Prompt（中文）
-│   └── en/discover-testing/           # 测试 Prompt 路由 Prompt（英文）
+│   ├── en/discover-testing/           # 测试 Prompt 路由 Prompt（英文）
+│   ├── zh/ai-quality-analysis-mvp/    # AI 质量分析 MVP：8 阶段、43 份中文 Prompt
+│   └── en/ai-quality-analysis-mvp/    # AI Quality Analysis MVP: 8 stages, 43 English prompts
 │
 ├── prompt-frameworks/                 # 提示词框架
 │   ├── frameworks/                    # 框架模板集合
