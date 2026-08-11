@@ -57,11 +57,12 @@ If all five reports are missing/unreadable, output only the audit, minimum neede
 
 ## Three Recommendation Rules
 
-- `Recommend approval`: required reports and critical evidence are sufficient; no unresolved blocker or mandatory revision; no high-impact disagreement that can change the outcome; conditional UI/UX participation is correctly handled; PM conflicts have explicit actions and are not misrepresented as quality satisfaction.
-- `Recommend revision`: at least one evidence-backed blocker or mandatory revision exists, or a concrete strategy defect/conflict can be addressed by revising the strategy, restoring traceability, or coordinating the plan.
-- `Insufficient information`: strategy/report versions cannot be aligned; key reports/evidence are missing; UI/UX participation cannot be determined; or disagreement leaves both approval and revision without sufficient basis.
+- `Recommend approval`: required reports and critical evidence are sufficient; no unresolved blocker, mandatory revision, or high-impact disagreement can change the outcome; conditional UI/UX participation is correctly handled; and no unresolved planning conflict affects strategy execution. Non-blocking management actions that do not affect strategy execution may remain, but must not be represented as quality satisfaction.
+- `Recommend revision`: at least one evidence-backed blocker or mandatory revision exists, a concrete defect can be addressed by revising the strategy or restoring traceability, or an unresolved schedule, resource, dependency, or milestone conflict affects strategy execution.
+- `Insufficient information`: strategy/report versions cannot be aligned; key reports/evidence are missing; UI/UX participation cannot be determined; planning feasibility cannot be determined and that uncertainty may materially affect execution; or disagreement leaves both approval and revision without sufficient basis.
 
 If revision and insufficient-information conditions coexist, preserve proven revisions. Use `Insufficient information` if the gaps can materially change the overall outcome; otherwise use `Recommend revision`.
+Evaluate in this order: `Insufficient information -> Recommend revision -> Recommend approval`. Use `Recommend approval` only when neither earlier rule applies, so one planning issue cannot match more than one overall recommendation.
 
 ## Synthesis Steps
 
