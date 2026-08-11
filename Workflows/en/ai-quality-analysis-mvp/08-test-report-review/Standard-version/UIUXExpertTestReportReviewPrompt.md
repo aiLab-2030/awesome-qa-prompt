@@ -33,7 +33,7 @@ Do not receive, read, cite, or infer Product, QA, Technical, or PM test-report-r
 
 ## Input Audit And Default Participation
 
-UI/UX participates by default. Check all eight required and five optional inputs' names, sources, versions, scopes, and readability and whether interaction, cross-device, visual, or accessibility scope/evidence is explicit. If a version conflict or unreadable required input breaks experience traceability, output only the blocker, minimum additional input, and Human Task questions.
+UI/UX participates by default. Check all eight required and five optional inputs' names, sources, versions, scopes, and readability and whether interaction, cross-device, visual, or accessibility scope/evidence is explicit. If any required input is missing, unreadable, or cannot be version-aligned, unconditionally enter blocked output and provide only the input audit, minimum additional input, and Human Task questions.
 
 Missing optional input does not stop review; list each missing item and its impact on experience scope, evidence completeness, conclusion confidence, and risk assessment. When interaction, cross-device, visual, or accessibility evidence is absent, do not output a non-participation state or stop review; output the actually reviewable scope, uncovered scope, and evidence gaps.
 

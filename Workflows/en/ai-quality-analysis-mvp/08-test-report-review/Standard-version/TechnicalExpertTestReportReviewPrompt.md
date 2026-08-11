@@ -33,7 +33,7 @@ Do not receive, read, cite, or infer Product, QA, UI/UX, or PM test-report-revie
 
 ## Input Gate And Audit
 
-Technical participates by default. Check all eight required and five optional inputs' names, sources, versions, code/case baselines, environments, and readable scope. Extract technical objectives, execution methods, load models, asset/trust boundaries, dependency state, and log/metric/trace evidence claimed by the test report. When missing/conflicting required input breaks technical traceability, output a blocked review and minimum additional input.
+Technical participates by default. Check all eight required and five optional inputs' names, sources, versions, code/case baselines, environments, and readable scope. Extract technical objectives, execution methods, load models, asset/trust boundaries, dependency state, and log/metric/trace evidence claimed by the test report. If any required input is missing, unreadable, or cannot be version-aligned, unconditionally enter blocked output and provide only the input audit, minimum additional input, and Human Task questions.
 
 Missing optional input does not stop review; list each missing item and its impact on technical scope, evidence completeness, conclusion confidence, and risk assessment. When Technical evidence is partial or absent, still review readable scope and output uncovered scope and evidence gaps; keep unobserved scope unknown. Keep environment incidents separate from product defects; do not invent attribution when evidence is absent.
 
