@@ -107,9 +107,7 @@ function checkReadmeLinks(file, text) {
   }
 }
 
-function checkPromptGuardrails(file, text) {
-  if (!isPromptFile(file)) return;
-
+function checkStandardPromptGuardrails(file, text) {
   const hasGuardrails =
     text.includes("## 使用约束与降级规则") ||
     text.includes("## Guardrails And Degradation Rules") ||
@@ -131,13 +129,46 @@ function checkPromptGuardrails(file, text) {
   if (!hasExecution) addIssue(file, "prompt is missing execution instructions section");
 }
 
+function checkPromptGuardrails(file, text) {
+  const normalized = rel(file).replaceAll("\\", "/");
+
+  if (normalized.startsWith("testing-types/")) {
+    const isLegacyZhPrompt =
+      normalized.includes("/zh/") &&
+      normalized.includes("-version/") &&
+      !normalized.includes("_Lean");
+
+    if (isLegacyZhPrompt) {
+      if (normalized.includes("LangGPT-version")) {
+        const hasGuardrails = text.includes("#### ## Guardrails");
+        const hasAuditInit =
+          text.includes("输入审计") ||
+          text.includes("input audit") ||
+          text.includes("先完成输入审计") ||
+          text.includes("input audit first") ||
+          text.includes("complete the input audit first");
+        if (!hasGuardrails) addIssue(file, "LangGPT prompt is missing Guardrails section");
+        if (!hasAuditInit) addIssue(file, "LangGPT prompt is missing audit-first initialization");
+        return;
+      }
+
+      checkStandardPromptGuardrails(file, text);
+      return;
+    }
+  }
+
+  if (isPromptFile(file)) checkStandardPromptGuardrails(file, text);
+}
+
 for (const file of walk(root)) {
   const text = readFileSync(file, "utf8");
 
-  if (!rel(file).startsWith("Workflows/")) {
-    for (const { pattern, message } of bannedPatterns) {
-      if (pattern.test(text)) addIssue(file, message);
-    }
+  for (const { pattern, message } of bannedPatterns) {
+    const isWorkflowLegacyPath =
+      rel(file).startsWith("Workflows/") &&
+      message === "contains broken ../testing-types/ relative path";
+    if (isWorkflowLegacyPath) continue;
+    if (pattern.test(text)) addIssue(file, message);
   }
 
   if (path.basename(file).startsWith("README")) {
