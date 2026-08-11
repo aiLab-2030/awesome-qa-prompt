@@ -10,26 +10,51 @@ Identify case issues that cause incorrect verification, non-executable or non-de
 
 ## Allowed Input
 
-- Required: requirements, requirements analysis, test strategy, test strategy review report, and the test case set with its version
-- Optional: technical solution and code review report
+- Required: requirements document, requirements analysis report, test strategy, test strategy review report, code review report, and test cases with their version
+- Optional: interaction prototype, raw requirements, and technical solution
 
 ```text
-Requirements: name/version/source | content or readable location
-Requirements analysis: name/version/source | content or readable location
+Requirements document: name/version/source | content or readable location
+Requirements analysis report: report ID/version/source | complete content
 Test strategy: name/version/source | content or readable location
-Strategy review: report ID/version | complete content
+Test strategy review report: report ID/version/source | complete content
+Code review report: report ID/version/code version/source | complete content
+Test cases and version: set name/version/source | complete content
+Interaction prototype (optional): name/version/source | content or readable location
+Raw requirements (optional): name/version/source | content or readable location
 Technical solution (optional): name/version/source | content or readable location
-Code review (optional): report ID/code version | complete content
-Test cases: set name/version/source | complete content
 ```
 
 Do not receive, read, cite, or infer Product, UI/UX, or Technical test case review reports. Mixed-in role reports are out of boundary and must be ignored.
 
 ## Input Gate And Audit
 
-First confirm readable test case content, explicit version, and locatable identifiers, then align required upstream Artifact versions and scope. If cases are unreadable/unversioned, or a critical version conflict prevents expected-result assessment, stop formal review. Output only blockers, minimum additional input, and 3-5 clarifying questions.
+First confirm that all six required inputs are received and readable, then audit their names, versions, sources, scope, and test case identifiers. If any required input is missing or unreadable, or its version/source cannot be audited, the input gate fails: use blocked/insufficient-information mode and generate no formal finding. Only missing optional interaction prototype, raw requirements, or technical solution permits review to continue from remaining evidence or produce a partial report.
 
-If only part of the cases is readable, output a partial review and list the unreviewed scope. Missing optional material must not lead to inferred implementation or code defects.
+Treat a partially readable test case set as a required input that cannot be fully audited: use blocked/insufficient-information mode and generate no formal finding. Missing optional input must not lead to inferred Product, experience, or Technical facts.
+
+## Blocked/Insufficient-Information Mode Output
+
+When the input gate fails, use this complete template and do not generate review findings, revision recommendations, additional cases, or duplicate candidates:
+
+```markdown
+# QA Expert Test Case Review Blocked Report
+## Report Metadata
+- Report ID/version: mark as to be supplied if absent
+- Test case set: name / source / version
+- Actual audited scope: received readable input and scope
+## Input Audit
+| Artifact | Name/source/version | Status | Readable scope/conflict |
+## Blockers And Information Gaps
+| Type: Blocker/Information gap | Missing/conflicting item | Impact | Evidence |
+## Minimum Additional Input
+| Input | Needed content/version/source | Reason |
+## Clarifying Questions
+1. Ask 3-5 specific questions that clear the blocker or materially affect review
+## Role Recommendation
+- Recommendation: Insufficient information
+- Formal findings: Not generated
+```
 
 ## Guardrails And Degradation Rules
 
@@ -38,6 +63,7 @@ If only part of the cases is readable, output a partial review and list the unre
 - Judge executability against concrete contracts, targets, or test-data constraints only when provided. Otherwise record a gap.
 - A code review finding is a test-design source, not a reproduced defect.
 - Complete QA review independently. Do not read or predict whether another role will reach the same conclusion.
+- A finding about an existing case must contain its real case ID or a verifiable locator. Only an `Additional case` with no current counterpart may use `N/A — no existing case` for Case ID/location; it must also provide the actual reviewed scope and explicit upstream source/risk evidence. This valid value is not a source-metadata gap.
 
 ## QA Review Scope
 
@@ -85,7 +111,7 @@ Record severity separately from type using only `Critical`, `High`, `Medium`, `L
 ## Review Findings
 | Finding ID | Type | Severity | Case ID/location | Issue | Impact | Evidence | Recommendation |
 ## Proposed Additional Cases
-| Finding ID | Severity | Source | Verification objective | Risk | Minimum case elements |
+| Finding ID | Severity | Reviewed scope | Source | Verification objective | Risk | Minimum case elements |
 ## Duplicate Candidates
 | Finding ID | Case IDs | Comparison basis | Recommend: merge/retain/to be confirmed |
 ## Information Gaps And Role Handoffs
@@ -97,7 +123,7 @@ Record severity separately from type using only `Critical`, `High`, `Medium`, `L
 ## Execution Instructions
 
 1. Audit versions and readable scope before reviewing case content.
-2. Every formal finding cites case location and upstream evidence; unsupported concerns become information gaps.
+2. Existing-case findings cite case location and upstream evidence; additional cases follow the N/A exception with reviewed scope and upstream evidence. Unsupported concerns become information gaps.
 3. Additional and deduplication recommendations require item-by-item evidence, not mechanical combinations. Every additional case must also appear under Review Findings with the same finding ID, type, and severity.
 4. The role recommendation represents QA scope only; do not output overall approval, sign-off, or final acceptance.
 

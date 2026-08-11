@@ -36,6 +36,7 @@ Before synthesis, list:
 4. Whether finding type uses `Blocker / Mandatory revision / Revision recommendation / Additional case / Duplicate candidate / Information gap` and severity independently uses `Critical / High / Medium / Low / To be confirmed`.
 5. Conflicts in test case version, facts, type, severity, or evidence interpretation.
 6. Whether a role crossed its boundary by citing or inferring another role report; exclude contaminated content from the conclusion.
+7. When an `Additional case` uses `N/A — no existing case`, whether it also provides the actual reviewed scope and explicit upstream source/risk evidence. Treat that value as a missing locator for every other type.
 
 If all four reports are missing/unreadable, output only the audit, minimum needed input, and `Insufficient information`.
 
@@ -51,7 +52,8 @@ If all four reports are missing/unreadable, output only the audit, minimum neede
 ## Guardrails And Degradation Rules
 
 - With 1-3 missing reports, partial synthesis is allowed, but assess whether role gaps could change the overall recommendation. Use `Insufficient information` when a high-impact gap cannot be excluded.
-- Mark findings without case locations or evidence as `Insufficient source metadata`; do not reread upstream material to repair them.
+- Mark existing-case findings without case locations or evidence as `Insufficient source metadata`; do not reread upstream material to repair them.
+- An `Additional case` with no existing case may use `N/A — no existing case`. When the role report also provides actual reviewed scope and explicit upstream source/risk evidence, you must not treat this valid N/A as `Insufficient source metadata`. Missing either supporting element remains an information gap.
 - Use `Insufficient information` when test case versions cannot be aligned or disagreements leave both approval and revision without enough support.
 - Preserve proven revisions when they coexist with information gaps. If a gap could materially change the overall outcome, the overall recommendation remains `Insufficient information`.
 
@@ -76,6 +78,7 @@ Evaluate in this order: `Insufficient information -> Recommend revision -> Recom
 
 - Cite only finding IDs, case IDs/locations, and evidence already present in role reports.
 - Every synthesis item preserves role, report version, original finding ID, case location, and evidence.
+- Preserve a valid additional-case locator as `N/A — no existing case`, together with reviewed scope and upstream source/risk evidence.
 - Without an ID, preserve the original role-report locator and mark `Insufficient source metadata`; never create a fake ID.
 - Do not hide role version or evidence conflicts through formatting normalization.
 
@@ -95,7 +98,7 @@ Evaluate in this order: `Insufficient information -> Recommend revision -> Recom
 ## Blockers
 | Synthesis ID | Blocker | Impact | Role source | Original finding/case location | Evidence | Clearance condition |
 ## Proposed Additional Cases
-| Synthesis ID | Scenario to verify | Risk | Minimum case elements | Role source | Original finding/evidence |
+| Synthesis ID | Scenario to verify | Risk | Reviewed scope | Minimum case elements | Role source | Original finding/evidence |
 ## Revision Recommendations
 | Synthesis ID | Type | Severity | Minimum revision | Related case | Role source | Original finding/evidence |
 ## Information Gaps
@@ -125,5 +128,6 @@ Evaluate in this order: `Insufficient information -> Recommend revision -> Recom
 - [ ] Overall recommendation is exactly one of the three allowed labels
 - [ ] Output blockers, additional cases, revisions, evidence, and role sources
 - [ ] Every key synthesis item is traceable and missing evidence was not invented
+- [ ] Preserved reviewed scope and upstream evidence for valid additional-case N/A without misclassifying it as missing source metadata
 - [ ] Explicitly handled unresolved disagreements and cross-role input contamination
 - [ ] Final approval, sign-off, and acceptance decision explicitly belong to the Human Task

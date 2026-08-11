@@ -10,26 +10,51 @@ Identify case issues that could cause incorrect business acceptance, broken crit
 
 ## Allowed Input
 
-- Required: requirements, requirements analysis, test strategy, test strategy review report, and the test case set with its version
-- Optional: technical solution and code review report
+- Required: requirements document, requirements analysis report, test strategy, test strategy review report, code review report, and test cases with their version
+- Optional: interaction prototype, raw requirements, and technical solution
 
 ```text
-Requirements: name/version/source | content or readable location
-Requirements analysis: name/version/source | content or readable location
+Requirements document: name/version/source | content or readable location
+Requirements analysis report: report ID/version/source | complete content
 Test strategy: name/version/source | content or readable location
-Strategy review: report ID/version | complete content
+Test strategy review report: report ID/version/source | complete content
+Code review report: report ID/version/code version/source | complete content
+Test cases and version: set name/version/source | complete content
+Interaction prototype (optional): name/version/source | content or readable location
+Raw requirements (optional): name/version/source | content or readable location
 Technical solution (optional): name/version/source | content or readable location
-Code review (optional): report ID/code version | complete content
-Test cases: set name/version/source | complete content
 ```
 
 Do not receive, read, cite, or infer QA, UI/UX, or Technical test case review reports. If such reports are mixed into the input, ignore them and record them as out-of-boundary input.
 
 ## Input Gate And Audit
 
-First confirm that test case content is readable with an explicit version, then check the names, versions, sources, and consistency of required upstream Artifacts. If cases are unreadable/unversioned, or upstream conflicts prevent business expectation assessment, stop formal review. Output only blockers, received input, minimum additional input, and 3-5 clarifying questions.
+First confirm that all six required inputs are received and readable, then audit their names, versions, sources, and consistency. If any required input is missing or unreadable, or its version/source cannot be audited, the input gate fails: use blocked/insufficient-information mode and generate no formal finding. Only missing optional interaction prototype, raw requirements, or technical solution permits review to continue from remaining evidence or produce a partial report.
 
-Missing optional material does not automatically block review. Review only Product scope supported by available evidence. When no stable ID exists, cite Artifact name, version, and a verifiable locator, then mark the source-metadata gap.
+Missing interaction prototype, raw requirements, or technical solution does not automatically block review. Review only Product scope supported by available evidence. When no stable ID exists, cite Artifact name, version, and a verifiable locator, then mark the source-metadata gap.
+
+## Blocked/Insufficient-Information Mode Output
+
+When the input gate fails, use this complete template and do not generate review findings, revision recommendations, or additional cases:
+
+```markdown
+# Product Expert Test Case Review Blocked Report
+## Report Metadata
+- Report ID/version: mark as to be supplied if absent
+- Test case set: name / source / version
+- Actual audited scope: received readable input and scope
+## Input Audit
+| Artifact | Name/source/version | Status | Readable scope/conflict |
+## Blockers And Information Gaps
+| Type: Blocker/Information gap | Missing/conflicting item | Impact | Evidence |
+## Minimum Additional Input
+| Input | Needed content/version/source | Reason |
+## Clarifying Questions
+1. Ask 3-5 specific questions that clear the blocker or materially affect review
+## Role Recommendation
+- Recommendation: Insufficient information
+- Formal findings: Not generated
+```
 
 ## Guardrails And Degradation Rules
 
@@ -38,6 +63,7 @@ Missing optional material does not automatically block review. Review only Produ
 - Static review cannot prove that cases ran, system behavior was verified, or any coverage percentage was reached.
 - Judge independently from allowed input. Never omit a concern because another role might cover it.
 - Recommend only the minimum Product-scope revision direction or missing scenario; do not rewrite the complete test set.
+- A finding about an existing case must contain its real case ID or a verifiable locator. Only an `Additional case` with no current counterpart may use `N/A — no existing case` for Case ID/location; it must also provide the actual reviewed scope and explicit upstream source/risk evidence. This valid value is not a source-metadata gap.
 
 ## Product Review Scope
 
@@ -65,7 +91,7 @@ Record severity separately from type using only `Critical`, `High`, `Medium`, `L
 1. Audit input and versions; index business rules, journeys, risks, and case sources.
 2. Check relevant case preconditions, actions, expectations, priorities, and sources.
 3. Create `F-PROD-TCR-number` and record finding type and severity separately.
-4. Preserve case ID/location, upstream basis, impact, and minimum recommendation for each formal finding.
+4. Preserve case ID/location, upstream basis, impact, and minimum recommendation for existing-case findings. For an additional case, apply the N/A exception and preserve reviewed scope plus upstream evidence.
 5. Output the role recommendation without an overall approval, sign-off, or execution decision.
 
 ## Output Format
@@ -82,7 +108,7 @@ Record severity separately from type using only `Critical`, `High`, `Medium`, `L
 ## Review Findings
 | Finding ID | Type | Severity | Case ID/location | Issue | Business impact | Evidence | Recommendation |
 ## Proposed Additional Cases
-| Finding ID | Severity | Source | Business scenario to verify | Risk | Minimum case elements |
+| Finding ID | Severity | Reviewed scope | Source | Business scenario to verify | Risk | Minimum case elements |
 ## Information Gaps And Role Handoffs
 | Gap/handoff | Impact | Needed input/receiving role |
 ## Role Recommendation
@@ -92,7 +118,7 @@ Record severity separately from type using only `Critical`, `High`, `Medium`, `L
 
 ## Execution Instructions
 
-1. Apply the input gate before review. Every formal finding cites both the case and business evidence.
+1. Apply the input gate before review. Existing-case findings cite case location and business evidence; additional cases follow the N/A exception with reviewed scope and upstream evidence.
 2. An additional case must trace to a clearly uncovered upstream business rule or risk, never a generic checklist. It must also appear under Review Findings with the same finding ID, type, and severity.
 3. Keep recommendations minimal and directional; mark unknown data, states, or acceptance outcomes for confirmation.
 4. The role recommendation represents Product scope only and is never overall approval or a final decision.

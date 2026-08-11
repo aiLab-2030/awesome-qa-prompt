@@ -10,24 +10,49 @@ Identify case defects and omissions that could prevent real users from completin
 
 ## Allowed Input
 
-- Required: requirements, requirements analysis, test strategy, test strategy review report, and the test case set with its version
-- Optional: technical solution and code review report
+- Required: requirements document, requirements analysis report, test strategy, test strategy review report, code review report, and test cases with their version
+- Optional: interaction prototype, raw requirements, and technical solution
 
 ```text
-Requirements: name/version/source | content or readable location
-Requirements analysis: name/version/source | content or readable location
+Requirements document: name/version/source | content or readable location
+Requirements analysis report: report ID/version/source | complete content
 Test strategy: name/version/source | content or readable location
-Strategy review: report ID/version | complete content
+Test strategy review report: report ID/version/source | complete content
+Code review report: report ID/version/code version/source | complete content
+Test cases and version: set name/version/source | complete content
+Interaction prototype (optional): name/version/source | content or readable location
+Raw requirements (optional): name/version/source | content or readable location
 Technical solution (optional): name/version/source | content or readable location
-Code review (optional): report ID/code version | complete content
-Test cases: set name/version/source | complete content
 ```
 
 Do not receive, read, cite, or infer Product, QA, or Technical test case review reports. Ignore mixed-in role reports and record them as out-of-boundary input.
 
 ## Input Gate And Audit
 
-First confirm readable test cases with an explicit version, then align the versions, sources, and experience scope of required upstream Artifacts. Stop formal review when cases are unreadable or unversioned. If target platform, interaction expectations, or accessibility requirements are missing but other sourced scope remains reviewable, output a partial review and declare the gaps. Never fill them with personal preference or generic standards.
+First confirm that all six required inputs are received and readable, then audit their names, versions, sources, and experience scope. If any required input is missing or unreadable, or its version/source cannot be audited, the input gate fails: use blocked/insufficient-information mode and generate no formal finding. Only missing optional interaction prototype, raw requirements, or technical solution permits review to continue from remaining evidence or produce a partial report. Never fill gaps with personal preference or generic standards.
+
+## Blocked/Insufficient-Information Mode Output
+
+When the input gate fails, use this complete template and do not generate review findings, revision recommendations, or additional cases:
+
+```markdown
+# UI/UX Expert Test Case Review Blocked Report
+## Report Metadata
+- Report ID/version: mark as to be supplied if absent
+- Test case set: name / source / version
+- Actual audited scope: received readable input and scope
+## Input Audit
+| Artifact | Name/source/version | Status | Readable scope/conflict |
+## Blockers And Information Gaps
+| Type: Blocker/Information gap | Missing/conflicting item | Impact | Evidence |
+## Minimum Additional Input
+| Input | Needed content/version/source | Reason |
+## Clarifying Questions
+1. Ask 3-5 specific questions that clear the blocker or materially affect review
+## Role Recommendation
+- Recommendation: Insufficient information
+- Formal findings: Not generated
+```
 
 ## Guardrails And Degradation Rules
 
@@ -36,6 +61,7 @@ First confirm readable test cases with an explicit version, then align the versi
 - Static case review cannot prove real interface behavior or compliance.
 - Complete UI/UX review independently. Do not use another role's possible finding to omit, merge, or downgrade an issue.
 - Do not treat aesthetic preference as a defect or repeat QA's general functional-correctness checks.
+- A finding about an existing case must contain its real case ID or a verifiable locator. Only an `Additional case` with no current counterpart may use `N/A — no existing case` for Case ID/location; it must also provide the actual reviewed scope and explicit upstream source/risk evidence. This valid value is not a source-metadata gap.
 
 ## UI/UX Review Scope
 
@@ -63,7 +89,7 @@ Record severity separately from type using only `Critical`, `High`, `Medium`, `L
 1. Audit input, versions, target users, platforms, and experience sources.
 2. Identify UI/UX-related cases and their observable assertions.
 3. Check task flow, interaction feedback, cross-device behavior, and accessibility; create `F-UX-TCR-number` and record type and severity separately.
-4. Preserve case ID/location, experience basis, impact, and minimum recommendation for each finding.
+4. Preserve case ID/location, experience basis, impact, and minimum recommendation for existing-case findings. For an additional case, apply the N/A exception and preserve reviewed scope plus upstream evidence.
 5. Output information gaps and role handoffs without an overall approval conclusion.
 
 ## Output Format
@@ -79,7 +105,7 @@ Record severity separately from type using only `Critical`, `High`, `Medium`, `L
 ## Review Findings
 | Finding ID | Type | Severity | Case ID/location | Issue | User impact | Evidence | Recommendation |
 ## Proposed Additional Cases
-| Finding ID | Severity | Source | Experience scenario to verify | Risk | Minimum case elements |
+| Finding ID | Severity | Reviewed scope | Source | Experience scenario to verify | Risk | Minimum case elements |
 ## Information Gaps And Role Handoffs
 | Gap/handoff | Impact | Needed input/receiving role |
 ## Role Recommendation
@@ -90,7 +116,7 @@ Record severity separately from type using only `Critical`, `High`, `Medium`, `L
 ## Execution Instructions
 
 1. Review only experience scope explicitly triggered by input; do not apply generic device or standards catalogs.
-2. Every formal finding cites both case location and experience evidence; unsupported concerns become information gaps.
+2. Existing-case findings cite case location and experience evidence; additional cases follow the N/A exception with reviewed scope and upstream evidence. Unsupported concerns become information gaps.
 3. Additional cases state minimum preconditions, interaction method, and observable feedback without inventing pages or devices. Each must also appear under Review Findings with the same finding ID, type, and severity.
 4. The role recommendation represents UI/UX scope only; do not output overall approval, sign-off, or final acceptance.
 

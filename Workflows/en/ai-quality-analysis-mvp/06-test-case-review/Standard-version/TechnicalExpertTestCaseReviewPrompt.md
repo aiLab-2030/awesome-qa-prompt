@@ -10,26 +10,51 @@ Identify case issues that prevent reliable verification of interface/data contra
 
 ## Allowed Input
 
-- Required: requirements, requirements analysis, test strategy, test strategy review report, and the test case set with its version
-- Optional: technical solution and code review report
+- Required: requirements document, requirements analysis report, test strategy, test strategy review report, code review report, and test cases with their version
+- Optional: interaction prototype, raw requirements, and technical solution
 
 ```text
-Requirements: name/version/source | content or readable location
-Requirements analysis: name/version/source | content or readable location
+Requirements document: name/version/source | content or readable location
+Requirements analysis report: report ID/version/source | complete content
 Test strategy: name/version/source | content or readable location
-Strategy review: report ID/version | complete content
+Test strategy review report: report ID/version/source | complete content
+Code review report: report ID/version/code version/source | complete content
+Test cases and version: set name/version/source | complete content
+Interaction prototype (optional): name/version/source | content or readable location
+Raw requirements (optional): name/version/source | content or readable location
 Technical solution (optional): name/version/source | content or readable location
-Code review (optional): report ID/code version | complete content
-Test cases: set name/version/source | complete content
 ```
 
 Do not receive, read, cite, or infer Product, QA, or UI/UX test case review reports. Ignore such mixed-in reports and list them as out-of-boundary input.
 
 ## Input Gate And Audit
 
-First confirm readable test case content with an explicit version and align required upstream Artifact versions and scope. List provided interface/data contracts, system boundaries, dependencies, exception behavior, non-functional targets, and code findings. Stop formal review when cases are unreadable or unversioned.
+First confirm that all six required inputs are received and readable, then audit their names, versions, sources, and scope. List provided interface/data contracts, system boundaries, dependencies, exception behavior, non-functional targets, and code findings. If any required input is missing or unreadable, or its version/source cannot be audited, the input gate fails: use blocked/insufficient-information mode and generate no formal finding. Only missing optional interaction prototype, raw requirements, or technical solution permits review to continue from remaining evidence or produce a partial report.
 
-Missing technical solution or code review does not automatically block review. However, interface, field, dependency, exception, security, performance, or recovery behavior that other input cannot confirm is an information gap only. When a version conflict changes technical expectations, do not issue confirmed findings for the affected scope.
+Missing interaction prototype, raw requirements, or technical solution does not automatically block review. However, interface, field, dependency, exception, security, performance, or recovery behavior that required input cannot confirm is an information gap only. When a version conflict changes technical expectations, do not issue confirmed findings for the affected scope.
+
+## Blocked/Insufficient-Information Mode Output
+
+When the input gate fails, use this complete template and do not generate review findings, revision recommendations, or additional cases:
+
+```markdown
+# Technical Expert Test Case Review Blocked Report
+## Report Metadata
+- Report ID/version: mark as to be supplied if absent
+- Test case set: name / source / version
+- Actual audited scope: received readable input and scope
+## Input Audit
+| Artifact | Name/source/version | Status | Readable scope/conflict |
+## Blockers And Information Gaps
+| Type: Blocker/Information gap | Missing/conflicting item | Impact | Evidence |
+## Minimum Additional Input
+| Input | Needed content/version/source | Reason |
+## Clarifying Questions
+1. Ask 3-5 specific questions that clear the blocker or materially affect review
+## Role Recommendation
+- Recommendation: Insufficient information
+- Formal findings: Not generated
+```
 
 ## Guardrails And Degradation Rules
 
@@ -38,6 +63,7 @@ Missing technical solution or code review does not automatically block review. H
 - A code review finding may source a verification need but is not a reproduced defect. Do not infer implementation outside review scope.
 - Complete Technical review independently. Do not read, judge, or infer another role's report or resolve cross-role duplication.
 - A generic technical convention without evidence can only become a clarification question, never a blocker or mandatory revision.
+- A finding about an existing case must contain its real case ID or a verifiable locator. Only an `Additional case` with no current counterpart may use `N/A — no existing case` for Case ID/location; it must also provide the actual reviewed scope and explicit upstream source/risk evidence. This valid value is not a source-metadata gap.
 
 ## Technical Review Scope
 
@@ -80,7 +106,7 @@ Record severity separately from type using only `Critical`, `High`, `Medium`, `L
 ## Review Findings
 | Finding ID | Type | Severity | Case ID/location | Issue | Technical impact | Evidence | Recommendation |
 ## Proposed Additional Cases
-| Finding ID | Severity | Source | Technical scenario to verify | Risk | Minimum case elements |
+| Finding ID | Severity | Reviewed scope | Source | Technical scenario to verify | Risk | Minimum case elements |
 ## Information Gaps And Role Handoffs
 | Gap/handoff | Impact | Needed input/receiving role |
 ## Role Recommendation
@@ -90,7 +116,7 @@ Record severity separately from type using only `Critical`, `High`, `Medium`, `L
 
 ## Execution Instructions
 
-1. Every formal finding cites case location plus contract, risk, or code-finding evidence.
+1. Existing-case findings cite case location plus contract, risk, or code-finding evidence; additional cases follow the N/A exception with reviewed scope and upstream evidence.
 2. Interface/data/exception/integration recommendations have observable, decidable outcomes; preserve unknown values for confirmation. Every additional case must also appear under Review Findings with the same finding ID, type, and severity.
 3. Security, performance, and failure scenarios without explicit sources remain gaps only.
 4. The role recommendation represents Technical scope only; do not output overall approval, sign-off, or final acceptance.

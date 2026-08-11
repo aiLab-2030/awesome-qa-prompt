@@ -10,10 +10,10 @@ The synthesis report must list blockers, proposed additional cases, revision rec
 
 ## Allowed Input
 
-- Required: requirements, requirements analysis, test strategy, test strategy review report, and a test case set with an explicit version
-- Optional: technical solution and code review report
+- Required: requirements document, requirements analysis report, test strategy, test strategy review report, code review report, and test cases with their version
+- Optional: interaction prototype, raw requirements, and technical solution
 
-Before review, align each Artifact's name, version, source, and readable scope. If test case content is unreadable, its version is unclear, or required upstream material is missing/conflicting enough to prevent expectation assessment, each role outputs blockers and information gaps only. It must not infer case content or product/technical facts.
+Before review, align each Artifact's name, version, source, and readable scope. If any required input is missing or unreadable, or its version/source cannot be audited, the role must use blocked/insufficient-information mode and generate no formal finding. Only missing optional input permits review to continue from remaining evidence or produce a partial report. Never infer case content or product/technical facts.
 
 ## Independent Review Boundaries
 
