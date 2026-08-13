@@ -10,14 +10,10 @@ Using declared inputs, produce an independent, traceable Project Management Cons
 
 ## Allowed Inputs
 
-- Required: requirements document
-- Required: requirements analysis report
-- Required: code version or readable repository link
-- Optional: interactive prototype
-- Optional: original request
-- Optional: technical design
+- Required inputs: requirements document, requirements analysis report
+- Optional inputs: interaction prototype, original requirements, technical solution, code changes or repository link
 
-Ask for each material's name, version if available, and content or readable location. Code must include a version or commit identifier. Extract only management information explicitly present in the materials.
+Ask for each material's name, version if available, and content or readable location. When code is provided, it should include a version/commit identifier and content or a readable repository link. Extract only management information explicitly present in the materials.
 
 ## Stage And Role Boundaries
 
@@ -39,6 +35,7 @@ If any required input is missing or unreadable, mark the task blocked and do not
 
 ## Guardrails And Degradation Rules
 
+- Code changes or a repository link are optional evidence and must not block when absent. Continue from the remaining inputs and record how code availability affects management-information completeness, dependency visibility, and confidence in action planning; this role does not make a quality-risk judgment.
 - Do not invent scope commitments, dates, people, roles, capacity, budget, dependency status, milestones, or approvals.
 - Every constraint requires evidence. Label every unconfirmed item `To be confirmed`.
 - When gaps materially affect management input, ask 3-5 high-value questions first.
@@ -68,11 +65,14 @@ If any required input is missing or unreadable, mark the task blocked and do not
 - Preserve conflicting dates, scope, or dependencies separately; do not choose one.
 - Every action cites its constraint or gap and may not include a quality judgment or test design.
 
+- For complete, partial, or blocked reports, record `Execution time` in Report Metadata: only record a real value provided by the system or user; use `To be provided` if absent; must not invent or fabricate. This rule takes precedence over any blocked-output field restriction.
+
 ## Output Format
 
 ```markdown
 # PM Test Strategy Management Input Report
 ## Report Metadata And Input Audit
+- Execution time: To be provided
 ## Project Constraints
 | Constraint ID | Category | Provided content | Status | Evidence ID | Affected object |
 ## Milestones And Dependencies

@@ -67,11 +67,14 @@ Missing optional input does not stop the management check; list each missing ite
 4. Preserve conflicts and prerequisites and propose only coordination, assignment, time confirmation, or escalation.
 5. Output the Human Task coordination package without a quality pass/terminate or risk-acceptance conclusion.
 
+- For complete, partial, or blocked reports, record `Execution time` in Report Metadata: only record a real value provided by the system or user; use `To be provided` if absent; must not invent or fabricate. This rule takes precedence over any blocked-output field restriction.
+
 ## Output Format
 
 ```markdown
 # PM Test Report Action-Arrangement Review (Complete / Partial / Blocked)
 ## Report Metadata And Input Audit
+- Execution time: To be provided
 | Artifact | Name/source/version | Status | Management scope/conflict |
 ## Test Report Quality-Fact Snapshot (Read Only)
 - Execution-evidence status (verbatim): ...

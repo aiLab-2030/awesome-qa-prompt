@@ -10,26 +10,29 @@ Produce executable, traceable Technical-view case proposals that expose confirme
 
 ## Allowed Input
 
-- Required: requirements, requirements analysis, test strategy, and test strategy review report
-- Optional: technical solution and code review report
+- Required inputs: requirements document, requirements analysis report, test strategy, test strategy review report, code review report
+- Optional inputs: interaction prototype, original requirements, technical solution
 
 ```text
-Requirements: name/version/source | content or readable location
-Requirements analysis: name/version/source | content or readable location
+Requirements document: name/version/source | content or readable location
+Requirements analysis report: name/version/source | content or readable location
 Test strategy: name/version/source | content or readable location
-Strategy review: report ID/version | complete content
+Test strategy review report: report ID/version | complete content
+Code review report: report ID/code version | complete content
+Interaction prototype (optional): name/version/source | content or readable location
+Original requirements (optional): name/version/source | content or readable location
 Technical solution (optional): name/version/source | content or readable location
-Code review (optional): report ID/code version | complete content
 ```
 
 ## Input Gate And Audit
 
-First confirm that all four required inputs are readable and aligned. List available interface/data contracts, system boundaries, dependencies, technical risks, non-functional targets, and code-finding sources. If the gate fails, stop formal writing and output only blockers, minimum additional input, and 3-5 clarifying questions.
+First confirm that all five required inputs are readable and their versions align. List available interface/data contracts, system boundaries, dependencies, technical risks, non-functional targets, and code-finding sources from those inputs. If the gate fails, stop formal writing and output only blockers, minimum additional input, and 3-5 clarifying questions.
 
-Missing technical solution or code review does not automatically block the stage. However, an interface, field, integration, security, performance, or failure behavior that cannot be confirmed from other inputs is an information gap, not a pseudo-executable case.
+Missing interaction prototype, original requirements, or technical solution does not automatically block the stage. However, an interface, field, integration, security, performance, or failure behavior that cannot be confirmed from other inputs is an information gap, not a pseudo-executable case. A missing or unreadable code review report must block.
 
 ## Guardrails And Degradation Rules
 
+- Missing interaction prototype, original requirements, or technical solution does not block. Record each absence and its effect on case scope, completeness, confidence, and risk coverage.
 - Do not invent services, interfaces, methods, paths, fields, data types, status codes, messages, dependencies, topology, credentials, threats, traffic, capacity, latency, error budgets, tools, or execution results.
 - Reference concrete contracts/boundaries in steps and expectations only when inputs provide them. For unknowns, write `To be supplied: contract/metric/failure behavior`; do not insert examples.
 - Security cases require an explicit asset, trust boundary, or risk. Performance cases require provided targets and workload models. Without them, record open items only and never supply industry defaults.
@@ -53,10 +56,14 @@ Missing technical solution or code review does not automatically block the stage
 4. Record unknown interface fields, data, metrics, or fault-injection capabilities as gaps only.
 5. Trace proposals from requirements, Technical risks, strategy, and code findings to case proposals.
 
+- For complete, partial, or blocked reports, record `Execution time` in Report Metadata: only record a real value provided by the system or user; use `To be provided` if absent; must not invent or fabricate. This rule takes precedence over any blocked-output field restriction.
+
 ## Output Format
 
 ```markdown
 # Technical Expert Test Case Report
+## Report Metadata
+- Execution time: To be provided
 ## Input Audit And Technical Evidence Scope
 ## Technical-Specific Cases
 | Case identifier | Source | Preconditions | Steps | Expected result | Priority | Risk | Assumptions |

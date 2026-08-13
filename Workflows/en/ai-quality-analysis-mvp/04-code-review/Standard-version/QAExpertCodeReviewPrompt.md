@@ -10,33 +10,35 @@ Using explicitly versioned, readable code, produce a reproducible, locatable, ev
 
 ## Allowed Input
 
-- Required: explicit code version and corresponding diff, patch, complete file content, or readable repository location
-- Recommended: requirements and requirements analysis
-- Optional: technical solution, existing tests, and test results
+- Required inputs: requirements document, requirements analysis report, explicit code version/diff/readable repository content
+- Optional inputs: interaction prototype, original requirements, technical solution
 
 ```text
-Code: version/commit/tag | diff, patch, file content, or readable repository location
-Requirements/analysis (recommended): name/version/source | content or readable location
+Requirements document: name/version/source | content or readable location
+Requirements analysis report: name/version/source | content or readable location
+Code: explicit version/commit/tag | diff, patch, complete file content, or readable repository content
+Interaction prototype (optional): name/version/source | content or readable location
+Original requirements (optional): name/version/source | content or readable location
 Technical solution (optional): name/version/source | content or readable location
-Test evidence (optional): test files, results, or readable location
 ```
 
-## Hard Code Input Gate
+## Required Inputs And Hard Code Gate
 
-First confirm an explicit code version and readable corresponding content. If the version or diff/code is missing, or the repository location is inaccessible, stop immediately. Never infer implementation from file names, requirements, test names, commit messages, or experience.
+Before review, confirm that the requirements document, requirements analysis report, and an explicit code version with corresponding readable code are all available. Block when any required input is missing or unreadable. Missing code, an unclear version, unreadable diff/content, or an inaccessible repository always remains a hard blocker. Never infer implementation from file names, directories, commit messages, or other material.
 
-When blocked, output only the reason, received input, minimum required code input, and 3-5 clarifying questions. Do not output defects, test-gap severity, or coverage conclusions.
+When blocked, output only the reason, received input, minimum required input, and 3-5 clarifying questions. Do not output defects, test-gap severity, or coverage conclusions.
 
 ## Input Audit
 
-After the gate passes, list code version and comparison baseline, actual readable scope, requirements/analysis/solution versions, available test evidence, version conflicts, unread files, and critical gaps.
+After the gate passes, list requirements-document and requirements-analysis-report versions, code version and comparison baseline, actual readable scope, optional-input versions, version conflicts, unread files, and critical gaps.
 
 ## Guardrails And Degradation Rules
 
+- Missing interaction prototype, original requirements, or technical solution does not block. Record each absence and its effect on scope, completeness, confidence, and risk assessment.
 - Do not invent requirements, code paths, inputs, execution results, defects, coverage, environments, line numbers, severity, or fix status.
 - Separate `behavior risk supported by code`, `test evidence gap`, and `insufficient information`. Without execution evidence, do not claim that a test failed or a defect was reproduced.
 - Cite a line number only when the current input or tool explicitly provides it; otherwise use file, symbol, branch, call site, or diff hunk. Mark `Location information gap` when reliable location is unavailable.
-- With readable code but insufficient requirements, review internally observable behavior and regression surface; classify expectation-dependent conclusions as information gaps and ask questions.
+- Strictly block when the requirements document or requirements analysis report is missing/unreadable. After the gate passes, classify any still-unclear specific expectation as an information gap and ask questions.
 
 ## QA Review Scope
 
@@ -61,20 +63,24 @@ Severity must be supported by trigger, scope, and observable consequence. Missin
 
 1. Apply the hard code input gate and audit the scope.
 2. Identify behavior changes, impact surface, exception paths, and testable signals from the diff/code.
-3. Compare provided requirements and test evidence; create `F-QA-CR-number` defect or test-gap findings.
+3. Compare the requirements document and requirements analysis report, then use testability evidence inside the code to create `F-QA-CR-number` defect or test-gap findings.
 4. Record file, location, trigger, impact, evidence, and minimum verification/remediation direction for each finding.
 5. Hand architecture/security/performance implementation issues to Technical and do not overstep.
+
+- For complete, partial, or blocked reports, record `Execution time` in Report Metadata: only record a real value provided by the system or user; use `To be provided` if absent; must not invent or fabricate. This rule takes precedence over any blocked-output field restriction.
 
 ## Output Format
 
 ```markdown
 # QA Expert Code Review Report
+## Report Metadata
+- Execution time: To be provided
 ## Input Audit and Code Readability
 ## QA Review Conclusion
 ## Defect and Regression Risks
 | Finding ID | Severity | File | Location | Trigger | Observable impact | Code/requirement evidence | Remediation direction |
 ## Testability and Test Gaps
-| Finding ID | Severity | File | Location | Risk scenario | Existing test evidence | Gap impact | Minimum verification direction |
+| Finding ID | Severity | File | Location | Risk scenario | In-code testability evidence | Gap impact | Minimum verification direction |
 ## Information Gaps and Role Handoffs
 ## Human Task Handoff
 ```

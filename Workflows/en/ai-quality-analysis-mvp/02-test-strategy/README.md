@@ -8,14 +8,12 @@ Have Product, QA, UI/UX, Technical, and PM roles independently provide the infor
 
 ## Input Baseline
 
-- Required: requirements document
-- Required: requirements analysis report
-- Required: code version or readable repository link
-- Optional: interactive prototype
-- Optional: original request
-- Optional: technical design
+- Required inputs: requirements document, requirements analysis report
+- Optional inputs: interaction prototype, original requirements, technical solution, code changes or repository link
 
 All five role prompts use the same declared inputs. The synthesis prompt reads only the five role reports and may not consult source materials or add facts absent from those reports.
+
+Code is optional evidence only. Its absence must not block the strategy stage. Each role continues from the remaining inputs and states how missing code affects visibility into implementation changes, report completeness, confidence, and risk assessment.
 
 ## Prompt Files
 
@@ -28,7 +26,7 @@ All five role prompts use the same declared inputs. The synthesis prompt reads o
 
 ## Recommended Invocation Order
 
-1. Invoke the Product, QA, UI/UX, Technical, and PM prompts independently with the same declared inputs. No role may treat another role's conclusion as a confirmed fact.
+1. Invoke the Product, QA, UI/UX, Technical, and PM prompts independently with the same required inputs and any actually provided optional inputs. No role may treat another role's conclusion as a confirmed fact.
 2. Check the UI/UX participation decision. When it is `Do not participate`, retain only its rationale and open items; do not require a full UI/UX strategy input.
 3. Confirm that the PM report contains management inputs only. It may not set or override quality conclusions, test priorities, or technical approaches.
 4. Pass all five role reports to the synthesis prompt to produce a traceable test strategy.

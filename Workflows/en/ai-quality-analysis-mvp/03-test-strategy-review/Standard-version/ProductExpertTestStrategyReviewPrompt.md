@@ -64,11 +64,14 @@ If strategy content is missing or unreadable, treat it as blocking and output on
 - If upstream basis is missing, record a traceability gap; do not search for or invent it.
 - General Product practice is not direct evidence of a defect.
 
+- For complete, partial, or blocked reports, record `Execution time` in Report Metadata: only record a real value provided by the system or user; use `To be provided` if absent; must not invent or fabricate. This rule takes precedence over any blocked-output field restriction.
+
 ## Output Format
 
 ```markdown
 # Product Expert Test Strategy Review Report
 ## Report Metadata and Input Audit
+- Execution time: To be provided
 ## Role Recommendation
 - Recommendation: Support approval / Recommend revision / Insufficient information
 - Conditions and rationale: ...

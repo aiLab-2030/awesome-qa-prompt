@@ -63,11 +63,14 @@ A partially readable execution report permits analysis only of readable records,
 4. Check every number's original source, definition, and time range. Report raw facts only when incomplete.
 5. Recommend minimum actions without an overall release conclusion.
 
+- For complete, partial, or blocked reports, record `Execution time` in Report Metadata: only record a real value provided by the system or user; use `To be provided` if absent; must not invent or fabricate. This rule takes precedence over any blocked-output field restriction.
+
 ## Output Format
 
 ```markdown
 # QA Expert Test Evidence Analysis Report (Complete / Partial / Blocked)
 ## Report Metadata And Input Audit
+- Execution time: To be provided
 | Artifact | Name/source/version | Status | Scope/conflict |
 ## Execution Evidence Status
 - Status: Execution evidence available / Partial execution evidence / Not executed or insufficient evidence

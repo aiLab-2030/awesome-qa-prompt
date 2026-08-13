@@ -10,7 +10,7 @@ Produce a traceable, minimum executable test strategy covering scope, risks, tes
 
 ## Allowed Inputs
 
-Only these five reports are allowed; record every missing report:
+Only the following five role reports are allowed; record every missing report:
 
 - Product Expert Test Strategy Input Report
 - QA Expert Test Strategy Input Report
@@ -18,7 +18,7 @@ Only these five reports are allowed; record every missing report:
 - Technical Expert Test Strategy Input Report
 - PM Test Strategy Management Input Report
 
-Provide each report's identifier/version if available and complete content. Do not consult requirements, the requirements analysis report, code, prototypes, original requests, technical designs, external sources, or conversation memory to repair a role report.
+Provide each report's identifier/version if available and complete content. Do not consult the requirements document, requirements analysis report, interaction prototype, original requirements, technical solution, code changes or repository link, external sources, or conversation memory to repair a role report.
 
 ## Synthesis Boundaries
 

@@ -8,8 +8,8 @@ Have Product, QA, UI/UX, and Technical independently propose test cases from the
 
 ## Allowed Input
 
-- Required: requirements, requirements analysis, test strategy, and test strategy review report
-- Optional: technical solution and code review report
+- Required inputs: requirements document, requirements analysis report, test strategy, test strategy review report, code review report
+- Optional inputs: interaction prototype, original requirements, technical solution
 
 Before formal writing, align every Artifact's name, version, source, and readable scope. If required input is missing or a version conflict materially affects the cases, output only blockers/gaps and questions. Do not fill in interfaces, fields, environments, or test data from common knowledge.
 
@@ -34,10 +34,10 @@ Every role case and final consolidated case must include at least: case identifi
 
 ## Recommended Invocation Order
 
-1. Lock aligned versions of requirements, requirements analysis, test strategy, strategy review, and optional technical solution and code review.
+1. Lock aligned versions of the requirements document, requirements analysis report, test strategy, strategy review, and code review, then prepare any actually provided interaction prototype, original requirements, and technical solution.
 2. Give the same inputs to all four role prompts; Product and UI/UX first decide conditional participation.
 3. Check that every proposal contains the eight minimum fields and that all steps, data, and expectations have input support.
-4. Give the four role reports and the same upstream artifacts to the synthesis prompt for deduplication, unified numbering, and the traceability matrix.
+4. Give only the four role reports to the synthesis prompt for deduplication, unified numbering, and the traceability matrix. Do not let synthesis reread upstream Artifacts.
 5. Hand the final set to the Human Task to confirm execution scope, provide actual test data, and arrange execution. This stage does not claim that cases ran or requirements are covered.
 
 ## Version Note

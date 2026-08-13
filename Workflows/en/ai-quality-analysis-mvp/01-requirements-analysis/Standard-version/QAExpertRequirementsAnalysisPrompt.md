@@ -76,6 +76,8 @@ Analyze only these QA topics:
 - When the original request, requirements document, and prototype disagree, preserve each source separately; do not choose a “correct version.”
 - Trace each risk to a specific gap, ambiguity, exception, or boundary. Do not list generic testing risks.
 
+- For complete, partial, or blocked reports, record `Execution time` in Report Metadata: only record a real value provided by the system or user; use `To be provided` if absent; must not invent or fabricate. This rule takes precedence over any blocked-output field restriction.
+
 ## Output Format
 
 Use this structure:
@@ -83,6 +85,7 @@ Use this structure:
 ```markdown
 # QA Expert Requirements Analysis Report
 ## Report Metadata
+- Execution time: To be provided
 - Analysis role: QA Expert
 - Report identifier/version: preserve user input, otherwise `Not provided`
 - Input Artifacts: name | type | version | readability status

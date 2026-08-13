@@ -8,6 +8,10 @@ This workflow uses 43 copy-and-use English prompts to connect requirements analy
 
 The workflow produces analysis, recommendations, and material for human decisions. It does not execute tests, replace approvals, authorize a release or waiver, accept risk, or present planned coverage as actual execution.
 
+## Version Selection
+
+This workflow currently provides only the Standard version (`Standard-version`), which is the default selection; do not assume other versions exist.
+
 ## Eight-Stage Sequence
 
 | Stage | Goal | Stage Guide |
@@ -25,18 +29,18 @@ When the stages run in sequence, each downstream stage must reference locked ver
 
 ## Role Matrix
 
-Legend: `Required` means the role participates by default; `Conditional` means the role first decides to participate, not participate, or mark participation as pending from the evidence; `—` means the stage has no prompt for that role.
+Legend: `Required` means the role participates by default; `Conditional` means the role first decides to participate, not participate, or mark participation as pending from the evidence; `Input` means PM provides project-management information only; `—` means the stage has no prompt for that role.
 
 | Stage | Product | QA | UI/UX | Technical | PM | Synthesis |
 | --- | --- | --- | --- | --- | --- | --- |
 | 1. Requirements analysis | Required | Required | Required | Required | — | 1 prompt |
-| 2. Test strategy | Required | Required | Conditional | Required | Required | 1 prompt |
-| 3. Test strategy review | Required | Required | Conditional | Required | Required | 1 prompt |
+| 2. Test strategy | Required | Required | Conditional | Required | Input | 1 prompt |
+| 3. Test strategy review | Required | Required | Conditional | Required | Input | 1 prompt |
 | 4. Code review | Conditional | Required | Conditional | Required | — | 1 prompt |
 | 5. Test case writing | Conditional | Required | Conditional | Required | — | 1 prompt |
 | 6. Test case review | Required | Required | Required | Required | — | 1 prompt |
 | 7. Test report | Conditional | Required | Conditional | Required | — | 1 prompt |
-| 8. Test report review | Required | Required | Required | Required | Required | 1 prompt |
+| 8. Test report review | Required | Required | Required | Required | Input | 1 prompt |
 
 Role prompts must run independently and must not read, restate, or infer another role's report. PM handles project-management information only and must not override quality facts, risk levels, test priorities, or technical judgments. The stage synthesis prompt owns cross-role deduplication, conflict preservation, and conclusion synthesis.
 
@@ -114,7 +118,7 @@ Role prompts must run independently and must not read, restate, or infer another
 1. **Lock inputs first**: Record each Artifact's name, source, version, and readable scope. Never silently mix versions.
 2. **Invoke roles independently**: Roles in one stage receive the same declared stage inputs but no other role output.
 3. **Preserve conditional-participation results**: A `Do not participate` or `Pending confirmation` result still needs a short report, rationale, and evidence gaps; never omit it silently.
-4. **Invoke synthesis afterward**: Pass only the role reports and Artifacts explicitly allowed by the stage guide. Synthesis in stages 1, 2, 3, 6, and 7 reads role reports only; stages 4, 5, and 8 also read the Artifacts declared by those stages.
+4. **Invoke synthesis afterward**: Synthesis in stages 1 through 7 reads only the corresponding role reports and source metadata declared inside them; it does not reread Artifacts. Stage 8 accepts the explicitly declared Artifacts and role reports described by its stage guide.
 5. **Do not fabricate across stages**: Synthesis deduplicates, classifies, preserves conflicts, and maintains traceability; it does not replace a missing role's professional judgment.
 6. **Hand output to a Human Task**: AI recommendations are not approval, release authorization, waiver, risk acceptance, or merge decisions.
 
@@ -123,10 +127,10 @@ Role prompts must run independently and must not read, restate, or infer another
 | Stage | Required Inputs | Optional or Recommended Inputs |
 | --- | --- | --- |
 | 1. Requirements analysis | Requirements document | Interaction prototype, original request |
-| 2. Test strategy | Requirements document, requirements analysis report, code version or readable repository link | Interaction prototype, original request, technical design |
+| 2. Test strategy | Requirements document, requirements analysis report | Interaction prototype, original requirements, technical solution, code changes or repository link |
 | 3. Test strategy review | Test strategy body or readable location, plus its name, source, and version | None |
-| 4. Code review | Explicit code version plus its diff, patch, complete file content, or readable repository location | Requirements and requirements analysis recommended; technical design optional |
-| 5. Test case writing | Requirements, requirements analysis, test strategy, test strategy review report | Technical design, code review report |
+| 4. Code review | Requirements document, requirements analysis report, explicit code version/diff/readable repository content | Interaction prototype, original requirements, technical solution |
+| 5. Test case writing | Requirements document, requirements analysis report, test strategy, test strategy review report, code review report | Interaction prototype, original requirements, technical solution |
 | 6. Test case review | Requirements document, requirements analysis report, test strategy, test strategy review report, code review report, test cases and version | Interaction prototype, original request, technical design |
 | 7. Test report | Test strategy, test strategy review report, code review report, test cases, test case review report | Test execution report, defect report |
 | 8. Test report review | Requirements document, requirements analysis report, test strategy, test strategy review report, code review report, test cases, test case review report, test report | Interaction prototype, original request, technical design, test case execution report, defect report |

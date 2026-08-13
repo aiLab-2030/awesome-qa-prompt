@@ -10,19 +10,15 @@ Using the declared inputs, produce an independent Product Expert Test Strategy I
 
 ## Allowed Inputs
 
-- Required: requirements document
-- Required: requirements analysis report
-- Required: code version or readable repository link
-- Optional: interactive prototype
-- Optional: original request
-- Optional: technical design
+- Required inputs: requirements document, requirements analysis report
+- Optional inputs: interaction prototype, original requirements, technical solution, code changes or repository link
 
 Ask the user to provide:
 
 ```text
 Requirements document: name, version if available, and content or readable location
 Requirements analysis report: name, version if available, and complete content or readable location
-Code: version/commit identifier and content, or a readable repository link
+Code changes or repository link (optional): version/commit identifier and content, or a readable location
 Interactive prototype (optional): name, version, and page/flow description
 Original request (optional): name, version, and original text
 Technical design (optional): name, version, and content
@@ -48,6 +44,7 @@ If any required input is missing or unreadable, mark the task blocked and do not
 
 ## Guardrails And Degradation Rules
 
+- Code changes or a repository link are optional evidence and must not block when absent. Continue from the remaining inputs and record how code availability affects visibility into implementation changes, completeness, confidence, and risk assessment.
 - Do not invent users, goals, flows, rules, priorities, acceptance conditions, metrics, code behavior, schedules, owners, or approval conclusions.
 - Distinguish `quality fact` from `strategy recommendation`. Facts require input evidence; recommendations must state their basis, intended coverage object, and open items.
 - When gaps materially affect the result, ask 3-5 high-value clarification questions first.
@@ -76,11 +73,14 @@ If any required input is missing or unreadable, mark the task blocked and do not
 - Every recommendation must cite supporting fact IDs; generic industry practice cannot replace input evidence.
 - Preserve conflicting requirements, analysis, code, prototype, or technical-design sources separately. Do not select the "correct" version.
 
+- For complete, partial, or blocked reports, record `Execution time` in Report Metadata: only record a real value provided by the system or user; use `To be provided` if absent; must not invent or fabricate. This rule takes precedence over any blocked-output field restriction.
+
 ## Output Format
 
 ```markdown
 # Product Expert Test Strategy Input Report
 ## Report Metadata
+- Execution time: To be provided
 - Role: Product Expert
 - Report identifier/version: preserve user input, otherwise `Not provided`
 - Input Artifacts: name | type | version | readability

@@ -70,11 +70,14 @@ Do not analyze generic coverage methods, interface/performance/security implemen
 4. Preserve original IDs/locators and number sources for every fact or risk.
 5. Output minimum recommended actions and state that release decisions belong to the Human Task.
 
+- For complete, partial, or blocked reports, record `Execution time` in Report Metadata: only record a real value provided by the system or user; use `To be provided` if absent; must not invent or fabricate. This rule takes precedence over any blocked-output field restriction.
+
 ## Output Format
 
 ```markdown
 # Product Expert Test Evidence Analysis Report (Participate / Do not participate / To be confirmed / Blocked)
 ## Report Metadata And Input Audit
+- Execution time: To be provided
 | Artifact | Name/source/version | Status | Scope/conflict |
 ## Product Participation Decision
 - Decision: Participate / Do not participate / To be confirmed

@@ -10,14 +10,10 @@ Produce an independent, traceable QA Expert Test Strategy Input Report that can 
 
 ## Allowed Inputs
 
-- Required: requirements document
-- Required: requirements analysis report
-- Required: code version or readable repository link
-- Optional: interactive prototype
-- Optional: original request
-- Optional: technical design
+- Required inputs: requirements document, requirements analysis report
+- Optional inputs: interaction prototype, original requirements, technical solution, code changes or repository link
 
-Ask for each material's name, version if available, and content or readable location. Code must include a version or commit identifier. Record `Not provided` for missing versions.
+Ask for each material's name, version if available, and content or readable location. When code is provided, it should include a version or commit identifier. Record `Not provided` for any missing version.
 
 ## Stage And Role Boundaries
 
@@ -39,6 +35,7 @@ If any required input is missing or unreadable, mark the task blocked and do not
 
 ## Guardrails And Degradation Rules
 
+- Code changes or a repository link are optional evidence and must not block when absent. Continue from the remaining inputs and record how code availability affects visibility into implementation changes, completeness, confidence, and risk assessment.
 - Do not invent behavior, interfaces, fields, environments, devices, test data, tools, coverage rates, defect counts, performance targets, owners, or gate status.
 - Separate `quality fact`, `strategy recommendation`, and `open item`. Recommendations must trace to a fact or explicit gap.
 - When a gap materially affects strategy, ask 3-5 high-value questions first.
@@ -68,11 +65,14 @@ If any required input is missing or unreadable, mark the task blocked and do not
 - Every recommendation cites a fact ID or explicit gap and must not be rewritten as a confirmed constraint.
 - Preserve code/document conflicts; do not silently let either source override the other.
 
+- For complete, partial, or blocked reports, record `Execution time` in Report Metadata: only record a real value provided by the system or user; use `To be provided` if absent; must not invent or fabricate. This rule takes precedence over any blocked-output field restriction.
+
 ## Output Format
 
 ```markdown
 # QA Expert Test Strategy Input Report
 ## Report Metadata
+- Execution time: To be provided
 ## Input Audit
 ## Quality Facts And Risks
 | Fact ID | Fact or risk | Status | Evidence ID | Impact |

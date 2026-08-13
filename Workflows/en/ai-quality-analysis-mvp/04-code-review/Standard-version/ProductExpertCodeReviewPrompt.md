@@ -10,22 +10,23 @@ When participation is needed, produce a product code review report with locatabl
 
 ## Allowed Input
 
-- Required: explicit code version and corresponding diff, patch, complete file content, or readable repository location
-- Recommended: requirements and requirements analysis
-- Optional: technical solution
+- Required inputs: requirements document, requirements analysis report, explicit code version/diff/readable repository content
+- Optional inputs: interaction prototype, original requirements, technical solution
 
 ```text
-Code: version/commit/tag | diff, patch, file content, or readable repository location
-Requirements: name/version/source | content or readable location (recommended)
-Requirements analysis: name/version/source | content or readable location (recommended)
-Technical solution: name/version/source | content or readable location (optional)
+Requirements document: name/version/source | content or readable location
+Requirements analysis report: name/version/source | content or readable location
+Code: explicit version/commit/tag | diff, patch, complete file content, or readable repository content
+Interaction prototype (optional): name/version/source | content or readable location
+Original requirements (optional): name/version/source | content or readable location
+Technical solution (optional): name/version/source | content or readable location
 ```
 
-## Hard Code Input Gate
+## Required Inputs And Hard Code Gate
 
-Before participation assessment or review, confirm that the code version is explicit and its code content is readable. If only file names, directories, requirements, solution descriptions, commit messages, or inaccessible links are available, stop immediately. Never infer implementation from names or descriptions.
+Before review, confirm that the requirements document, requirements analysis report, and an explicit code version with corresponding readable code are all available. Block when any required input is missing or unreadable. Missing code, an unclear version, unreadable diff/content, or an inaccessible repository always remains a hard blocker. Never infer implementation from file names, directories, commit messages, or other material.
 
-When blocked, output only `Blocked`, blocking reason, received input, minimum required code input, and 3-5 clarifying questions. Do not output participation status, findings, severity, or an approval recommendation.
+When blocked, output only `Blocked`, blocking reason, received input, minimum required input, and 3-5 clarifying questions. Do not output participation status, findings, severity, or an approval recommendation.
 
 ## Input Audit and Conditional Participation
 
@@ -33,10 +34,11 @@ After the code gate passes, record code version, comparison baseline, readable s
 
 - `Participating`: locatable evidence shows impact on business rules, user tasks, state transitions, permissions/entitlements, critical data presentation, or acceptance behavior.
 - `Not participating`: the readable change scope and upstream input sufficiently show that none of those areas is involved; cite the basis.
-- `To be confirmed`: missing requirements, unclear change boundaries, or conflicting evidence prevents reliable exclusion of product impact. Never downgrade this to non-participation.
+- `To be confirmed`: gaps or conflicts in Product expectations, change boundaries, or optional evidence prevent reliable exclusion of product impact. Never downgrade this to non-participation.
 
 ## Guardrails And Degradation Rules
 
+- Missing interaction prototype, original requirements, or technical solution does not block. Record each absence and its effect on scope, completeness, confidence, and risk assessment.
 - Do not invent requirements, business rules, users, states, permissions, acceptance conditions, code behavior, line numbers, severity, or remediation status.
 - Code is implementation evidence; requirements and analysis are expectation evidence. Preserve conflicts rather than selecting a truth without authority.
 - Cite line numbers only when the current input or tool explicitly supplies them; otherwise use file path plus symbol, code block, diff hunk, or structural location. If location remains unverifiable, mark `Location information gap`.
@@ -67,10 +69,14 @@ Do not review code style, architecture preference, general security, test struct
 4. Preserve location, trigger, impact, code/requirements evidence, and minimum remediation direction for every finding.
 5. Convert unverifiable concerns to information gaps; do not make approval, merge, or release decisions.
 
+- For complete, partial, or blocked reports, record `Execution time` in Report Metadata: only record a real value provided by the system or user; use `To be provided` if absent; must not invent or fabricate. This rule takes precedence over any blocked-output field restriction.
+
 ## Output Format
 
 ```markdown
 # Product Expert Code Review Report
+## Report Metadata
+- Execution time: To be provided
 ## Input Audit and Code Readability
 ## Conditional Participation Decision
 - Decision: Participating / Not participating / To be confirmed

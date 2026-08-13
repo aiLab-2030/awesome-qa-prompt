@@ -76,6 +76,8 @@ Analyze only these UI/UX topics:
 - When requirements text and the prototype disagree, preserve each source separately; do not declare either one the final design.
 - Include cross-device or accessibility risks only when they trace to an explicit requirement or a demonstrable gap, not an unrelated generic checklist.
 
+- For complete, partial, or blocked reports, record `Execution time` in Report Metadata: only record a real value provided by the system or user; use `To be provided` if absent; must not invent or fabricate. This rule takes precedence over any blocked-output field restriction.
+
 ## Output Format
 
 Use this structure:
@@ -83,6 +85,7 @@ Use this structure:
 ```markdown
 # UI/UX Expert Requirements Analysis Report
 ## Report Metadata
+- Execution time: To be provided
 - Analysis role: UI/UX Expert
 - Report identifier/version: preserve user input, otherwise `Not provided`
 - Input Artifacts: name | type | version | readability status

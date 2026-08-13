@@ -8,11 +8,10 @@ Have Product, QA, UI/UX, and Technical experts independently review the same rea
 
 ## Allowed Input
 
-- Required: an explicit code version and its corresponding diff, patch, complete file content, or readable repository location
-- Recommended: requirements and requirements analysis
-- Optional: technical solution
+- Required inputs: requirements document, requirements analysis report, explicit code version/diff/readable repository content
+- Optional inputs: interaction prototype, original requirements, technical solution
 
-Requirements, file names, directory names, commit messages, or verbal descriptions alone are not readable code. If any role or synthesis prompt cannot read an explicit code version and its corresponding code content, it must stop, report the blocker and required input, and never guess the implementation.
+Requirements, file names, directory names, commit messages, or verbal descriptions alone are not readable code. Every role blocks when any required input is missing. Missing code, an unclear code version, unreadable diff/content, or an inaccessible repository always remains a hard blocker. The synthesis prompt reads only the four role reports and enforces this gate from their declared code versions, readable scopes, and blocking states; it does not reread code or another Artifact.
 
 ## Conditional Participation
 
@@ -31,10 +30,10 @@ Requirements, file names, directory names, commit messages, or verbal descriptio
 
 ## Recommended Invocation Order
 
-1. Lock one code version and code input, then prepare requirements, requirements analysis, and any technical solution.
+1. Lock aligned versions of the requirements document, requirements analysis report, and code input, then prepare any actually provided interaction prototype, original requirements, and technical solution.
 2. Give the same input to the four role prompts; Product and UI/UX assess conditional participation first.
 3. Check that every finding retains file, verifiable location, trigger, impact, evidence, and remediation direction. When no reliable location exists, mark an information gap and never invent a line number.
-4. Give the four role reports and the same code input to the synthesis prompt for deduplication, severity normalization, and source preservation.
+4. Give only the four role reports to the synthesis prompt for deduplication, severity normalization, and source preservation. Do not let synthesis reread code or another Artifact.
 5. Give the synthesis report to the Human Task to decide fixes, risk acceptance, or additional input. An AI report is not an approval or merge decision.
 
 ## Version Note

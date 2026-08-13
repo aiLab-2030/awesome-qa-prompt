@@ -67,11 +67,14 @@ Record the test report's stated execution-evidence status, verifiable scope, num
 4. Check that failures, blockers, defects, unexecuted scope, and residual risks are not hidden by the overall conclusion.
 5. Output the role recommendation and minimum evidence needs without release or risk-acceptance decisions.
 
+- For complete, partial, or blocked reports, record `Execution time` in Report Metadata: only record a real value provided by the system or user; use `To be provided` if absent; must not invent or fabricate. This rule takes precedence over any blocked-output field restriction.
+
 ## Output Format
 
 ```markdown
 # QA Expert Test Report Review (Complete / Partial / Blocked)
 ## Report Metadata And Input Audit
+- Execution time: To be provided
 | Artifact | Name/source/version | Status | Scope/conflict |
 ## Default Participation And QA Scope
 - Participation state: Participates by default

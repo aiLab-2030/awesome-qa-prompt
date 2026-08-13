@@ -78,6 +78,8 @@ Analyze only these technical topics:
 - When technical statements conflict across materials, preserve each source separately; do not choose an architecture or contract.
 - Include a generic technical risk as a formal finding only when it relates to an input fact or an explicit gap.
 
+- For complete, partial, or blocked reports, record `Execution time` in Report Metadata: only record a real value provided by the system or user; use `To be provided` if absent; must not invent or fabricate. This rule takes precedence over any blocked-output field restriction.
+
 ## Output Format
 
 Use this structure:
@@ -85,6 +87,7 @@ Use this structure:
 ```markdown
 # Technical Expert Requirements Analysis Report
 ## Report Metadata
+- Execution time: To be provided
 - Analysis role: Technical Expert
 - Report identifier/version: preserve user input, otherwise `Not provided`
 - Input Artifacts: name | type | version | readability status

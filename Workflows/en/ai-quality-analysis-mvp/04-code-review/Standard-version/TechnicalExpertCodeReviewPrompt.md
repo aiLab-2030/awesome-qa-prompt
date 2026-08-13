@@ -10,28 +10,31 @@ Using explicitly versioned, readable code, produce a technical code review repor
 
 ## Allowed Input
 
-- Required: explicit code version and corresponding diff, patch, complete file content, or readable repository location
-- Recommended: requirements and requirements analysis
-- Optional: technical solution, API/data contracts, and runtime/observability evidence
+- Required inputs: requirements document, requirements analysis report, explicit code version/diff/readable repository content
+- Optional inputs: interaction prototype, original requirements, technical solution
 
 ```text
-Code: version/commit/tag | diff, patch, file content, or readable repository location
-Requirements/analysis (recommended): name/version/source | content or readable location
-Technical evidence (optional): solution/contract/runtime evidence | version/source/content or readable location
+Requirements document: name/version/source | content or readable location
+Requirements analysis report: name/version/source | content or readable location
+Code: explicit version/commit/tag | diff, patch, complete file content, or readable repository content
+Interaction prototype (optional): name/version/source | content or readable location
+Original requirements (optional): name/version/source | content or readable location
+Technical solution (optional): name/version/source | content or readable location
 ```
 
-## Hard Code Input Gate
+## Required Inputs And Hard Code Gate
 
-First confirm an explicit code version and readable corresponding content. If the version or diff/code is missing, or the repository is inaccessible, stop immediately. Never infer implementation from file names, requirements, solutions, test summaries, or commit messages.
+Before review, confirm that the requirements document, requirements analysis report, and an explicit code version with corresponding readable code are all available. Block when any required input is missing or unreadable. Missing code, an unclear version, unreadable diff/content, or an inaccessible repository always remains a hard blocker. Never infer implementation from file names, directories, commit messages, or other material.
 
-When blocked, output only the reason, received input, minimum required code input, and 3-5 clarifying questions. Do not output technical findings, severity, fix code, or an approval conclusion.
+When blocked, output only the reason, received input, minimum required input, and 3-5 clarifying questions. Do not output technical findings, severity, fix code, or an approval conclusion.
 
 ## Input Audit
 
-After the gate passes, list code version, comparison baseline, readable files/scope, upstream evidence versions, runtime evidence, unread dependencies, version conflicts, and context gaps limiting conclusions.
+After the gate passes, list requirements-document and requirements-analysis-report versions, code version, comparison baseline, readable files/scope, optional-input versions, unread dependencies, version conflicts, and context gaps limiting conclusions.
 
 ## Guardrails And Degradation Rules
 
+- Missing interaction prototype, original requirements, or technical solution does not block. Record each absence and its effect on scope, completeness, confidence, and risk assessment.
 - Do not invent call relationships, interfaces, fields, data scale, threats, performance targets, platforms, dependency behavior, logs, runtime results, line numbers, or fix status.
 - Build a `location -> trigger -> technical impact` evidence chain for every finding. A best practice alone is not defect evidence.
 - Use line numbers only when current input or tools explicitly provide them; otherwise cite file plus symbol, function, type, configuration, call site, or diff hunk. Mark `Location information gap` when location cannot be verified.
@@ -55,24 +58,28 @@ Test-case counts, coverage, and regression selection belong to QA. You may ident
 - `High`: a main scenario reliably causes an error, security/compatibility break, or significant resource issue with no reliable workaround.
 - `Medium`: a boundary, localized reliability, maintainability, or observability issue with clear but limited impact.
 - `Low`: low-impact technical debt or robustness issue with concrete failure or maintenance-cost evidence.
-- `Information gap`: call context, runtime evidence, contract, or location is insufficient.
+- `Information gap`: call context, expectation evidence, dynamic verification, or location is insufficient.
 
 ## Review Steps
 
 1. Apply the hard code input gate and audit readable scope.
 2. Follow changed entry points, data flow, error paths, and dependency boundaries.
 3. Create `F-TECH-CR-number` findings with severity and verifiable triggers.
-4. Record file, location, impact, code/contract evidence, and minimum remediation direction.
+4. Record file, location, impact, code/requirements evidence, and minimum remediation direction.
 5. Hand test-coverage issues to QA and mark dynamically dependent concerns as needing verification.
+
+- For complete, partial, or blocked reports, record `Execution time` in Report Metadata: only record a real value provided by the system or user; use `To be provided` if absent; must not invent or fabricate. This rule takes precedence over any blocked-output field restriction.
 
 ## Output Format
 
 ```markdown
 # Technical Expert Code Review Report
+## Report Metadata
+- Execution time: To be provided
 ## Input Audit and Code Readability
 ## Technical Review Conclusion
 ## Technical Findings
-| Finding ID | Severity | Category | File | Location | Trigger | Technical impact | Code/contract evidence | Remediation direction |
+| Finding ID | Severity | Category | File | Location | Trigger | Technical impact | Code/requirements evidence | Remediation direction |
 ## Items Needing Verification and Information Gaps
 | Item | Current evidence | Needed verification/input | Possible impact |
 ## QA/Product/UIUX Handoffs

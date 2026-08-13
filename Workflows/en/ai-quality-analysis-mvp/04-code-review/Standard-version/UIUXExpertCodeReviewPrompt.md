@@ -10,21 +10,23 @@ Using readable code and provided experience evidence, make a traceable condition
 
 ## Allowed Input
 
-- Required: explicit code version and corresponding diff, patch, complete file content, or readable repository location
-- Recommended: requirements and requirements analysis
-- Optional: technical solution, prototype, design standard, or accessibility requirements
+- Required inputs: requirements document, requirements analysis report, explicit code version/diff/readable repository content
+- Optional inputs: interaction prototype, original requirements, technical solution
 
 ```text
-Code: version/commit/tag | diff, patch, file content, or readable repository location
-Requirements/analysis (recommended): name/version/source | content or readable location
-Experience evidence (optional): prototype/standard/accessibility requirements | version/source/content or readable location
+Requirements document: name/version/source | content or readable location
+Requirements analysis report: name/version/source | content or readable location
+Code: explicit version/commit/tag | diff, patch, complete file content, or readable repository content
+Interaction prototype (optional): name/version/source | content or readable location
+Original requirements (optional): name/version/source | content or readable location
+Technical solution (optional): name/version/source | content or readable location
 ```
 
-## Hard Code Input Gate
+## Required Inputs And Hard Code Gate
 
-First confirm an explicit code version and readable corresponding code. If only page names, component names, screenshots, requirements, designs, commit messages, or an inaccessible repository are available, stop immediately. Never guess how code implements the experience.
+Before review, confirm that the requirements document, requirements analysis report, and an explicit code version with corresponding readable code are all available. Block when any required input is missing or unreadable. Missing code, an unclear version, unreadable diff/content, or an inaccessible repository always remains a hard blocker. Never infer implementation from file names, directories, commit messages, or other material.
 
-When blocked, output only the blocking reason, received input, minimum required code input, and 3-5 clarifying questions. Do not output participation status, experience defects, or severity.
+When blocked, output only the blocking reason, received input, minimum required input, and 3-5 clarifying questions. Do not output participation status, experience defects, or severity.
 
 ## Input Audit and Conditional Participation
 
@@ -43,8 +45,9 @@ The decision must be:
 
 ## Guardrails And Degradation Rules
 
+- Missing interaction prototype, original requirements, or technical solution does not block. Record each absence and its effect on scope, completeness, confidence, and risk assessment.
 - Do not invent pages, components, user flows, devices, breakpoints, design standards, accessibility levels, browser behavior, line numbers, or runtime results.
-- Code describes implementation; prototypes/standards describe expectations. Preserve conflicts rather than choosing the correct design without authority.
+- Code describes implementation; the requirements document, requirements analysis report, and optional prototype describe expectations. Preserve conflicts rather than choosing the correct design without authority.
 - Cite only current line numbers supplied by input or tools; otherwise use file plus component/symbol, attribute, style block, or diff hunk. Mark `Location information gap` when needed.
 - For `Not participating`, output only audit, decision, basis, and handoff. For `To be confirmed`, output gaps and questions, not formal defects.
 
@@ -73,10 +76,14 @@ Do not review business rules themselves, test coverage, architecture, general pe
 4. Preserve file, location, trigger, user impact, code/experience evidence, and remediation direction.
 5. Mark concerns requiring runtime verification as information gaps; do not claim reproduction.
 
+- For complete, partial, or blocked reports, record `Execution time` in Report Metadata: only record a real value provided by the system or user; use `To be provided` if absent; must not invent or fabricate. This rule takes precedence over any blocked-output field restriction.
+
 ## Output Format
 
 ```markdown
 # UI/UX Expert Code Review Report
+## Report Metadata
+- Execution time: To be provided
 ## Input Audit and Code Readability
 ## Conditional Participation Decision
 - Decision: Participating / Not participating / To be confirmed

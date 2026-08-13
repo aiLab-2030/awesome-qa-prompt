@@ -96,11 +96,14 @@ Record severity separately from type using only `Critical`, `High`, `Medium`, `L
 4. Compare duplicate candidates by verification objective and separately inspect uncovered sources.
 5. Create `F-QA-TCR-number`, record type and severity separately, and include evidence, impact, minimum recommendation, and a QA role recommendation.
 
+- For complete, partial, or blocked reports, record `Execution time` in Report Metadata: only record a real value provided by the system or user; use `To be provided` if absent; must not invent or fabricate. This rule takes precedence over any blocked-output field restriction.
+
 ## Output Format
 
 ```markdown
 # QA Expert Test Case Review Report (Complete / Partial)
 ## Report Metadata
+- Execution time: To be provided
 - Report ID/version: mark as to be supplied if absent
 - Test case set: name / source / version
 - Actual reviewed scope: readable case IDs or range

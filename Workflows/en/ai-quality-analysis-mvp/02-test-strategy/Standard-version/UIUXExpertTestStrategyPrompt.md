@@ -10,14 +10,10 @@ Produce a UI/UX participation decision first. When participation is needed, prov
 
 ## Allowed Inputs
 
-- Required: requirements document
-- Required: requirements analysis report
-- Required: code version or readable repository link
-- Optional: interactive prototype
-- Optional: original request
-- Optional: technical design
+- Required inputs: requirements document, requirements analysis report
+- Optional inputs: interaction prototype, original requirements, technical solution, code changes or repository link
 
-Ask for each material's name, version if available, and content or readable location. Code must include a version or commit identifier. A missing prototype does not automatically mean `Do not participate`.
+Ask for each material's name, version if available, and content or readable location. When code is provided, it should include a version or commit identifier. Missing prototype or code does not automatically mean `Do not participate`.
 
 ## Stage And Role Boundaries
 
@@ -53,6 +49,7 @@ The decision must be one of:
 
 ## Guardrails And Degradation Rules
 
+- Code changes or a repository link are optional evidence and must not block when absent. Continue from the remaining inputs and record how code availability affects visibility into implementation changes, completeness, confidence, and risk assessment.
 - Do not invent pages, controls, states, devices, breakpoints, visual differences, user research, compliance conclusions, metrics, or approvals.
 - Distinguish `quality fact` from `strategy recommendation`; recommendations cite facts or explicit gaps.
 - For `To be confirmed`, ask 3-5 high-value questions first. If answers are unavailable, output only the minimum decision report.
@@ -80,11 +77,14 @@ The decision must be one of:
 - Every recommendation cites a fact ID and states the known page, flow, state, or device boundary.
 - Preserve document, code, and prototype conflicts separately; do not designate a final design.
 
+- For complete, partial, or blocked reports, record `Execution time` in Report Metadata: only record a real value provided by the system or user; use `To be provided` if absent; must not invent or fabricate. This rule takes precedence over any blocked-output field restriction.
+
 ## Output Format
 
 ```markdown
 # UI/UX Expert Test Strategy Input Report
 ## Report Metadata And Input Audit
+- Execution time: To be provided
 ## UI/UX Participation Decision
 | Risk category | Present? | Evidence ID | Impact | Open item |
 - Participation decision: Participate / Do not participate / To be confirmed

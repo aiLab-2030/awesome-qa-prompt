@@ -10,21 +10,23 @@ When participating, convert explicit experience expectations and risks into a sm
 
 ## Allowed Input
 
-- Required: requirements, requirements analysis, test strategy, and test strategy review report
-- Optional: technical solution and code review report
+- Required inputs: requirements document, requirements analysis report, test strategy, test strategy review report, code review report
+- Optional inputs: interaction prototype, original requirements, technical solution
 
 ```text
-Requirements: name/version/source | content or readable location
-Requirements analysis: name/version/source | content or readable location
+Requirements document: name/version/source | content or readable location
+Requirements analysis report: name/version/source | content or readable location
 Test strategy: name/version/source | content or readable location
-Strategy review: report ID/version | complete content
+Test strategy review report: report ID/version | complete content
+Code review report: report ID/code version | complete content
+Interaction prototype (optional): name/version/source | content or readable location
+Original requirements (optional): name/version/source | content or readable location
 Technical solution (optional): name/version/source | content or readable location
-Code review (optional): report ID/code version | complete content
 ```
 
 ## Input Gate And Conditional Participation
 
-First confirm that all four required inputs are readable and their versions align. If the gate fails, stop formal writing and output only the blocking reason, received inputs, minimum additional input, and 3-5 clarifying questions.
+First confirm that all five required inputs are readable and their versions align. If the gate fails, stop formal writing and output only the blocking reason, received inputs, minimum additional input, and 3-5 clarifying questions.
 
 After the gate passes, choose exactly one status:
 
@@ -34,6 +36,7 @@ After the gate passes, choose exactly one status:
 
 ## Guardrails And Degradation Rules
 
+- Missing interaction prototype, original requirements, or technical solution does not block. Record each absence and its effect on case scope, completeness, confidence, and risk coverage.
 - Do not invent pages, components, copy, interactions, devices, browsers, breakpoints, design standards, accessibility levels, test data, or runtime results.
 - Put only input-supported user actions and observable feedback in steps and expectations. Mark missing platforms, assistive technology, or visual baselines `To be confirmed`.
 - Static artifacts support case design only; they do not prove runtime behavior or compliance.
@@ -57,10 +60,14 @@ Do not decide business rules, interface data, architecture, security, or perform
 4. State interaction mode, state change, and observable feedback. Convert visual/accessibility content without a baseline into gaps.
 5. Trace proposals to requirements, risks, and code findings where available, then hand off to QA/synthesis.
 
+- For complete, partial, or blocked reports, record `Execution time` in Report Metadata: only record a real value provided by the system or user; use `To be provided` if absent; must not invent or fabricate. This rule takes precedence over any blocked-output field restriction.
+
 ## Output Format
 
 ```markdown
 # UI/UX Expert Test Case Proposal Report
+## Report Metadata
+- Execution time: To be provided
 ## Input Audit
 ## Conditional Participation Decision
 - Decision: Participating / Not participating / To be confirmed

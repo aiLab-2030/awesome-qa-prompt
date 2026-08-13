@@ -67,11 +67,14 @@ Product participates by default. Do not output a non-participation state or stop
 4. Separate needed evidence, wording corrections, and business-risk decisions for the Human Task.
 5. Output the role recommendation and limitations without changing test facts or making a release decision.
 
+- For complete, partial, or blocked reports, record `Execution time` in Report Metadata: only record a real value provided by the system or user; use `To be provided` if absent; must not invent or fabricate. This rule takes precedence over any blocked-output field restriction.
+
 ## Output Format
 
 ```markdown
 # Product Expert Test Report Review (Complete / Partial / Blocked)
 ## Report Metadata And Input Audit
+- Execution time: To be provided
 | Artifact | Name/source/version | Status | Scope/conflict |
 ## Default Participation And Product Scope
 - Participation state: Participates by default

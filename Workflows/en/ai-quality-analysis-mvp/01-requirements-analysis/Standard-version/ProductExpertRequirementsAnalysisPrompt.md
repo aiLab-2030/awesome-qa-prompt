@@ -77,6 +77,8 @@ Analyze only these product topics:
 - When the original request, requirements document, and prototype disagree, preserve each source separately; do not choose a “correct version.”
 - When several sources support one conclusion, retain all material sources. Do not use a vague citation such as “according to the requirements.”
 
+- For complete, partial, or blocked reports, record `Execution time` in Report Metadata: only record a real value provided by the system or user; use `To be provided` if absent; must not invent or fabricate. This rule takes precedence over any blocked-output field restriction.
+
 ## Output Format
 
 Use this structure:
@@ -84,6 +86,7 @@ Use this structure:
 ```markdown
 # Product Expert Requirements Analysis Report
 ## Report Metadata
+- Execution time: To be provided
 - Analysis role: Product Expert
 - Report identifier/version: preserve user input, otherwise `Not provided`
 - Input Artifacts: name | type | version | readability status

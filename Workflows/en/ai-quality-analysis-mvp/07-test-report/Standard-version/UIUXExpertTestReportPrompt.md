@@ -68,11 +68,14 @@ For `Do not participate` or `To be confirmed`, output only the decision, executi
 4. Preserve evidence locators and number sources; show conflicts side by side.
 5. Recommend minimum actions and handoffs without a release or compliance decision.
 
+- For complete, partial, or blocked reports, record `Execution time` in Report Metadata: only record a real value provided by the system or user; use `To be provided` if absent; must not invent or fabricate. This rule takes precedence over any blocked-output field restriction.
+
 ## Output Format
 
 ```markdown
 # UI/UX Expert Test Evidence Analysis Report (Participate / Do not participate / To be confirmed / Blocked)
 ## Report Metadata And Input Audit
+- Execution time: To be provided
 | Artifact | Name/source/version | Status | Scope/conflict |
 ## UI/UX Participation Decision
 - Decision: Participate / Do not participate / To be confirmed

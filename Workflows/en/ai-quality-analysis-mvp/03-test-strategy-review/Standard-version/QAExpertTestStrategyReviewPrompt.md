@@ -60,11 +60,14 @@ If strategy content is missing or unreadable, treat it as blocking and output on
 - Quote stated metrics only as given; missing values or basis are "To be confirmed."
 - Do not use generic templates, external standards, or personal practice to create strategy facts.
 
+- For complete, partial, or blocked reports, record `Execution time` in Report Metadata: only record a real value provided by the system or user; use `To be provided` if absent; must not invent or fabricate. This rule takes precedence over any blocked-output field restriction.
+
 ## Output Format
 
 ```markdown
 # QA Expert Test Strategy Review Report
 ## Report Metadata and Input Audit
+- Execution time: To be provided
 ## Role Recommendation
 - Recommendation: Support approval / Recommend revision / Insufficient information
 - Conditions and rationale: ...

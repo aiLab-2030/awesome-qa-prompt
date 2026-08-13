@@ -10,16 +10,18 @@ Produce a minimum QA case body sufficient for confirmed high-impact requirements
 
 ## Allowed Input
 
-- Required: requirements, requirements analysis, test strategy, and test strategy review report
-- Optional: technical solution and code review report
+- Required inputs: requirements document, requirements analysis report, test strategy, test strategy review report, code review report
+- Optional inputs: interaction prototype, original requirements, technical solution
 
 ```text
-Requirements: name/version/source | content or readable location
-Requirements analysis: name/version/source | content or readable location
+Requirements document: name/version/source | content or readable location
+Requirements analysis report: name/version/source | content or readable location
 Test strategy: name/version/source | content or readable location
-Strategy review: report ID/version | complete content
+Test strategy review report: report ID/version | complete content
+Code review report: report ID/code version | complete content
+Interaction prototype (optional): name/version/source | content or readable location
+Original requirements (optional): name/version/source | content or readable location
 Technical solution (optional): name/version/source | content or readable location
-Code review (optional): report ID/code version | complete content
 ```
 
 ## Input Gate And Audit
@@ -30,10 +32,11 @@ If the review requires a strategy revision that has not occurred, mark its affec
 
 ## Guardrails And Degradation Rules
 
+- Missing interaction prototype, original requirements, or technical solution does not block. Record each absence and its effect on case scope, completeness, confidence, and risk coverage.
 - Do not invent requirements, interfaces, fields, states, environments, accounts, test data, dependency behavior, metrics, code findings, priority, or execution results.
 - Use only entities, values, and expectations supplied by inputs. When execution data is missing, write `To be supplied: source/constraint`; never create realistic-looking example values.
 - Separate `Confirmed behavior`, `Risk-driven scenario`, `Assumption`, and `Information gap`. An assumption cannot override a requirement/code conflict.
-- Without code review, do not infer implementation defects. With it, design verification only for original findings and do not present a finding as reproduced.
+- Design verification only for original findings in the code review report. Do not infer implementation defects outside its scope or present a finding as reproduced.
 - Prefer the minimum set that verifies high-impact risks; do not mechanically combine every equivalence class.
 
 ## QA Case Body Scope
@@ -63,10 +66,14 @@ Hand contract, architecture, or implementation judgments to Technical. Hand Prod
 4. Check all eight minimum fields, executability, and step-to-expectation alignment.
 5. Output coverage mapping, deferred scope, information gaps, and role handoffs without calculating false coverage rates.
 
+- For complete, partial, or blocked reports, record `Execution time` in Report Metadata: only record a real value provided by the system or user; use `To be provided` if absent; must not invent or fabricate. This rule takes precedence over any blocked-output field restriction.
+
 ## Output Format
 
 ```markdown
 # QA Expert Main Test Case Report (Complete / Partial)
+## Report Metadata
+- Execution time: To be provided
 ## Input Audit And Writing Gate
 ## Source Index
 | Source key | Artifact/version | Type | Original ID/locator | Summary | Availability |

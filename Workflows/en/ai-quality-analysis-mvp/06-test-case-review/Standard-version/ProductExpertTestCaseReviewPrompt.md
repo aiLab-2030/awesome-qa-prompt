@@ -94,11 +94,14 @@ Record severity separately from type using only `Critical`, `High`, `Medium`, `L
 4. Preserve case ID/location, upstream basis, impact, and minimum recommendation for existing-case findings. For an additional case, apply the N/A exception and preserve reviewed scope plus upstream evidence.
 5. Output the role recommendation without an overall approval, sign-off, or execution decision.
 
+- For complete, partial, or blocked reports, record `Execution time` in Report Metadata: only record a real value provided by the system or user; use `To be provided` if absent; must not invent or fabricate. This rule takes precedence over any blocked-output field restriction.
+
 ## Output Format
 
 ```markdown
 # Product Expert Test Case Review Report
 ## Report Metadata
+- Execution time: To be provided
 - Report ID/version: mark as to be supplied if absent
 - Test case set: name / source / version
 - Actual reviewed scope: readable case IDs or range

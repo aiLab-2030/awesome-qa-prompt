@@ -70,11 +70,14 @@ Missing or unreadable strategy content is blocking and yields `To be confirmed`.
 - Missing devices, baselines, or accessibility targets are gaps; do not select defaults.
 - General aesthetics, trends, or unprovided standards are not blocking evidence.
 
+- For complete, partial, or blocked reports, record `Execution time` in Report Metadata: only record a real value provided by the system or user; use `To be provided` if absent; must not invent or fabricate. This rule takes precedence over any blocked-output field restriction.
+
 ## Output Format
 
 ```markdown
 # UI/UX Expert Test Strategy Review Report
 ## Report Metadata and Input Audit
+- Execution time: To be provided
 ## Conditional Participation Decision
 | Risk category | Result | Strategy evidence ID | Rationale |
 - Participation: Participating / Not participating / To be confirmed

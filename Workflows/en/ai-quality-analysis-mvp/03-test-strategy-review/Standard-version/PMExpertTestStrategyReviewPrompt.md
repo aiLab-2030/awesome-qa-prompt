@@ -60,11 +60,14 @@ If strategy content is missing or unreadable, treat it as blocking and output on
 - Each action cites a finding or gap and only addresses coordination.
 - Do not fill missing project facts from common practice, history, or external plans.
 
+- For complete, partial, or blocked reports, record `Execution time` in Report Metadata: only record a real value provided by the system or user; use `To be provided` if absent; must not invent or fabricate. This rule takes precedence over any blocked-output field restriction.
+
 ## Output Format
 
 ```markdown
 # PM Test Strategy Planning Feasibility Review Report
 ## Report Metadata and Input Audit
+- Execution time: To be provided
 ## Planning Feasibility Recommendation
 - Recommendation: Plan feasible / Recommend plan adjustment / Insufficient information
 - Conditions and rationale: ...

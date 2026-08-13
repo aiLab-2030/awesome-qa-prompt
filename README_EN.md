@@ -407,7 +407,7 @@ Visit our online documentation: **[https://inaodeng.com/prompts](https://inaoden
    - Example: Requirements analysis needs requirements documents or User Stories
 
 3. **Copy the Prompt**
-   - Open the selected prompt and copy all content starting from the first divider `---`
+   - If a prompt contains a divider `---`, copy everything after its first divider; if the file has no divider, copy the entire file
    - Paste the copied content into your AI assistant
    - Attach your input materials after the prompt
 
@@ -420,7 +420,7 @@ Visit our online documentation: **[https://inaodeng.com/prompts](https://inaoden
 - Prompt files no longer repeat the inline "Usage Instructions" notice
 - Use prompts with this same flow:
   - Select one prompt file
-  - Copy all content below the first divider `---` into your AI assistant
+  - If a prompt contains a divider `---`, copy everything after its first divider; if the file has no divider, copy the entire file into your AI assistant
   - Add your project context, requirements, or testing materials after the prompt
   - Let AI generate output, then review and adjust it for your real project
 

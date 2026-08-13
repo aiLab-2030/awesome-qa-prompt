@@ -67,11 +67,14 @@ Missing optional input does not stop review; list each missing item and its impa
 4. Identify omissions, conflicts, overstatement, unsupported compliance claims, and undisclosed experience risks.
 5. Output minimum evidence needs and Human Task handoff without release or compliance decisions.
 
+- For complete, partial, or blocked reports, record `Execution time` in Report Metadata: only record a real value provided by the system or user; use `To be provided` if absent; must not invent or fabricate. This rule takes precedence over any blocked-output field restriction.
+
 ## Output Format
 
 ```markdown
 # UI/UX Expert Test Report Review (Complete / Partial / Blocked)
 ## Report Metadata And Input Audit
+- Execution time: To be provided
 | Artifact | Name/source/version | Status | Experience scope/conflict |
 ## Default Participation And UI/UX Scope
 - Participation state: Participates by default
