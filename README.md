@@ -89,13 +89,14 @@
 
 英文模块路径将 `zh` 换为 `en` 即可，例如 [`testing-types/en/functional-testing/`](./testing-types/en/functional-testing/)。
 
-### 测试工作流（3）
+### 测试工作流（4）
 
 | 工作流 | 中文 | 英文 |
 | --- | --- | --- |
 | 日常测试 | [`Workflows/zh/daily-testing-workflow.md`](./Workflows/zh/daily-testing-workflow.md) | [`Workflows/en/daily-testing-workflow.md`](./Workflows/en/daily-testing-workflow.md) |
 | 迭代测试 | [`Workflows/zh/sprint-testing-workflow.md`](./Workflows/zh/sprint-testing-workflow.md) | [`Workflows/en/sprint-testing-workflow.md`](./Workflows/en/sprint-testing-workflow.md) |
 | 发布测试 | [`Workflows/zh/release-testing-workflow.md`](./Workflows/zh/release-testing-workflow.md) | [`Workflows/en/release-testing-workflow.md`](./Workflows/en/release-testing-workflow.md) |
+| AI 研发质量分析 MVP | [`Workflows/zh/ai-quality-analysis-mvp/README.md`](./Workflows/zh/ai-quality-analysis-mvp/README.md) | [`Workflows/en/ai-quality-analysis-mvp/README.md`](./Workflows/en/ai-quality-analysis-mvp/README.md) |
 
 说明见 [`Workflows/zh/README.md`](./Workflows/zh/README.md)。
 
@@ -104,7 +105,8 @@
 | 类别 | 说明 |
 | --- | --- |
 | 测试类型模块 | 15 个（中英各一套） |
-| 工作流 | 3 个（中英各一份） |
+| 工作流 | 4 个（中英各一份） |
+| AI 质量分析角色与汇总提示词 | 86 个（中英文各 43 个） |
 | Standard 提示词 | Full / Lite，部分模块另有 `all_round` / `Web` / `Mobile` |
 | 框架变体 | ROSES、LangGPT、ICIO、CRISPE、RISE（完整版 + 精简版，含部分平台场景版） |
 
@@ -150,7 +152,7 @@ cd awesome-qa-prompt
 使用步骤：
 
 1. 打开上述文件（或你的目标模块）
-2. 从第一个 `---` 起复制其后全部内容到 AI 助手
+2. 若文件包含第一个 `---`，从其后复制；否则复制整个 Prompt 内容到 AI 助手
 3. 在 Prompt 后补充真实项目上下文；缺失信息应先澄清或标注假设
 4. 对生成结果做人工校对后再用于评审、执行或归档
 

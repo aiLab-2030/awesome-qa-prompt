@@ -89,13 +89,14 @@ Chinese modules live under `testing-types/zh/<module>/`; English under `testing-
 
 Chinese paths use `zh` instead of `en`, for example [`testing-types/zh/functional-testing/`](./testing-types/zh/functional-testing/).
 
-### Testing workflows (3)
+### Testing workflows (4)
 
 | Workflow | Chinese | English |
 | --- | --- | --- |
 | Daily testing | [`Workflows/zh/daily-testing-workflow.md`](./Workflows/zh/daily-testing-workflow.md) | [`Workflows/en/daily-testing-workflow.md`](./Workflows/en/daily-testing-workflow.md) |
 | Sprint testing | [`Workflows/zh/sprint-testing-workflow.md`](./Workflows/zh/sprint-testing-workflow.md) | [`Workflows/en/sprint-testing-workflow.md`](./Workflows/en/sprint-testing-workflow.md) |
 | Release testing | [`Workflows/zh/release-testing-workflow.md`](./Workflows/zh/release-testing-workflow.md) | [`Workflows/en/release-testing-workflow.md`](./Workflows/en/release-testing-workflow.md) |
+| AI Quality Analysis MVP | [`Workflows/zh/ai-quality-analysis-mvp/README.md`](./Workflows/zh/ai-quality-analysis-mvp/README.md) | [`Workflows/en/ai-quality-analysis-mvp/README.md`](./Workflows/en/ai-quality-analysis-mvp/README.md) |
 
 See [`Workflows/en/README.md`](./Workflows/en/README.md) for details.
 
@@ -104,7 +105,8 @@ See [`Workflows/en/README.md`](./Workflows/en/README.md) for details.
 | Category | Description |
 | --- | --- |
 | Testing-type modules | 15 (Chinese and English sets) |
-| Workflows | 3 (Chinese and English copies) |
+| Workflows | 4 (Chinese and English copies) |
+| AI quality-analysis role and synthesis prompts | 86 (43 Chinese + 43 English) |
 | Standard prompts | Full / Lite; selected modules also have `all_round` / `Web` / `Mobile` |
 | Framework variants | ROSES, LangGPT, ICIO, CRISPE, RISE (full + lite, including some platform variants) |
 
@@ -150,7 +152,7 @@ Recommended path example (English · functional testing · Standard):
 Usage:
 
 1. Open that file (or your target module)
-2. Copy everything after the first `---` into your AI assistant
+2. If the file has a first `---`, copy the content after it; otherwise copy the entire Prompt into your AI assistant
 3. Append real project context; clarify gaps or mark assumptions when information is incomplete
 4. Human-review the output before review, execution, or archival use
 

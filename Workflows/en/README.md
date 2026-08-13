@@ -8,6 +8,32 @@ This directory contains practical workflow guides for using the QA Prompt Librar
 
 ## 📚 Available Workflows
 
+### [AI Quality Analysis MVP](ai-quality-analysis-mvp/README.md)
+**Use for**: Moving from requirements analysis through test report review while preserving role separation, evidence, and Human Task decision boundaries
+
+**Eight stages**:
+- Requirements analysis → Test strategy → Test strategy review → Code review
+- Test case writing → Test case review → Test report → Test report review
+
+**Five role types**: Product, QA, UI/UX, Technical, and PM. Invoke the applicable roles independently in each stage, then use the synthesis prompt to preserve consensus, disagreements, and traceability.
+
+**Best for**: R&D teams that need an auditable quality-analysis chain built from 43 prompts per language
+
+---
+
+### [Testing Prompt Router](discover-testing/README.md)
+**Use for**: Choosing the right testing-type prompt or workflow prompt when the entry point is unclear
+
+**Covers**:
+- Identifying the main prompt from the user goal
+- Recommending at most one auxiliary prompt
+- Providing the order of use and a minimal input template
+- Labeling missing information, prerequisites, and risks
+
+**Best for**: First-time repository use, unclear task boundaries, or combining multiple prompts
+
+---
+
 ### [Daily Testing Workflow](daily-testing-workflow.md)
 **Use for**: Day-to-day testing activities
 
@@ -57,10 +83,12 @@ This directory contains practical workflow guides for using the QA Prompt Librar
 
 ## 🎯 How to Use These Workflows
 
-1. **Select the appropriate workflow** based on your current testing phase
-2. **Follow the timeline** and activities outlined in each workflow
-3. **Use the referenced prompts** from the main library for each activity
-4. **Adapt as needed** - these are templates, customize them for your team's needs
+1. **Use the testing prompt router first** if you are not sure where to start
+2. **Use AI Quality Analysis MVP** for an eight-stage, role-based quality-analysis chain
+3. **Select the appropriate workflow** based on your current testing phase
+4. **Follow the timeline** and activities outlined in each workflow
+5. **Use the referenced prompts** from the main library for each activity
+6. **Adapt as needed** - these are templates, customize them for your team's needs
 
 ## 💡 Tips for Success
 

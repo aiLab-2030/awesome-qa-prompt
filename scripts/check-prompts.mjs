@@ -22,7 +22,8 @@ function walk(dir, acc = []) {
       const inScope =
         relPath === "README.md" ||
         relPath === "README_EN.md" ||
-        relPath.startsWith("testing-types/");
+        relPath.startsWith("testing-types/") ||
+        relPath.startsWith("Workflows/");
       if (!inScope) continue;
       acc.push(full);
     }
@@ -36,6 +37,14 @@ function rel(file) {
 
 function addIssue(file, message) {
   issues.push(`${rel(file)}: ${message}`);
+}
+
+function isPromptFile(file) {
+  const normalized = rel(file).replaceAll("\\", "/");
+  return (
+    normalized.includes("/Standard-version/") &&
+    (normalized.startsWith("testing-types/") || normalized.startsWith("Workflows/"))
+  );
 }
 
 function checkReadmeLinks(file, text) {
@@ -98,47 +107,67 @@ function checkReadmeLinks(file, text) {
   }
 }
 
+function checkStandardPromptGuardrails(file, text) {
+  const hasGuardrails =
+    text.includes("## 使用约束与降级规则") ||
+    text.includes("## Guardrails And Degradation Rules") ||
+    text.includes("输入完整性检查") ||
+    text.includes("Input Completeness Check");
+  const hasExecution =
+    text.includes("## 执行指令") ||
+    text.includes("## Execution Instructions") ||
+    text.includes("先进行输入完整性检查") ||
+    text.includes("Start with an input completeness check") ||
+    text.includes("格式输出") ||
+    text.includes("Format Output") ||
+    text.includes("按照输出格式要求") ||
+    text.includes("## Execution Rules") ||
+    text.includes("Before producing the main output, run an input audit:") ||
+    text.includes("在开始正式输出前，请先执行输入审计：");
+
+  if (!hasGuardrails) addIssue(file, "prompt is missing guardrails section");
+  if (!hasExecution) addIssue(file, "prompt is missing execution instructions section");
+}
+
 function checkPromptGuardrails(file, text) {
-  if (!file.includes("testing-types")) return;
-  if (!file.includes(`${path.sep}zh${path.sep}`)) return;
-  if (!file.includes("-version/")) return;
-  if (file.includes("_Lean")) return;
-  if (file.includes("LangGPT-version")) {
-    const hasGuardrails = text.includes("#### ## Guardrails");
-    const hasAuditInit =
-      text.includes("输入审计") ||
-      text.includes("input audit") ||
-      text.includes("先完成输入审计") ||
-      text.includes("input audit first") ||
-      text.includes("complete the input audit first");
-    if (!hasGuardrails) addIssue(file, "LangGPT prompt is missing Guardrails section");
-    if (!hasAuditInit) addIssue(file, "LangGPT prompt is missing audit-first initialization");
-    return;
+  const normalized = rel(file).replaceAll("\\", "/");
+
+  if (normalized.startsWith("testing-types/")) {
+    const isLegacyZhPrompt =
+      normalized.includes("/zh/") &&
+      normalized.includes("-version/") &&
+      !normalized.includes("_Lean");
+
+    if (isLegacyZhPrompt) {
+      if (normalized.includes("LangGPT-version")) {
+        const hasGuardrails = text.includes("#### ## Guardrails");
+        const hasAuditInit =
+          text.includes("输入审计") ||
+          text.includes("input audit") ||
+          text.includes("先完成输入审计") ||
+          text.includes("input audit first") ||
+          text.includes("complete the input audit first");
+        if (!hasGuardrails) addIssue(file, "LangGPT prompt is missing Guardrails section");
+        if (!hasAuditInit) addIssue(file, "LangGPT prompt is missing audit-first initialization");
+        return;
+      }
+
+      checkStandardPromptGuardrails(file, text);
+      return;
+    }
   }
 
-    const hasGuardrails =
-      text.includes("## 使用约束与降级规则") ||
-      text.includes("## Guardrails And Degradation Rules") ||
-      text.includes("输入完整性检查") ||
-      text.includes("Input Completeness Check");
-    const hasExecution =
-      text.includes("## Execution Instructions (执行指令)") ||
-      text.includes("## Execution Instructions") ||
-      text.includes("## 执行指令") ||
-      text.includes("先进行输入完整性检查") ||
-      text.includes("Start with an input completeness check") ||
-      text.includes("格式输出") ||
-      text.includes("Format Output") ||
-      text.includes("按照输出格式要求");
-
-    if (!hasGuardrails) addIssue(file, "prompt is missing guardrails section");
-    if (!hasExecution) addIssue(file, "prompt is missing execution instructions section");
+  if (isPromptFile(file)) checkStandardPromptGuardrails(file, text);
 }
 
 for (const file of walk(root)) {
   const text = readFileSync(file, "utf8");
 
   for (const { pattern, message } of bannedPatterns) {
+    const isWorkflowLegacyPath =
+      rel(file).startsWith("Workflows/") &&
+      message === "contains broken ../testing-types/ relative path";
+    if (isWorkflowLegacyPath) continue;
     if (pattern.test(text)) addIssue(file, message);
   }
 
