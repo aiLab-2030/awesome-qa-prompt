@@ -88,9 +88,7 @@ If all five reports are missing or unreadable, mark the task blocked and do not 
 ## Risks
 | Risk ID | Risk | Supporting fact ID | Impact | Status | Open item |
 ## Test Scope
-- Included: ...
-- Excluded: ...
-- Provisional / To be confirmed: ...
+| Scope ID | Type: Included/Excluded/Provisional | Scope item | Supporting fact/recommendation ID | Role/report version | Original ID/evidence ID | Status |
 ## Test Levels And Types
 | Strategy ID | Level/type | Coverage object | Supporting fact ID | Role recommendation source | Status |
 ## Environments And Data
@@ -98,6 +96,7 @@ If all five reports are missing or unreadable, mark the task blocked and do not 
 ## Coverage And Evidence
 | Strategy ID | Requirement/risk | Coverage approach | Expected evidence | Trace source | Status |
 ## Entry And Exit Recommendations
+| Gate ID | Phase: Entry/Exit | Recommendation | Supporting fact/recommendation ID | Role/report version | Original ID/evidence ID | Status |
 ## Project Constraints
 | Constraint ID | Scope/schedule/resource/dependency/milestone | Source | Effect or conflict with strategy | Status |
 ## Gaps, Conflicts, And Open Items

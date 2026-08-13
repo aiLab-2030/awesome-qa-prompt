@@ -4,7 +4,7 @@ English | [简体中文](../../../zh/ai-quality-analysis-mvp/03-test-strategy-re
 
 ## Stage Goal
 
-Have Product, QA, UI/UX, Technical, and PM reviewers independently review the same test-strategy version, then generate a traceable review report for a Human Task. AI may only recommend "Recommend approval," "Recommend revision," or "Insufficient information"; it must not replace the Human Task that approves, rejects, or otherwise decides on the strategy.
+Have Product, QA, UI/UX, Technical, and PM reviewers independently review the same test-strategy version, then generate a traceable review report for a Human Task. The synthesis prompt may only give the overall recommendation "Recommend approval," "Recommend revision," or "Insufficient information"; each role report uses the role-level labels defined by its prompt. No AI output may replace the Human Task that approves, rejects, or otherwise decides on the strategy.
 
 ## Allowed Input
 
