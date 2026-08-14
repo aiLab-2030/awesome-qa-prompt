@@ -110,7 +110,7 @@ Welcome to contribute to the Test Case Writing module:
 
 ## License
 
-This module follows the MIT License. See the [LICENSE](../../../LICENSE) file in the project root directory for details.
+This module follows the CC BY-NC-SA 4.0 License. See the [LICENSE](../../../LICENSE) file in the project root directory for details.
 
 ---
 
