@@ -1,0 +1,3 @@
+#!/bin/sh
+# Pre-commit: 拦截语义越界表述（声称执行测试/检测漏洞/高覆盖率/生成执行报告等）
+npm run --silent check:semantic-boundary

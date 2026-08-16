@@ -28,6 +28,7 @@ npm install
 - Node.js：建议 >= 18
 - 本仓库几乎全是 Markdown；一般不需要构建前端或启动服务
 - 在线文档站点不在本仓库主流程内；改内容以仓库 Markdown 为准
+- `npm install` 会自动启用 `.githooks/pre-commit`（`core.hooksPath`）；如未生效，手动执行 `git config core.hooksPath .githooks`
 
 ## Repository map
 
@@ -43,6 +44,8 @@ npm install
 | `CONTRIBUTING.md` | 人类贡献流程 |
 | `scripts/check-prompts.mjs` | Prompt / README 链接与禁用模式检查 |
 | `scripts/check-markdown-format.mjs` | Markdown 格式检查 |
+| `scripts/check-semantic-boundary.mjs` | 语义越界检查（声称执行测试 / 检测漏洞 / 高覆盖率 / 生成执行报告） |
+| `.githooks/pre-commit` | 提交前自动运行语义越界检查 |
 | `.github/workflows/prompt-check.yml` | CI：Prompt Check |
 
 模块目录通常包含：`README.md` + `Standard-version/` + 多个 `*-version/`。
@@ -95,12 +98,14 @@ npm run check:all
 # 或分别运行
 npm run check:prompts
 npm run check:markdown-format
+npm run check:semantic-boundary
 ```
 
 检查含义：
 
 - `check:prompts`：根 README + `testing-types/**` 的坏链、禁用文案、模块入口约定等
 - `check:markdown-format`：仓库内 Markdown 格式问题（含尾随空格等）
+- `check:semantic-boundary`：Prompt 文件不得声称真实执行测试、检测漏洞、生成高覆盖率用例 / 测试执行报告（含英文直译与近义改写），提交时由 `.githooks/pre-commit` 自动执行
 
 CI 工作流：`.github/workflows/prompt-check.yml`（PR / push 到 `main` 会跑 Prompt Check）。
 

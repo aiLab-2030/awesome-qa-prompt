@@ -25,3 +25,6 @@ jobs:
 
       - name: Run prompt checks
         run: npm run check:prompts
+
+      - name: Run semantic boundary checks
+        run: npm run check:semantic-boundary

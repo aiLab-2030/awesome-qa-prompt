@@ -13,7 +13,10 @@
 
 ```bash
 npm run check:prompts
+npm run check:semantic-boundary
 ```
+
+`npm install` 会自动启用 `.githooks/pre-commit` 钩子，提交时自动执行语义越界检查；如未生效，可手动执行 `git config core.hooksPath .githooks`。
 
 ## 推荐工作流
 
@@ -32,6 +35,7 @@ npm run check:prompts
 - 输入不足时必须优先输入审计，而不是直接生成完整结果
 - 未提供的指标必须标注为“待确认 / 建议值 / 示例值”
 - 不要默认输出不必要的审批人、日期、预算、环境细节
+- 只能声明分析、设计、建议、整理、辅助检查类能力；不得声称真实执行测试、检测漏洞、生成高覆盖率用例或测试执行报告（提交时由 pre-commit 钩子自动拦截）
 
 ## README 修改要求
 

@@ -13,7 +13,10 @@ Contributions to prompts, READMEs, docs, and workflows are welcome, but changes 
 
 ```bash
 npm run check:prompts
+npm run check:semantic-boundary
 ```
+
+`npm install` automatically enables the `.githooks/pre-commit` hook, which runs the semantic boundary check on every commit. If it does not take effect, run `git config core.hooksPath .githooks` manually.
 
 ## Recommended Workflow
 
@@ -32,6 +35,7 @@ npm run check:prompts
 - When the input is incomplete, prompts must perform an input audit before generating the main result
 - Missing metrics must be marked as `TBD`, `recommended`, or `example values`
 - Do not force unnecessary metadata such as approvers, dates, budgets, or environment details by default
+- Prompts may only claim analysis, design, recommendation, organization, and auxiliary-check capabilities; they must not claim to actually execute tests, detect vulnerabilities, or generate high-coverage test cases or test execution reports (the pre-commit hook blocks these automatically)
 
 ## README Requirements
 
