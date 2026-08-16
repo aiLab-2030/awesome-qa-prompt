@@ -168,7 +168,7 @@
 
 ## 📄 许可证
 
-本项目采用 [CC BY-NC-SA 4.0](../../../LICENSE) 许可证。
+本项目采用 [PolyForm Noncommercial License 1.0.0](../../../LICENSE) 许可证。
 
 ---
 

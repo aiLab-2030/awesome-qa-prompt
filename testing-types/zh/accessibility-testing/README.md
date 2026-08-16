@@ -317,7 +317,7 @@
 
 ## 许可证
 
-本模块遵循 CC BY-NC-SA 4.0 许可证，详见项目根目录的 LICENSE 文件。
+本模块遵循 PolyForm Noncommercial License 1.0.0 许可证，详见项目根目录的 LICENSE 文件。
 
 ---
 

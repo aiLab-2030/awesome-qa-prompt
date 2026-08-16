@@ -338,7 +338,7 @@ Welcome to contribute to the Test Case Review module:
 
 ## License
 
-This module follows the CC BY-NC-SA 4.0 License. See the [LICENSE](../../../LICENSE) file in the project root directory for details.
+This module follows the PolyForm Noncommercial License 1.0.0. See the [LICENSE](../../../LICENSE) file in the project root directory for details.
 
 ---
 

@@ -218,7 +218,7 @@ After changing prompts or module READMEs, run `npm run check:all` and confirm wh
 
 ## License and support
 
-- License: [CC BY-NC-SA 4.0](./LICENSE) (Attribution — NonCommercial — ShareAlike)
+- License: [PolyForm Noncommercial License 1.0.0](./LICENSE)
 - Support: [Buy Me a Coffee](https://www.buymeacoffee.com/naodeng) · [Ko-fi](https://ko-fi.com/naodeng) · [Docs sponsorship page](https://inaodeng.com/prompts)
 
 ### Related links

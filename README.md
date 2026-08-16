@@ -218,7 +218,7 @@ npm run check:all
 
 ## 许可证与支持
 
-- 许可证：[CC BY-NC-SA 4.0](./LICENSE)（署名 — 非商业性使用 — 相同方式共享）
+- 许可证：[PolyForm Noncommercial License 1.0.0](./LICENSE)（非商业性使用）
 - 赞助：[Buy Me a Coffee](https://www.buymeacoffee.com/naodeng) · [Ko-fi](https://ko-fi.com/naodeng) · [在线文档赞助页](https://inaodeng.com/prompts)
 
 ### 相关链接
