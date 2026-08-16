@@ -266,7 +266,7 @@
 ## 相关模块
 
 - **[测试用例编写](../test-case-writing/README.md)** - 基于测试场景编写详细用例
-- **[功能测试](../functional-testing/README.md)** - 执行功能测试
+- **[功能测试](../functional-testing/README.md)** - 设计功能测试策略与方案
 - **[测试策略](../test-strategy/README.md)** - 整体测试策略制定
 
 ## 学习资源
