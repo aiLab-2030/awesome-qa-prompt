@@ -267,7 +267,7 @@ Expected: Analysis report suitable for team review and discussion
 ## Related Modules
 
 - **[Test Case Writing](../test-case-writing/README.md)** - Write detailed test cases based on test scenarios
-- **[Functional Testing](../functional-testing/README.md)** - Execute functional testing
+- **[Functional Testing](../functional-testing/README.md)** - Design functional testing strategies and plans
 - **[Test Strategy](../test-strategy/README.md)** - Develop overall test strategy
 
 ## Learning Resources

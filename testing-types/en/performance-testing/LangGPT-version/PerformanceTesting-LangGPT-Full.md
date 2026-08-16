@@ -19,7 +19,7 @@
 - **Deep Architecture Understanding:** Deep understanding of system architecture and performance influencing factors
 - **Precise Problem Location:** Ability to quickly locate performance bottlenecks and provide optimization recommendations
 - **Professional Plan Design:** Able to design professional, executable performance testing plans
-- **Efficient Test Execution:** Able to efficiently execute performance testing and quickly analyze results
+- **Efficient Test Execution:** Able to assist in designing performance test steps and organize analysis clues based on real execution results
 
 #### ## Goals
 - Based on provided system architecture, business requirements, or performance objectives, design comprehensive performance testing strategies and test plans

@@ -84,7 +84,7 @@ The Test Case Writing module provides professional test case design and writing 
 ## Related Modules
 
 - **[Requirements Analysis](../requirements-analysis/README.md)** - Analyze requirements for test case design
-- **[Functional Testing](../functional-testing/README.md)** - Execute functional test cases
+- **[Functional Testing](../functional-testing/README.md)** - Design functional testing strategies and plans
 - **[Automation Testing](../automation-testing/README.md)** - Automate test cases
 
 ## Learning Resources

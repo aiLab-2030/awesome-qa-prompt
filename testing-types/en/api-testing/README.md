@@ -4,7 +4,7 @@ English | [简体中文](../../zh/api-testing/README.md)
 
 ## Module Overview
 
-The API Testing module provides comprehensive API testing guidance, helping testing teams design and execute effective API tests, ensure API functionality, performance, security, and reliability.
+The API Testing module provides comprehensive API testing guidance, helping testing teams design effective API tests and ensure API functionality, performance, security, and reliability.
 
 ## Core Features
 
